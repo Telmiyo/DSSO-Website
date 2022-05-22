@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@chakra-ui/react": "^2.1.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.3.3"
+  },
+  "name": "dsso-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-next": "^12.1.6",
+    "prettier": "^2.6.2"
+  },
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Telmo Beroiz<telmoberoiz.xyz>",
+  "license": "MIT",
+  "description": "Dune SSO Website"
+}
