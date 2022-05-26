@@ -4,7 +4,7 @@ import {
 } from "@chakra-ui/react"
 import PageLayout from "../../components/layouts/page-layout"
 import ReactMarkdown from "react-markdown";
-import React, {Component, useState, useEffect} from "react"
+import React, {Component} from "react"
 
 
 class Telmo extends Component {
@@ -15,7 +15,7 @@ class Telmo extends Component {
         this.state = {markdown:''};
     }
 
-    componentWillMount(){
+    componentDidMount(){
         fetch("https://raw.githubusercontent.com/Telmiyo/DSSO-Website/Dev/public/markdown/telmo.md").then(res =>res.text()).then(text=>this.setState({markdown:text}))
     }
 
