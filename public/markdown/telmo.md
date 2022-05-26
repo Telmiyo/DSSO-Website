@@ -1,5 +1,7 @@
 ## Hello
+
 * mdlr
+  
 | Action | Key | Button |
 | --- | --- | --- |
 | **Move** | WASD | DPAD |
@@ -11,4 +13,5 @@
 
 
 ![Bat Cat Studios](../logo.png)
+
 - [Alejandro Ávila](https://github.com/Omicrxn) - Programmer and Project Manager
