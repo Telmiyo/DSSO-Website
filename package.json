@@ -4,18 +4,11 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "framer-motion": "^6.3.3",
+    "gray-matter": "^4.0.3",
     "next": "^12.1.6",
-    "raw-loader": "^4.0.2",
+    "next-mdx-remote": "^4.0.3",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-markdown": "^8.0.3",
-    "rehype-toc": "^3.0.2",
-    "remark-gfm": "^3.0.1",
-    "remark-parse": "^10.0.1",
-    "remark-prism": "^1.3.6",
-    "remark-react": "^9.0.1",
-    "remark-toc": "^8.0.1",
-    "unified": "^10.1.2"
+    "react-dom": "^18.1.0"
   },
   "name": "dsso-website",
   "version": "1.0.0",
@@ -23,6 +16,7 @@
   "devDependencies": {
     "eslint": "^8.16.0",
     "eslint-config-next": "^12.1.6",
+    "postcss-normalize": "^10.0.1",
     "prettier": "^2.6.2"
   },
   "scripts": {
@@ -31,6 +25,7 @@
     "prettier": "prettier -write .",
     "lint": "next lint"
   },
+  "browserslist": "last 2 versions",
   "keywords": [],
   "author": "Telmo Beroiz<telmoberoiz.xyz>",
   "license": "MIT",

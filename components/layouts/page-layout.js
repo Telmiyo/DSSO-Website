@@ -19,7 +19,7 @@ const PageLayout = ({ children, title }) => (
 		<>
 			{title && (
 				<Head>
-					<title>{title} - Telmo Beroiz</title>
+					<title>Dune: SSO - {title}</title>
 				</Head>
 			)}
 			{children}
