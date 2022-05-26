@@ -3,37 +3,36 @@ import {
     Container,
 } from "@chakra-ui/react"
 import PageLayout from "../../components/layouts/page-layout"
-import Markdown from "markdown-to-jsx"
-import React, { useState, useEffect} from "react"
+import ReactMarkdown from "react-markdown";
+import React, {Component, useState, useEffect} from "react"
 
 
-const Telmo = () => {
+class Telmo extends Component {
+
+    constructor()
+    {
+        super();
+        this.state = {markdown:''};
+    }
+
+    componentWillMount(){
+        fetch("https://raw.githubusercontent.com/Telmiyo/DSSO-Website/Dev/public/markdown/telmo.md").then(res =>res.text()).then(text=>this.setState({markdown:text}))
+    }
+
+    render (){
+        const {markdown} = this.state;
+        return <PageLayout title="telmo">
+        <Container>
+            <Box>
+                I am Telmo Beroiz!
+            </Box>
+            <ReactMarkdown children={markdown}/>
+      
+        </Container>
+    </PageLayout>
+    }
+       
     
-    const telmoFile = "../../public/markdown/telmo.md"
-    const [post, setPost] = useState("")
-
-       useEffect(() => { 
-        fetch(telmoFile)
-        .then(res => res.text())
-        .then(response => setPost(response))
-        .catch(err => setPost(err))
-        })
-    
-
-    return (
-        <PageLayout title="telmo">
-            <Container>
-                <Box>
-                    I am Telmo Beroiz!
-                </Box>
-        
-                <Markdown>
-                    {post}
-                </Markdown>
-          
-            </Container>
-        </PageLayout>
-    )
 }
 
 export default Telmo

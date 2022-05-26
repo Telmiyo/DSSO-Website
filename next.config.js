@@ -1,3 +1,15 @@
 module.exports = {
-    reactStrictMode: true
+    env:{
+        basePath: '.'
+    },
+    webpack: (config) => {
+        config.module.rules.push(
+          {
+            test: /\.md$/,
+            loader: 'raw-loader'
+          }
+        )
+    
+        return config
+      },
 }
