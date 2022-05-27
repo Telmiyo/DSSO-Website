@@ -1,4 +1,4 @@
-import { Box, Container, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, Heading } from "@chakra-ui/react";
 import PageLayout from "../components/layouts/page-layout";
 import { getAllFilesMetadata } from "../utils/mdx";
 import Link from "next/link";
@@ -6,6 +6,9 @@ export default function Team({ teammembers }) {
   return (
     <PageLayout title="team">
       <Container>
+        <Heading>This is a heading</Heading>
+        <h1>this is a h1</h1>
+        <a href="https://www.google.com">This is a link</a>
         <Grid templateColumns="repeat(2,1fr)" gap={6}>
           {teammembers.map(teammember => (
             <GridItem>

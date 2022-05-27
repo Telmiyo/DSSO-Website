@@ -2,6 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
+import remarkGfm from "remark-gfm";
+import stringWidth from 'string-width'
+import remarkToc from "remark-toc";
 
 //gray-matter is a package that reads mdx files and separates the metadata from the content
 //next-mdx-remote is a package to interpret markdown on nextjs
@@ -20,7 +23,7 @@ export const getFileBySlug = async (slug) => {
   );
 
   const { data, content } = await matter(mdxSource);
-  const source = await serialize(content, {});
+  const source = await serialize(content, {mdxOptions:{remarkPlugins:[[remarkGfm,{stringLength: stringWidth}],[remarkToc,{}]]}});
   return {
     source,
     frontmatter: {

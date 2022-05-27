@@ -1,26 +1,27 @@
-import {MDXRemote} from 'next-mdx-remote'
-import { getFileBySlug, getFiles } from "../utils/mdx"
-import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
+import {themeMarkdown} from '../lib/theme'
+import {Box} from '@chakra-ui/react'
+import { MDXRemote } from "next-mdx-remote";
+import { getFileBySlug, getFiles } from "../utils/mdx";
+export default function TeamMember({ source, frontmatter }) {
 
-export default function TeamMember({source, frontmatter}){
-    return <MDXRemote components={ChakraUIRenderer()} {...source}/>
+  return <Box p='20px'><MDXRemote {...source} components={themeMarkdown} lazy /></Box>;
 }
-export async function getStaticProps({params}){
-    const {source, frontmatter} = await getFileBySlug(params.slug)
-    return {
-        props:{source,frontmatter}
-    }
+export async function getStaticProps({ params }) {
+  const { source, frontmatter } = await getFileBySlug(params.slug);
+  return {
+    props: { source, frontmatter }
+  };
 }
 
-export async function getStaticPaths(){
-    const members = await getFiles()
-    const paths = members.map((member)=>({
-        params: {
-            slug: member.replace(/\.mdx/,""),
-        }
-    }))
-    return{
-        paths,
-        fallback: false,
+export async function getStaticPaths() {
+  const members = await getFiles();
+  const paths = members.map(member => ({
+    params: {
+      slug: member.replace(/\.mdx/, "")
     }
+  }));
+  return {
+    paths,
+    fallback: false
+  };
 }
