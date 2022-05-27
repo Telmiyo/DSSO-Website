@@ -2,6 +2,7 @@ import { Box, Container, Grid, GridItem, Heading } from "@chakra-ui/react";
 import PageLayout from "../components/layouts/page-layout";
 import { getAllFilesMetadata } from "../utils/mdx";
 import Link from "next/link";
+//We are getting the teammembers given by the get static props function below
 export default function Team({ teammembers }) {
   return (
     <PageLayout title="team">
@@ -10,6 +11,7 @@ export default function Team({ teammembers }) {
         <h1>this is a h1</h1>
         <a href="https://www.google.com">This is a link</a>
         <Grid templateColumns="repeat(2,1fr)" gap={6}>
+          {/* mapping the teammembers array and defining a component that will be apply to each element */}
           {teammembers.map(teammember => (
             <GridItem>
               <Link key={teammember.slug} href={`/${teammember.slug}`}>
@@ -49,8 +51,12 @@ export default function Team({ teammembers }) {
     </PageLayout>
   );
 }
+/**
+ * GetStaticProps() is a function that fetches data at build time.
+ * @returns An array of objects.
+ */
 export async function getStaticProps() {
-  const teammembers = await getAllFilesMetadata();
+  const teammembers = await getAllFilesMetadata(); //getting the metadata from all mdx files
   console.log(teammembers);
   return {
     props: { teammembers }

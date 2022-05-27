@@ -9,13 +9,18 @@ import remarkToc from "remark-toc";
 //gray-matter is a package that reads mdx files and separates the metadata from the content
 //next-mdx-remote is a package to interpret markdown on nextjs
 
-//get the root of our project
+/* Getting the root of the project. */
 const root = process.cwd();
 
-//util functin to get the files on our data folder (the one containing the .mdx files)
+/**
+ * It returns a list of all the files in the data directory
+ */
 export const getFiles = () => fs.readdirSync(path.join(root, "data"));
 
-// This function reads the .mdx based on the slug, separates the metadata from the content and serializes it
+/**
+ * It takes a slug, reads the file, parses the frontmatter, and returns the source and frontmatter
+ * @param slug - the name of the file
+ */
 export const getFileBySlug = async (slug) => {
   const mdxSource = fs.readFileSync(
     path.join(root, "data", `${slug}.mdx`),
@@ -33,7 +38,24 @@ export const getFileBySlug = async (slug) => {
   };
 };
 
-//Reading all files on the data folder and extracting the metadata
+/**
+ * It takes all the files in the `data` directory, reads them, and returns an array of objects with the
+ * file's metadata and slug.
+ * 
+ * The `getFiles` function is a helper function that returns an array of all the files in the `data`
+ * directory.
+ * 
+ * The `reduce` function is a JavaScript function that takes an array and returns a single value. In
+ * this case, we're returning an array of objects.
+ * 
+ * The `reduce` function takes two arguments: a callback function and an initial value. The callback
+ * function takes two arguments: the accumulator and the current value. The accumulator is the value
+ * that gets returned by the `reduce` function. The current value is the current item in the array.
+ * 
+ * The `reduce` function loops through the array and calls the callback function for each item in the
+ * array. The callback function returns the accumulator.
+ * @returns An array of objects.
+ */
 export const getAllFilesMetadata = () => {
     const files = getFiles()
 
