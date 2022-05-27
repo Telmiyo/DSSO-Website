@@ -3,6 +3,7 @@ import PageLayout from "../components/layouts/page-layout";
 import { getAllFilesMetadata } from "../utils/mdx";
 import NextLink from "next/link"
 
+
 import { Member } from "../components/member";
 
 export default function Team({ teammembers }) {

@@ -2,11 +2,9 @@ import {
     Heading,
     Avatar,
     Box,
-    Text,
     Button,
     Badge,
     Link,
-    LinkBox
 } from '@chakra-ui/react';
 
 
