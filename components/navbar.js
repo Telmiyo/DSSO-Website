@@ -1,7 +1,7 @@
 import NextLink from "next/link"
 import {
     Box,
-    Stack,
+    Container,
     Menu,
     MenuButton,
     IconButton,
@@ -11,8 +11,9 @@ import {
     Image,
     Flex
 } from "@chakra-ui/react"
+import React, { useState } from "react"
 
-import { HamburgerIcon } from "@chakra-ui/icons"
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, children }) => {
@@ -31,8 +32,14 @@ const LinkItem = ({ href, path, children }) => {
     )
 }
 
+function HandleNavbarIcon(bool) {
+
+    bool ? bool = false : bool = true
+}
+
 const Navbar = props => {
     const { path } = props
+    const [isMenuActive, SetMenuActive] = useState(true)
 
     return (
         <Flex
@@ -42,48 +49,53 @@ const Navbar = props => {
             alignItems="center"
             justifyContent="center"
             h="72px"
-            >
+        >
             <Box align="center" flexGrow={1} >
-                <Image  src="/logo.png" flexAlign="center" w="50px" h="50px"></Image>
+                <LinkItem href="/">
+                    <Image src="/logo.png" flexAlign="center" w="50px" h="50px"></Image>
+                </LinkItem>
             </Box>
-
-            <Menu flexGrow={1}  id="navbar-menu">
+            <Menu flexGrow={1} id="navbar-menu">
                 <MenuButton
                     as={IconButton}
-                    icon={<HamburgerIcon />}
+                    icon={isMenuActive ? <HamburgerIcon /> : <CloseIcon />}
                     variant="ghost"
                     aria-label="Menu"
                     size="lg"
+                    onClick={() => { isMenuActive ? SetMenuActive(false) : SetMenuActive(true) }}
                 />
-                <MenuList>
+
+                <MenuList justifyContent={"center"} width="50vw" height={"90vh"} onClick={() => { isMenuActive ? SetMenuActive(false) : SetMenuActive(true) }}>
                     <NextLink href="/" passHref>
-                        <MenuItem as={Link}>Home</MenuItem>
+                        <MenuItem justifyContent={"center"} align="center" as={Link}>Home</MenuItem>
                     </NextLink>
                     <NextLink href="/game" passHref>
-                        <MenuItem as={Link}>Game</MenuItem>
+                        <MenuItem justifyContent={"center"} as={Link}>Game</MenuItem>
                     </NextLink>
                     <NextLink href="/team" passHref>
-                        <MenuItem as={Link}>Team</MenuItem>
+                        <MenuItem justifyContent={"center"} as={Link}>Team</MenuItem>
                     </NextLink>
                     <NextLink href="/engine" passHref>
-                        <MenuItem as={Link}>Engine</MenuItem>
+                        <MenuItem justifyContent={"center"} as={Link}>Engine</MenuItem>
                     </NextLink>
                     <NextLink href="/production" passHref>
-                        <MenuItem as={Link}>Production</MenuItem>
+                        <MenuItem justifyContent={"center"} as={Link}>Production</MenuItem>
                     </NextLink>
                     <NextLink href="/gallery" passHref>
-                        <MenuItem as={Link}>Gallery</MenuItem>
+                        <MenuItem justifyContent={"center"} as={Link}>Gallery</MenuItem>
                     </NextLink>
                     <NextLink href="/postmortem" passHref>
-                        <MenuItem as={Link}>Post Mortem</MenuItem>
+                        <MenuItem justifyContent={"center"} as={Link}>Post Mortem</MenuItem>
                     </NextLink>
                     <MenuItem
+                        justifyContent={"center"}
                         as={Link}
                         href="https://github.com/Chamfer-Studios/Dune-Special-Spice-Ops"
                         target="_blank"
                     >
-                       View Source <IoLogoGithub />
+                        View Source <IoLogoGithub />
                     </MenuItem>
+
                 </MenuList>
             </Menu>
         </Flex>
