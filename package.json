@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.1",
     "@chakra-ui/react": "^2.1.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/inter": "^4.5.10",
     "@nikolovlazar/chakra-ui-prose": "^1.1.0",
     "chakra-ui-markdown-renderer": "^4.0.0",
     "framer-motion": "^6.3.3",
@@ -11,6 +13,7 @@
     "next-mdx-remote": "^4.0.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
     "remark-gfm": "^3.0.1",
     "remark-toc": "^8.0.1",
     "string-width": "^5.1.2"

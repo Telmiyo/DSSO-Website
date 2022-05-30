@@ -25,6 +25,7 @@ export default function Team({ teammembers }) {
             </GridItem>
           ))}
         </Grid>
+
       </Container>
     </PageLayout>
   );

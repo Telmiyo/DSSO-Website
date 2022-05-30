@@ -7,8 +7,14 @@ import {
     Link,
 } from '@chakra-ui/react';
 
+let roleColor = "black"
+const pro = "Programmer"
+const SetRoleColor = (_role) => (
+   _role === "Programmer" ? roleColor = "red.200" : roleColor = "grey" 
+   
+)
 
-export const Member = ({ name, role, src }) => (
+export const Member = ({ name, role, src }) => (  
     <Box
         w="full"
         minHeight="320px"
@@ -24,7 +30,8 @@ export const Member = ({ name, role, src }) => (
     >
         <Box flexGrow={1}>
             <Avatar
-                size='xl'
+                width={125}
+                height={125}
                 src={src}
                 alt={name}
                 mb={4}
@@ -40,22 +47,12 @@ export const Member = ({ name, role, src }) => (
             <Badge
                 px={2}
                 py={1}
-                bg="gray.100"
+                bg={SetRoleColor(role)}
                 fontWeight="400"
                 textColor="black"
             >
                 {role}
             </Badge>
         </Box>
-        <Button
-            variant="outline"
-            fontSize="xl"
-            colorScheme="orange"
-            boxShadow={'0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px -5px rgb(66 153 225 / 43%)'
-            }
-
-        >
-            <Link href={"link"} target="_blank"></Link>Follow
-        </Button>
     </Box>
 )
