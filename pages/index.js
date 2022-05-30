@@ -4,7 +4,8 @@ import {
   Heading,
   Button,
   Stack,
-  Text
+  Text,
+  ButtonGroup
 } from "@chakra-ui/react"
 
 const Page = () => {
@@ -15,6 +16,9 @@ const Page = () => {
 
       <Box align="center">
         Hello to HomePage!
+      </Box>
+      <Box w="100px" h="100px" bg="red" position="fixed" top="180">
+
       </Box>
       <Heading align="center" as="h1">Theme Style View</Heading>
       <Heading as="h2" align="center" py={10} textColor={"secondary"}>Colors</Heading>

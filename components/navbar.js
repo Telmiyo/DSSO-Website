@@ -1,103 +1,102 @@
-import NextLink from "next/link"
-import {
-    Box,
-    Menu,
-    MenuButton,
-    IconButton,
-    MenuList,
-    MenuItem,
-    Link,
-    Image,
-    Flex
-} from "@chakra-ui/react"
-import React, { useState } from "react"
+import Link from "next/link";
+import { Box, Button, IconButton, Image, Flex } from "@chakra-ui/react";
+import React, { useState } from "react";
 
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
-import { IoLogoGithub } from 'react-icons/io5'
-
-const LinkItem = ({ href, path, children }) => {
-    const active = path === href
-    const inactiveColor = 'primary'
-    return (
-        <NextLink href={href}>
-            <Link p={2}
-                rounded="lg"
-                bg={active ? 'secondary' : undefined}
-                color={active ? 'primary' : inactiveColor}
-            >
-                {children}
-            </Link>
-        </NextLink>
-    )
-}
-
-function HandleNavbarIcon(bool) {
-
-    bool ? bool = false : bool = true
-}
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { IoLogoGithub } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
-    const [isMenuActive, SetMenuActive] = useState(true)
+  const [display, changeDisplay] = useState("none");
+  return (
+    <Box zIndex="auto">
+      <Flex bg="white">
+        <Flex bg="white" w="100vw" justifyContent="space-between" py="2">
+          <IconButton
+            visibility="hidden"
+            aria-label="Open Menu"
+            size="lg"
+            mr={2}
+            icon={display == "none" ? <HamburgerIcon /> : <CloseIcon />}
+          />
+          <Box>
+            <Link href="/">
+              <Image
+                cursor="pointer"
+                src="/logo.png"
+                align="center"
+                w="50px"
+                h="50px"
+              ></Image>
+            </Link>
+          </Box>
 
-    return (
-        <Flex
-            bg="white"
-            flexDirection="row"
-            flexWrap="nowrap"
-            alignItems="center"
-            justifyContent="center"
-            h="72px"
-        >
-            <Box align="center" flexGrow={1} >
-                <LinkItem href="/">
-                    <Image src="/logo.png" align="center" w="50px" h="50px"></Image>
-                </LinkItem>
-            </Box>
-            <Menu flexGrow={1} id="navbar-menu">
-                <MenuButton
-                    as={IconButton}
-                    icon={isMenuActive ? <HamburgerIcon /> : <CloseIcon />}
-                    variant="ghost"
-                    aria-label="Menu"
-                    size="lg"
-                    onClick={() => { isMenuActive ? SetMenuActive(false) : SetMenuActive(true) }}
-                />
-
-                <MenuList justifyContent={"center"} width="50vw" height={"90vh"} onClick={() => { isMenuActive ? SetMenuActive(false) : SetMenuActive(true) }}>
-                    <NextLink href="/" passHref>
-                        <MenuItem justifyContent={"center"} align="center" as={Link}>Home</MenuItem>
-                    </NextLink>
-                    <NextLink href="/game" passHref>
-                        <MenuItem justifyContent={"center"} as={Link}>Game</MenuItem>
-                    </NextLink>
-                    <NextLink href="/team" passHref>
-                        <MenuItem justifyContent={"center"} as={Link}>Team</MenuItem>
-                    </NextLink>
-                    <NextLink href="/engine" passHref>
-                        <MenuItem justifyContent={"center"} as={Link}>Engine</MenuItem>
-                    </NextLink>
-                    <NextLink href="/production" passHref>
-                        <MenuItem justifyContent={"center"} as={Link}>Production</MenuItem>
-                    </NextLink>
-                    <NextLink href="/gallery" passHref>
-                        <MenuItem justifyContent={"center"} as={Link}>Gallery</MenuItem>
-                    </NextLink>
-                    <NextLink href="/postmortem" passHref>
-                        <MenuItem justifyContent={"center"} as={Link}>Post Mortem</MenuItem>
-                    </NextLink>
-                    <MenuItem
-                        justifyContent={"center"}
-                        as={Link}
-                        href="https://github.com/Chamfer-Studios/Dune-Special-Spice-Ops"
-                        target="_blank"
-                    >
-                        View Source <IoLogoGithub />
-                    </MenuItem>
-
-                </MenuList>
-            </Menu>
+          <IconButton
+            aria-label="Open Menu"
+            size="lg"
+            mr={2}
+            icon={display == "none" ? <HamburgerIcon /> : <CloseIcon />}
+            onClick={() => changeDisplay(display == "none" ? "flex" : "none")}
+          />
         </Flex>
-    )
-}
+      </Flex>
+      <Flex
+        display={display}
+        flexDir="column"
+        align="center"
+        justifyContent="center"
+        bg="white"
+        w="50vw"
+        h="100vh"
+        pos="fixed"
+        right="0"
+      >
+        <Link href="/">
+          <Button variant="ghost" aria-label="Home" color="black">
+            Home
+          </Button>
+        </Link>
+        <Link href="/game">
+          <Button variant="ghost" aria-label="Home" color="black">
+            Game
+          </Button>
+        </Link>
+        <Link href="/team">
+          <Button variant="ghost" aria-label="Home" color="black">
+            Team
+          </Button>
+        </Link>
+        <Link href="/engine">
+          <Button variant="ghost" aria-label="Home" color="black">
+            Engine
+          </Button>
+        </Link>
+        <Link href="/production">
+          <Button variant="ghost" aria-label="Home" color="black">
+            Production
+          </Button>
+        </Link>
+        <Link href="/gallery">
+          <Button variant="ghost" aria-label="Home" color="black">
+            Gallery
+          </Button>
+        </Link>
+        <Link href="/postmortem">
+          <Button variant="ghost" aria-label="Home" color="black">
+            Postmortem
+          </Button>
+        </Link>
+        <Link href="https://github.com/Chamfer-Studios/Dune-Special-Spice-Ops">
+          <Button variant="ghost" aria-label="Home" color="black">
+            View Source{" "}
+            <Box ml="2">
+              <IoLogoGithub />
+            </Box>
+          </Button>
+        </Link>
+      </Flex>
+    </Box>
+  );
+};
 
-export default Navbar
+export default Navbar;
