@@ -1,7 +1,6 @@
 import NextLink from "next/link"
 import {
     Box,
-    Container,
     Menu,
     MenuButton,
     IconButton,
@@ -37,8 +36,7 @@ function HandleNavbarIcon(bool) {
     bool ? bool = false : bool = true
 }
 
-const Navbar = props => {
-    const { path } = props
+const Navbar = () => {
     const [isMenuActive, SetMenuActive] = useState(true)
 
     return (
@@ -52,7 +50,7 @@ const Navbar = props => {
         >
             <Box align="center" flexGrow={1} >
                 <LinkItem href="/">
-                    <Image src="/logo.png" flexAlign="center" w="50px" h="50px"></Image>
+                    <Image src="/logo.png" align="center" w="50px" h="50px"></Image>
                 </LinkItem>
             </Box>
             <Menu flexGrow={1} id="navbar-menu">

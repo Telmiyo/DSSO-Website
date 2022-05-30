@@ -19,6 +19,8 @@ export default function Team({ teammembers }) {
                   name={teammember.name}
                   role={teammember.role}
                   src={teammember.src}
+                  github={teammember.github}
+                  linkdn={teammember.linkdn}
                 />
                 </LinkBox>
               </NextLink>
