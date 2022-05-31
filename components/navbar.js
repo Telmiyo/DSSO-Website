@@ -32,49 +32,49 @@ export default function Navbar(props) {
 
             <div className={`${isActive == 'flex' ? 'flex' : 'hidden'} bg-red-200 fixed right-0 w-1/2 h-screen flex-col justify-center items-center `}>
                 <div className='mt-8 '>
-                    <NextLink href="/" >
+                    <NextLink href="/"passHref >
                         <a >Home</a>
                     </NextLink>
 
                 </div>
                 <div className='mt-8 '>
-                    <NextLink href="/game" >
+                    <NextLink href="/game"passHref>
                         <a >Game</a>
                     </NextLink>
 
                 </div>
                 <div className='mt-8 '>
-                    <NextLink href="/engine" >
+                    <NextLink href="/engine" passHref>
                         <a >Engine</a>
                     </NextLink>
 
                 </div>
                 <div className='mt-8 '>
-                    <NextLink href="/team" >
+                    <NextLink href="/team" passHref>
                         <a >Team</a>
                     </NextLink>
 
                 </div>
                 <div className='mt-8 '>
-                    <NextLink href="/production" >
+                    <NextLink href="/production" passHref >
                         <a >Production</a>
                     </NextLink>
 
                 </div>
                 <div className='mt-8 '>
-                    <NextLink href="/gallery" >
+                    <NextLink href="/gallery" passHref>
                         <a >Gallery</a>
                     </NextLink>
 
                 </div>
                 <div className='mt-8 '>
-                    <NextLink href="/postmortem" >
+                    <NextLink href="/postmortem" passHref>
                         <a >Post Mortem</a>
                     </NextLink>
 
                 </div>
                 <div className='mt-8 '>
-                    <NextLink href="https://github.com/Chamfer-Studios/Dune-Special-Spice-Ops" target="_blank" >
+                    <NextLink href="https://github.com/Chamfer-Studios/Dune-Special-Spice-Ops" target="_blank" passHref>
                         <a className='flex flex-row items-center'><IoLogoGithub className='mr-2'/>View Source</a>
                     </NextLink>
 
