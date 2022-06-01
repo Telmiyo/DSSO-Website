@@ -7,6 +7,8 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js"
+
   ],
   theme: {
     screens: {
@@ -44,5 +46,5 @@ module.exports = {
         fonseca: ['Fonseca', 'sans-serif'], 
       },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"),require('flowbite/plugin')],
 };
