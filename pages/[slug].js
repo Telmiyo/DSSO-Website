@@ -10,7 +10,7 @@ export default function TeamMember({ source, frontmatter }) {
       {/* Profile */}
       <div className="flex flex-col items-center justify-center space-y-5 mt-5">
         <Image
-          src={`/team/${frontmatter.slug}.jpg`}
+          src={`/team/${frontmatter.slug}.png`}
           width={125}
           height={125}
           objectFit="cover"
