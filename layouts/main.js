@@ -4,10 +4,12 @@ import Footer from "../components/footer";
 
 export default function Main({ children, router }) {
   return (
-    <main >
+    <main className="container-none flex flex-col h-screen">
       <Navbar />
-      {children}
-      <Footer/>
+      <div className="flex flex-col items-center justify-center h-full py-2 ">
+        {children}
+      </div>
+      <Footer />
     </main>
   );
 }

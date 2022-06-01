@@ -14,12 +14,20 @@ export default function Team({ teammembers }) {
               {teammembers
                 .filter((teammember) => teammember.role.includes("Programmer"))
                 .map((filteredmember) => (
-                  <MemberFrame
-                    id={"Programmer"}
-                    src={`/team/${filteredmember.slug}.png`}
-                    name={filteredmember.name}
-                    role={filteredmember.role}
-                  />
+                  <NextLink
+                    key={filteredmember.slug}
+                    href={`/${filteredmember.slug}`}
+                    passHref
+                  >
+                    <a>
+                      <MemberFrame
+                        id={"Programmer"}
+                        src={`/team/${filteredmember.slug}.png`}
+                        name={filteredmember.name}
+                        role={filteredmember.role}
+                      />
+                    </a>
+                  </NextLink>
                 ))}
             </div>
           </Tabs.Item>
@@ -28,12 +36,20 @@ export default function Team({ teammembers }) {
               {teammembers
                 .filter((teammember) => teammember.role.includes("Designer"))
                 .map((filteredmember) => (
-                  <MemberFrame
-                    id={"Designer"}
-                    src={`/team/${filteredmember.slug}.png`}
-                    name={filteredmember.name}
-                    role={filteredmember.role}
-                  />
+                  <NextLink
+                    key={filteredmember.slug}
+                    href={`/${filteredmember.slug}`}
+                    passHref
+                  >
+                    <a>
+                      <MemberFrame
+                        id={"Designer"}
+                        src={`/team/${filteredmember.slug}.png`}
+                        name={filteredmember.name}
+                        role={filteredmember.role}
+                      />
+                    </a>
+                  </NextLink>
                 ))}
             </div>
           </Tabs.Item>
@@ -42,12 +58,20 @@ export default function Team({ teammembers }) {
               {teammembers
                 .filter((teammember) => teammember.role.includes("Artist"))
                 .map((filteredmember) => (
-                  <MemberFrame
-                    id={"Artist"}
-                    src={`/team/${filteredmember.slug}.png`}
-                    name={filteredmember.name}
-                    role={filteredmember.role}
-                  />
+                  <NextLink
+                    key={filteredmember.slug}
+                    href={`/${filteredmember.slug}`}
+                    passHref
+                  >
+                    <a>
+                      <MemberFrame
+                        id={"Artist"}
+                        src={`/team/${filteredmember.slug}.png`}
+                        name={filteredmember.name}
+                        role={filteredmember.role}
+                      />
+                    </a>
+                  </NextLink>
                 ))}
             </div>
           </Tabs.Item>

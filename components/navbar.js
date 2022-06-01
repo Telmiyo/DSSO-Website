@@ -15,7 +15,7 @@ export default function Navbar(props) {
           <NextLink href="/">
             <Image
               layout="intrinsic"
-              src="/logo.png"
+              src="/corporative/logo.png"
               width="50px"
               height="50px"
               onClick={() => setActive(false)}

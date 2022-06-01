@@ -11,6 +11,9 @@ module.exports = {
 
   ],
   theme: {
+    container: {
+      center: true,
+    },
     screens: {
       sm: "576px",
       // => @media (min-width: 640px) { ... }
