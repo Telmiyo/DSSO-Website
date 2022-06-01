@@ -26,7 +26,20 @@ module.exports = {
       "2xl": "1400px",
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      colors: {
+        roles: {
+          programmer: "#EB8A8A",
+          designer: "#639DE5",
+          artist: "#52C1AF",
+          leadprogrammer: "#DE3C3C",
+          leaddesigner: "#3C85DE",
+          leadartist: "#27B29B",
+          producer: "#663CDE",
+
+        }
+      },
+    },
   },
   plugins: [],
 }
