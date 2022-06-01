@@ -6,7 +6,7 @@ export default function Main({ children, router }) {
   return (
     <main className="container-none flex flex-col h-screen">
       <Navbar />
-      <div className="flex flex-col items-center justify-center h-full py-2 ">
+      <div className="flex flex-col items-center justify-center h-full py-5 ">
         {children}
       </div>
       <Footer />
