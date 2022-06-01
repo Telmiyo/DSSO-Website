@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <title>DSSO - Home</title>
     </Head>
     <Main>
-      <Component {...pageProps} />
+      <Component  {...pageProps} />
     </Main>
 
   </div>
