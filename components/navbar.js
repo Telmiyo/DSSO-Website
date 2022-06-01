@@ -9,13 +9,13 @@ export default function Navbar(props) {
   return (
     <nav {...props}>
       {/* Navbar */}
-      <div className="bg-transparent flex w-full justify-between py-2 items-center">
+      <div className="bg-transparent flex w-full justify-between py-2 items-center shadow-md">
         <IoMenuOutline className=" text-white text-2xl invisible ml-2" />
         <div className="cursor-pointer">
           <NextLink href="/">
             <Image
               layout="intrinsic"
-              src="/corporative/logo.png"
+              src="/contents/corporative/logo.png"
               width="50px"
               height="50px"
               onClick={() => setActive(false)}

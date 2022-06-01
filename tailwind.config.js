@@ -7,8 +7,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.js"
-
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     container: {
@@ -40,14 +39,20 @@ module.exports = {
           leaddesigner: "#3C85DE",
           leadartist: "#27B29B",
           producer: "#663CDE",
-
-        }
+        },
+        dune: {
+          white: "#F8F6F6",
+          lightblue: "#A0D1D7",
+          black: "#464855",
+          orangespicy: "#E4865B",
+          bluefremen: "#12868D",
+        },
       },
     },
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'], 
-        fonseca: ['Fonseca', 'sans-serif'], 
-      },
+    fontFamily: {
+      inter: ["Inter", "sans-serif"],
+      fonseca: ["Fonseca", "sans-serif"],
+    },
   },
-  plugins: [require("@tailwindcss/typography"),require('flowbite/plugin')],
+  plugins: [require("@tailwindcss/typography"), require("flowbite/plugin")],
 };

@@ -3,12 +3,12 @@ import { getFileBySlug, getFiles } from "../utils/mdx";
 import Image from "next/image";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Link from "next/link";
-import MDXComponents from "../components/mdx-components"
+import MDXComponents from "../components/mdx-components";
 
 //the source is the actual content of the mdx file and teh frontmatter is the metadata but we inserted also the slug
 export default function TeamMember({ source, frontmatter }) {
   return (
-    <div >
+    <div>
       {/* Profile */}
       <div className="flex flex-col items-center justify-center space-y-5 mt-5">
         <Image
@@ -33,11 +33,12 @@ export default function TeamMember({ source, frontmatter }) {
           </Link>
         </div>
       </div>
-      
 
       {/* Markdown */}
       <div className="flex justify-center items-center mt-5">
-        <div className="prose">{<MDXRemote {...source} components={MDXComponents}  lazy />}</div>
+        <div className="prose">
+          {<MDXRemote {...source} components={MDXComponents} lazy />}
+        </div>
       </div>
     </div>
   );
