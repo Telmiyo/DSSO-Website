@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "flowbite": "^1.4.7",
+    "flowbite-react": "0.0.25",
     "gray-matter": "^4.0.3",
     "next": "12.1.6",
     "next-mdx-remote": "^4.0.3",
