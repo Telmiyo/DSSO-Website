@@ -2,6 +2,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { getFileBySlug, getFiles } from "../utils/mdx";
 import Image from "next/image";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import Link from "next/link";
 //the source is the actual content of the mdx file and teh frontmatter is the metadata but we inserted also the slug
 export default function TeamMember({ source, frontmatter }) {
   return (
@@ -18,7 +19,12 @@ export default function TeamMember({ source, frontmatter }) {
         <h1 className="text-4xl font-semibold">{frontmatter.name}</h1>
         <p className="text-center text-sm w-1/3">{frontmatter.description}</p>
         <div className="flex justify-center space-x-5">
-          <IoLogoGithub size={32} /> <IoLogoLinkedin size={32} className="text-blue-500" />
+          <Link href={`${frontmatter.github}`}>
+            <a><IoLogoGithub size={32} /></a>
+          </Link>
+          <Link href={`${frontmatter.linkedin}`} passHref>
+            <a ><IoLogoLinkedin size={32} className="text-blue-500" /></a>
+          </Link>
         </div>
       </div>
       {/* Markdown */}
