@@ -1,9 +1,8 @@
 module.exports = {
-  mode: 'jit',
-  content:[
-  ],
+  mode: "jit",
+  content: [],
   content: [
-    './public/**/*.html',
+    "./public/**/*.html",
     // './src/**/*.{js,jsx,ts,tsx,vue}',
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
@@ -28,5 +27,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
-}
+  plugins: [require("@tailwindcss/typography")],
+};

@@ -41,7 +41,7 @@ export default function Navbar(props) {
         } bg-white text-black fixed right-0 w-1/2 h-screen flex-col justify-center items-center `}
       >
         <div className="mt-8 ">
-          <NextLink href="/" passHref onClick={() => setActive(false)}>
+          <NextLink href="/" passHref>
             <a onClick={() => setActive(false)}>Home</a>
           </NextLink>
         </div>
