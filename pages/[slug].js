@@ -1,19 +1,27 @@
 import { MDXRemote } from "next-mdx-remote";
 import { getFileBySlug, getFiles } from "../utils/mdx";
 import Image from "next/image";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 //the source is the actual content of the mdx file and teh frontmatter is the metadata but we inserted also the slug
 export default function TeamMember({ source, frontmatter }) {
   return (
     <div>
-      <div className="flex justify-center">
+      {/* Profile */}
+      <div className="flex flex-col items-center justify-center space-y-5 mt-5">
         <Image
-          src={`/team/${frontmatter.slug}.png`}
-          width={200}
-          height={200}
+          src={`/team/${frontmatter.slug}.jpg`}
+          width={125}
+          height={125}
           objectFit="cover"
           className="rounded-full"
         ></Image>
+        <h1 className="text-4xl font-semibold">{frontmatter.name}</h1>
+        <p className="text-center text-sm w-1/3">{frontmatter.description}</p>
+        <div className="flex justify-center space-x-5">
+          <IoLogoGithub size={32} /> <IoLogoLinkedin size={32} className="text-blue-500" />
+        </div>
       </div>
+      {/* Markdown */}
       <div className="flex justify-center items-center">
         <div className="prose">{<MDXRemote {...source} lazy />}</div>
       </div>

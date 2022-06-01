@@ -39,6 +39,10 @@ module.exports = {
         }
       },
     },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'], 
+        fonseca: ['Fonseca', 'sans-serif'], 
+      },
   },
   plugins: [require("@tailwindcss/typography")],
 };
