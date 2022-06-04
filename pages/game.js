@@ -18,10 +18,7 @@ export default function Game() {
           width={533}
           height={72}
         />
-        <h4 className="text-md text-dune-orangespicy font-semibold">
-          {" "}
-          Lorem Ipsum{" "}
-        </h4>
+     
         <p className="w-1/2 text-center mb-10">
           Lorem Ipsum has been the industry's standard dummy text ever since the
           1500s, when an unknown printer took a galley of type and scrambled it
