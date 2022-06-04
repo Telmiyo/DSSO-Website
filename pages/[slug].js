@@ -8,7 +8,7 @@ import MDXComponents from "../components/mdx-components";
 //the source is the actual content of the mdx file and teh frontmatter is the metadata but we inserted also the slug
 export default function TeamMember({ source, frontmatter }) {
   return (
-    <div>
+    <div className="">
       {/* Profile */}
       <div className="flex flex-col items-center justify-center space-y-5 mt-5">
         <Image

@@ -11,8 +11,8 @@ export default function Game() {
     },
   };
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start ">
-      <div className=" flex flex-col items-center space-y-3">
+    <div className="flex flex-col items-center">
+      <div className=" flex flex-col items-center justify-center space-y-3">
         <Image
           src="/contents/corporative/dune_logo.png"
           width={533}
