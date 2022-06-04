@@ -9,7 +9,7 @@ export default function Main({ children, router }) {
       <div className="flex flex-col items-center justify-start h-full py-5 ">
         {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
