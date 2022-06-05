@@ -9,6 +9,28 @@ export default function Team({ teammembers }) {
     <div>
       <div className="">
         <Tabs.Group aria-label="Default tabs" style="default">
+        <Tabs.Item active={true} title="Producer">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:px-40 2xl:px-80 gap-4 justify-items-center">
+              {teammembers
+                .filter((teammember) => teammember.role.includes("Producer"))
+                .map((filteredmember) => (
+                  <NextLink
+                    key={filteredmember.slug}
+                    href={`/${filteredmember.slug}`}
+                    passHref
+                  >
+                    <a>
+                      <MemberFrame
+                        id={"Producer"}
+                        src={`/team/${filteredmember.slug}.png`}
+                        name={filteredmember.name}
+                        role={filteredmember.role}
+                      />
+                    </a>
+                  </NextLink>
+                ))}
+            </div>
+          </Tabs.Item>
           <Tabs.Item active={true} title="Programmer">
             <div className="grid grid-cols-2 md:grid-cols-4 lg:px-40 2xl:px-80 gap-4 justify-items-center">
               {teammembers
