@@ -1,6 +1,5 @@
 import React from 'react'
 import Lottie from 'react-lottie'
-
 export default function FeatureBox({width,height,lottieData,title,body}) {
     const defaultOptions = {
         loop: true,
