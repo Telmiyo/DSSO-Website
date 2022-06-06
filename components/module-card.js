@@ -28,7 +28,7 @@ export default function ModuleCard({
         </div>
       </div>
 
-      <div className="mt-16 space-y-3">
+      <div className="mt-16 space-y-3 h-full ">
         <p className="text-3xl">{title}</p>
         <p>{description}</p>
       </div>
