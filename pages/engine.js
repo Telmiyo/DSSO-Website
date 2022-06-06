@@ -1,12 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import FeatureBox from "../components/feature-box";
-import resourceManagerData from "../public/icons/resource_manager.json";
-import customLayoutsData from "../public/icons/custom_layouts.json";
-import skyboxData from "../public/icons/skybox.json";
-import navigateData from "../public/icons/navigate.json";
 import ModuleCard from "../components/module-card";
-import animationModuleLottie from "../public/icons/module_animation.json";
+import {
+  moduleAnimationData,
+  modulePhysicsData,
+  moduleShaderData,
+  moduleUIData,
+  moduleParticlesData,
+  moduleAudioData,
+  moduleCameraData,
+  moduleScriptingData,
+  resourceManagerData,
+  customLayoutsData,
+  skyboxData,
+  navigateData,
+} from "../components/lottie-references";
 export default function Engine() {
   return (
     <div className="flex flex-col items-center">
@@ -56,22 +65,22 @@ export default function Engine() {
           body="You can add a navmesh to create your own AIs."
         />
       </div>
-      <div className="flex flex-wrap m-10">
+      <div className="grid grid-cols-2 m-10 gap-4">
         <ModuleCard
           img="/contents/images/module_animation.png"
-          lottieData={animationModuleLottie}
+          lottieData={moduleAnimationData}
           title="Animation"
           description="In enim nostrud do duis non aliqua consequat occaecat. Dolor fugiat cupidatat ex commodo consequat consectetur mollit fugiat aliqua nisi qui nostrud. Ea sint sit sunt duis ullamco cillum excepteur. Occaecat Lorem ut Lorem laboris. Sint deserunt adipisicing aliquip est laboris aliquip consequat dolor enim elit sint laborum elit. Ea qui elit labore aute magna Lorem adipisicing ipsum excepteur commodo incididunt duis ea labore."
         />
         <ModuleCard
           img="/contents/images/module_animation.png"
-          lottieData={animationModuleLottie}
+          lottieData={modulePhysicsData}
           title="Physics"
           description="In enim nostrud do duis non aliqua consequat occaecat. Dolor fugiat cupidatat ex commodo consequat consectetur mollit fugiat aliqua nisi qui nostrud. Ea sint sit sunt duis ullamco cillum excepteur. Occaecat Lorem ut Lorem laboris. Sint deserunt adipisicing aliquip est laboris aliquip consequat dolor enim elit sint laborum elit. Ea qui elit labore aute magna Lorem adipisicing ipsum excepteur commodo incididunt duis ea labore."
         />
         <ModuleCard
           img="/contents/images/module_animation.png"
-          lottieData={animationModuleLottie}
+          lottieData={moduleShaderData}
           title="Shaders"
           description="In enim nostrud do duis non aliqua consequat occaecat. Dolor fugiat cupidatat ex commodo consequat consectetur mollit fugiat aliqua nisi qui nostrud. Ea sint sit sunt duis ullamco cillum excepteur. Occaecat Lorem ut Lorem laboris. Sint deserunt adipisicing aliquip est laboris aliquip consequat dolor enim elit sint laborum elit. Ea qui elit labore aute magna Lorem adipisicing ipsum excepteur commodo incididunt duis ea labore."
         />
@@ -79,27 +88,32 @@ export default function Engine() {
         <ModuleCard
           img="/contents/images/module_animation.png"
           title="User Interface"
-          lottieData={animationModuleLottie}
+          lottieClassName="-translate-x-2 translate-y-1.5"
+          lottieData={moduleUIData}
           description="In enim nostrud do duis non aliqua consequat occaecat. Dolor fugiat cupidatat ex commodo consequat consectetur mollit fugiat aliqua nisi qui nostrud. Ea sint sit sunt duis ullamco cillum excepteur. Occaecat Lorem ut Lorem laboris. Sint deserunt adipisicing aliquip est laboris aliquip consequat dolor enim elit sint laborum elit. Ea qui elit labore aute magna Lorem adipisicing ipsum excepteur commodo incididunt duis ea labore."
         />
         <ModuleCard
           img="/contents/images/module_animation.png"
           title="Particles"
-          lottieData={animationModuleLottie}
+          lottieData={moduleParticlesData}
           description="In enim nostrud do duis non aliqua consequat occaecat. Dolor fugiat cupidatat ex commodo consequat consectetur mollit fugiat aliqua nisi qui nostrud. Ea sint sit sunt duis ullamco cillum excepteur. Occaecat Lorem ut Lorem laboris. Sint deserunt adipisicing aliquip est laboris aliquip consequat dolor enim elit sint laborum elit. Ea qui elit labore aute magna Lorem adipisicing ipsum excepteur commodo incididunt duis ea labore."
         />
         <ModuleCard
           img="/contents/images/module_animation.png"
+          lottieData={moduleAudioData}
           title="Audio"
           description="In enim nostrud do duis non aliqua consequat occaecat. Dolor fugiat cupidatat ex commodo consequat consectetur mollit fugiat aliqua nisi qui nostrud. Ea sint sit sunt duis ullamco cillum excepteur. Occaecat Lorem ut Lorem laboris. Sint deserunt adipisicing aliquip est laboris aliquip consequat dolor enim elit sint laborum elit. Ea qui elit labore aute magna Lorem adipisicing ipsum excepteur commodo incididunt duis ea labore."
         />
         <ModuleCard
           img="/contents/images/module_animation.png"
+          lottieData={moduleCameraData}
           title="Camera"
           description="In enim nostrud do duis non aliqua consequat occaecat. Dolor fugiat cupidatat ex commodo consequat consectetur mollit fugiat aliqua nisi qui nostrud. Ea sint sit sunt duis ullamco cillum excepteur. Occaecat Lorem ut Lorem laboris. Sint deserunt adipisicing aliquip est laboris aliquip consequat dolor enim elit sint laborum elit. Ea qui elit labore aute magna Lorem adipisicing ipsum excepteur commodo incididunt duis ea labore."
         />
         <ModuleCard
           img="/contents/images/module_animation.png"
+          lottieData={moduleScriptingData}
+          lottieClassName="w-36"
           title="Scripting"
           description="In enim nostrud do duis non aliqua consequat occaecat. Dolor fugiat cupidatat ex commodo consequat consectetur mollit fugiat aliqua nisi qui nostrud. Ea sint sit sunt duis ullamco cillum excepteur. Occaecat Lorem ut Lorem laboris. Sint deserunt adipisicing aliquip est laboris aliquip consequat dolor enim elit sint laborum elit. Ea qui elit labore aute magna Lorem adipisicing ipsum excepteur commodo incididunt duis ea labore."
         />

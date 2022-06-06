@@ -46,6 +46,8 @@ module.exports = {
           black: "#464855",
           orangespicy: "#E4865B",
           bluefremen: "#12868D",
+          ultralightblue: "#D1EEEF",
+          ultradeepblue: "#0E656A",
         },
       },
     },
