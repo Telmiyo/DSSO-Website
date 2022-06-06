@@ -6,7 +6,7 @@ import Link from "next/link";
 import MDXComponents from "../components/mdx-components";
 
 //the source is the actual content of the mdx file and teh frontmatter is the metadata but we inserted also the slug
-export default function TeamMember({ source, frontmatter }) {
+export default function TeamMember({ source,descriptionMarkdown, frontmatter }) {
   return (
     <div className="">
       {/* Profile */}
@@ -19,7 +19,9 @@ export default function TeamMember({ source, frontmatter }) {
           className="rounded-full"
         ></Image>
         <h1 className="text-4xl font-semibold">{frontmatter.name}</h1>
-        <p className="text-center text-sm w-1/3">{frontmatter.description}</p>
+        <div className="prose prose-p:text-justify prose-headings:text-dune-bluefremen">
+          {<MDXRemote {...descriptionMarkdown} components={MDXComponents} lazy />}
+        </div>
         <div className="flex justify-center space-x-5">
           <Link href={`${frontmatter.github}`}>
             <a>
@@ -33,10 +35,10 @@ export default function TeamMember({ source, frontmatter }) {
           </Link>
         </div>
       </div>
-
+      
       {/* Markdown */}
       <div className="flex justify-center items-center mt-5">
-        <div className="prose">
+        <div className="prose max-w-lg prose-p:text-justify prose-headings:text-dune-bluefremen">
           {<MDXRemote {...source} components={MDXComponents} lazy />}
         </div>
       </div>
@@ -48,9 +50,9 @@ export default function TeamMember({ source, frontmatter }) {
  * @returns The props object is being returned.
  */
 export async function getStaticProps({ params }) {
-  const { source, frontmatter } = await getFileBySlug(params.slug);
+  const { source,descriptionMarkdown, frontmatter } = await getFileBySlug(params.slug);
   return {
-    props: { source, frontmatter },
+    props: { source, frontmatter,descriptionMarkdown },
   };
 }
 /**

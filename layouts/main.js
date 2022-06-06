@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-
-export default function Main({ children, router }) {
+export default function Main({ children }) {
   return (
     <main className="container-none flex flex-col h-screen">
       <Navbar />

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Youtube, { YouTubeProps } from "react-youtube";
+import Youtube from "react-youtube";
 
 export default function Game() {
   const youtubeOpts = {
