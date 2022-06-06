@@ -49,7 +49,7 @@ export const MemberFrame = ({ src, name, role, github, linkdn }) => {
 
 export const ToolFrame = ({ src, role, name, desc }) => {
     return (
-        <div className='rounded-xl shadow-xl w-[468px]'>
+        <div className='rounded-xl shadow-xl w-[468px] '>
             <div className='flex flex-row justify-start h-100 space-x-4 p-4 items-center'>
                 <div className={`${SetRoleColor(role)} text-center rounded-xl p-1`}>
                     <Image src={src} width={50} height={50} objectFit="cover" className="rounded-full" />
