@@ -1,7 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Lottie from "react-lottie";
-export default function ModuleCard({lottieClassName, img, title, description, lottieData }) {
+export default function ModuleCard({
+  lottieClassName,
+  img,
+  title,
+  description,
+  lottieData,
+}) {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -12,8 +18,8 @@ export default function ModuleCard({lottieClassName, img, title, description, lo
   };
   return (
     <div className="flex flex-col items-center justify-center text-center mt-20">
-      <div className=" bg-gray-500 relative">
-        <img class="rounded-t-lg" src={img} alt="" />
+      <div className=" relative">
+        <img class="rounded-3xl" src={img} alt="" />
 
         <div className="flex justify-center items-center w-28 h-28 rounded-3xl bg-dune-ultralightblue absolute -bottom-11 left-1/2 -translate-x-1/2">
           <div className={`w-52 ${lottieClassName}`}>
