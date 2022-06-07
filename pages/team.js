@@ -9,6 +9,7 @@ import PageLayout from "../layouts/page-layout"
 import {IoPeopleOutline, IoNewspaperOutline, IoCode, IoBrush} from "react-icons/io5"
 
 export default function Team({ teammembers }) {
+  const [activeRol, setActiveRole] = useState("Artist")
   return (
     <PageLayout>
       <Image src="/contents/corporative/ch_banner.png" width={350} height={150} />
@@ -42,14 +43,15 @@ export default function Team({ teammembers }) {
         </div>
         <Image className="rounded-2xl" src="/contents/images/art_team.jpeg" width={930} height={725} />
       </div>
+      
 
       {/* Member Grid */}
-      <div className="">
-        <Tabs.Group aria-label="Default tabs" style="underline">
-          <Tabs.Item active={true} icon={IoPeopleOutline}>
+  
+        <Tabs.Group aria-label="Full width tabs" style="fullWidth" >
+          <Tabs.Item active={true} title="Hello" icon={IoPeopleOutline}  className="bg-red-200">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
               {teammembers
-                .filter((teammember) => teammember.role.includes("Programmer"))
+                .filter((teammember) => teammember.role.includes("Producer"))
                 .map((filteredmember) => (
                   <NextLink
                     key={filteredmember.slug}
@@ -68,10 +70,10 @@ export default function Team({ teammembers }) {
                 ))}
             </div>
           </Tabs.Item>
-          <Tabs.Item icon={IoCode}>
+          <Tabs.Item title="Hello" icon={IoCode}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
               {teammembers
-                .filter((teammember) => teammember.role.includes("Designer"))
+                .filter((teammember) => teammember.role.includes("Programmer"))
                 .map((filteredmember) => (
                   <NextLink
                     key={filteredmember.slug}
@@ -93,7 +95,7 @@ export default function Team({ teammembers }) {
           <Tabs.Item icon={IoNewspaperOutline}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
               {teammembers
-                .filter((teammember) => teammember.role.includes("Artist"))
+                .filter((teammember) => teammember.role.includes("Designer"))
                 .map((filteredmember) => (
                   <NextLink
                     key={filteredmember.slug}
@@ -135,7 +137,7 @@ export default function Team({ teammembers }) {
             </div>
           </Tabs.Item>
         </Tabs.Group>
-      </div>
+
     </PageLayout>
   );
 }
