@@ -6,7 +6,7 @@ import Lottie from "react-lottie";
 import menuIconData from "../public/icons/menu.json";
 export default function Navbar(props) {
   const [isActive, setActive] = useState(false);
-  const [menuState, setMenuState] = useState({ isStopped: true,direction:1 });
+  const [menuState, setMenuState] = useState({ isStopped: true, direction: 1 });
   const defaultOptions = {
     loop: false,
     autoplay: false,
@@ -23,24 +23,22 @@ export default function Navbar(props) {
         <div className="cursor-pointer">
           <NextLink href="/">
             <a href="">
-            <Image
-              layout="intrinsic"
-              src="/contents/corporative/logo.png"
-              width="50px"
-              height="50px"
-              onClick={() => setActive(false)}
-            ></Image>
+              <Image
+                layout="intrinsic"
+                src="/contents/corporative/logo.png"
+                width="50px"
+                height="50px"
+                onClick={() => setActive(false)}
+              ></Image>
             </a>
-            
           </NextLink>
         </div>
         <button
           className="text-gray text-2xl mr-2"
           onClick={() => {
             isActive ? setActive(false) : setActive(true);
-          
-            setMenuState({ isStopped: false,direction:isActive?-1:1 })
-              
+
+            setMenuState({ isStopped: false, direction: isActive ? -1 : 1 });
           }}
         >
           <Lottie
@@ -50,7 +48,6 @@ export default function Navbar(props) {
             direction={menuState.direction}
             height={32}
             width={32}
-           
           />
         </button>
       </div>
@@ -62,45 +59,121 @@ export default function Navbar(props) {
         } bg-white text-black fixed right-0 w-1/2 h-screen flex-col justify-center items-center z-10`}
       >
         <div className="mt-8 ">
-          <NextLink href="/" >
-            <a onClick={() => setActive(false)}>Home</a>
+          <NextLink href="/">
+            <a
+              onClick={() => {
+                isActive ? setActive(false) : setActive(true);
+
+                setMenuState({
+                  isStopped: false,
+                  direction: isActive ? -1 : 1,
+                });
+              }}
+            >
+              Home
+            </a>
           </NextLink>
         </div>
         <div className="mt-8 ">
-          <NextLink href="/game" >
-            <a onClick={() => setActive(false)}>Game</a>
+          <NextLink href="/game">
+            <a
+              onClick={() => {
+                isActive ? setActive(false) : setActive(true);
+
+                setMenuState({
+                  isStopped: false,
+                  direction: isActive ? -1 : 1,
+                });
+              }}
+            >
+              Game
+            </a>
           </NextLink>
         </div>
         <div className="mt-8 ">
-          <NextLink href="/engine" >
-            <a onClick={() => setActive(false)}>Engine</a>
+          <NextLink href="/engine">
+            <a
+              onClick={() => {
+                isActive ? setActive(false) : setActive(true);
+
+                setMenuState({
+                  isStopped: false,
+                  direction: isActive ? -1 : 1,
+                });
+              }}
+            >
+              Engine
+            </a>
           </NextLink>
         </div>
         <div className="mt-8 ">
-          <NextLink href="/team" >
-            <a onClick={() => setActive(false)}>Team</a>
+          <NextLink href="/team">
+            <a
+              onClick={() => {
+                isActive ? setActive(false) : setActive(true);
+
+                setMenuState({
+                  isStopped: false,
+                  direction: isActive ? -1 : 1,
+                });
+              }}
+            >
+              Team
+            </a>
           </NextLink>
         </div>
         <div className="mt-8 ">
-          <NextLink href="/production" >
-            <a onClick={() => setActive(false)}>Production</a>
+          <NextLink href="/production">
+            <a
+              onClick={() => {
+                isActive ? setActive(false) : setActive(true);
+
+                setMenuState({
+                  isStopped: false,
+                  direction: isActive ? -1 : 1,
+                });
+              }}
+            >
+              Production
+            </a>
           </NextLink>
         </div>
         <div className="mt-8 ">
-          <NextLink href="/gallery" >
-            <a onClick={() => setActive(false)}>Gallery</a>
+          <NextLink href="/gallery">
+            <a
+              onClick={() => {
+                isActive ? setActive(false) : setActive(true);
+
+                setMenuState({
+                  isStopped: false,
+                  direction: isActive ? -1 : 1,
+                });
+              }}
+            >
+              Gallery
+            </a>
           </NextLink>
         </div>
         <div className="mt-8 ">
-          <NextLink href="/postmortem" >
-            <a onClick={() => setActive(false)}>Post Mortem</a>
+          <NextLink href="/postmortem">
+            <a
+              onClick={() => {
+                isActive ? setActive(false) : setActive(true);
+
+                setMenuState({
+                  isStopped: false,
+                  direction: isActive ? -1 : 1,
+                });
+              }}
+            >
+              Post Mortem
+            </a>
           </NextLink>
         </div>
         <div className="mt-8 ">
           <NextLink
             href="https://github.com/Chamfer-Studios/Dune-Special-Spice-Ops"
             target="_blank"
-            
           >
             <a
               className="flex flex-row items-center"
