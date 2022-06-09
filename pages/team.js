@@ -99,7 +99,7 @@ export default function Team({ teammembers }) {
       
 
       {/* Member Grid */}
-      <div className="">
+    
         <Tabs.Group aria-label="Default tabs" style="underline">
             <Tabs.Item active={true} icon={IoPeopleOutline}>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
@@ -190,6 +190,7 @@ export default function Team({ teammembers }) {
                     </NextLink>
                   ))}
               </div>
+              
             </Tabs.Item>
         </Tabs.Group>
 
