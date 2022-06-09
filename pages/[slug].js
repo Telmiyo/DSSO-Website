@@ -1,12 +1,30 @@
+import React, { useState } from "react";
 import { MDXRemote } from "next-mdx-remote";
 import { getFileBySlug, getFiles } from "../utils/mdx";
 import Image from "next/image";
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { RiSpotifyLine } from "react-icons/ri";
 import Link from "next/link";
 import MDXComponents from "../components/mdx-components";
-
+import Lottie from "react-lottie";
+import {
+  githubIconData,
+  linkedinIconData,
+  twitterIconData,
+  youtubeIconData,
+} from "../components/lottie-references";
 //the source is the actual content of the mdx file and teh frontmatter is the metadata but we inserted also the slug
-export default function TeamMember({ source,descriptionMarkdown, frontmatter }) {
+export default function TeamMember({
+  source,
+  descriptionMarkdown,
+  frontmatter,
+}) {
+  const [animateGithub, setAnimateGithub] = useState(true);
+  const [animateLinkedin, setAnimateLinkedin] = useState(true);
+  const [animateYoutube, setAnimateYoutube] = useState(true);
+  const [animateTwitter, setAnimateTwitter] = useState(true);
+  const existsYoutube = frontmatter.youtube === undefined;
+  const existsTwitter = frontmatter.twitter === undefined;
+  const existsSpotify = frontmatter.spotify === undefined;
   return (
     <div className="">
       {/* Profile */}
@@ -20,22 +38,110 @@ export default function TeamMember({ source,descriptionMarkdown, frontmatter }) 
         ></Image>
         <h1 className="text-4xl font-semibold">{frontmatter.name}</h1>
         <div className="prose prose-p:text-justify prose-headings:text-dune-bluefremen">
-          {<MDXRemote {...descriptionMarkdown} components={MDXComponents} lazy />}
+          {
+            <MDXRemote
+              {...descriptionMarkdown}
+              components={MDXComponents}
+              lazy
+            />
+          }
         </div>
-        <div className="flex justify-center space-x-5">
+        <div className="flex justify-center space-x-5 items-baseline">
           <Link href={`${frontmatter.github}`}>
-            <a>
-              <IoLogoGithub size={32} />
+            <a
+              target="_blank"
+              onMouseEnter={() => setAnimateGithub(false)}
+              onMouseLeave={() => setAnimateGithub(true)}
+            >
+              <Lottie
+                options={{
+                  loop: false,
+                  autoplay: false,
+                  animationData: githubIconData,
+                  rendererSettings: {
+                    preserveAspectRation: "xMidYMid slice",
+                  },
+                }}
+                width={32}
+                isStopped={animateGithub}
+              />
             </a>
           </Link>
           <Link href={`${frontmatter.linkedin}`} passHref>
-            <a>
-              <IoLogoLinkedin size={32} className="text-blue-500" />
+            <a
+              target="_blank"
+              onMouseEnter={() => setAnimateLinkedin(false)}
+              onMouseLeave={() => setAnimateLinkedin(true)}
+            >
+              <Lottie
+                options={{
+                  loop: false,
+                  autoplay: false,
+                  animationData: linkedinIconData,
+                  rendererSettings: {
+                    preserveAspectRation: "xMidYMid slice",
+                  },
+                }}
+                width={32}
+                isStopped={animateLinkedin}
+              />
+            </a>
+          </Link>
+
+          <Link href={`${frontmatter.youtube}`} passHref>
+            <a
+              target="_blank"
+              onMouseEnter={() => setAnimateYoutube(false)}
+              onMouseLeave={() => setAnimateYoutube(true)}
+              className={`${existsYoutube ? "hidden" : "flex"} items-end`}
+            >
+              <Lottie
+                options={{
+                  loop: false,
+                  autoplay: false,
+                  animationData: youtubeIconData,
+                  rendererSettings: {
+                    preserveAspectRation: "xMidYMid slice",
+                  },
+                }}
+                width={32}
+                isStopped={animateYoutube}
+              />
+            </a>
+          </Link>
+
+          <Link href={`${frontmatter.twitter}`} passHref>
+            <a
+              target="_blank"
+              onMouseEnter={() => setAnimateTwitter(false)}
+              onMouseLeave={() => setAnimateTwitter(true)}
+              className={`${existsTwitter ? "hidden" : "flex"}`}
+            >
+              <Lottie
+                options={{
+                  loop: false,
+                  autoplay: false,
+                  animationData: twitterIconData,
+                  rendererSettings: {
+                    preserveAspectRation: "xMidYMid slice",
+                  },
+                }}
+                width={32}
+                isStopped={animateTwitter}
+              />
+            </a>
+          </Link>
+          <Link href={`${frontmatter.spotify}`} passHref>
+            <a
+              target="_blank"
+              className={`${existsSpotify ? "hidden" : "flex"}`}
+            >
+              <RiSpotifyLine size={27} />
             </a>
           </Link>
         </div>
       </div>
-      
+
       {/* Markdown */}
       <div className="flex justify-center items-center mt-5">
         <div className="prose max-w-lg prose-p:text-justify prose-headings:text-dune-bluefremen">
@@ -50,9 +156,11 @@ export default function TeamMember({ source,descriptionMarkdown, frontmatter }) 
  * @returns The props object is being returned.
  */
 export async function getStaticProps({ params }) {
-  const { source,descriptionMarkdown, frontmatter } = await getFileBySlug(params.slug);
+  const { source, descriptionMarkdown, frontmatter } = await getFileBySlug(
+    params.slug
+  );
   return {
-    props: { source, frontmatter,descriptionMarkdown },
+    props: { source, frontmatter, descriptionMarkdown },
   };
 }
 /**

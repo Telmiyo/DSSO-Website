@@ -37,4 +37,16 @@ export const resourceManagerData = resourceManagerJson;
 // SKYBOX JSON
 import skyboxJson from "../public/icons/skybox.json";
 export const skyboxData = skyboxJson;
+//YOUTUBE ICON
+import youtubeIconJson from "../public/icons/youtube.json"
+export const youtubeIconData = youtubeIconJson;
+//GITHUB ICON
+import githubIconJson from "../public/icons/github.json"
+export const githubIconData = githubIconJson;
+//LINKEDIN ICON
+import linkedinIconJson from "../public/icons/linkedin.json"
+export const linkedinIconData = linkedinIconJson;
+//TWITTER ICON
+import twitterIconJson from "../public/icons/twitter.json"
+export const twitterIconData = twitterIconJson;
 
