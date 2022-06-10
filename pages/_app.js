@@ -6,9 +6,17 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <title>DSSO - Home</title>
+        <title>Dune Special Spice Ops</title>
+        <meta
+          name="description"
+          content="Dune is a videogame developed for Project III subject @ CITM"
+        />
+        <meta name="author" content="Alejandro Ávila & Telmo Beroiz" />
+        <meta name="copyright" content="Alejandro Ávila & Telmo Beroiz" />
+        <meta name="robots" content="index, follow" />
+        <meta name="rating" content="safe for kids" />
       </Head>
       <Main>
         <Component {...pageProps} />
