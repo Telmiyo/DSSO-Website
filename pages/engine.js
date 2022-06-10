@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import FeatureBox from "../components/feature-box";
 import ModuleCard from "../components/module-card";
@@ -16,9 +16,13 @@ import {
   skyboxData,
   navigateData,
 } from "../components/lottie-references";
+import dynamic from "next/dynamic";
+
+import Spline from "@splinetool/react-spline";
+
 export default function Engine() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col mx-5  md:w-1/2 md:mx-0 items-center">
       <div className=" flex flex-col items-center justify-center space-y-3">
         <h1 className="text-4xl text-dune-orangespicy font-semibold">
           Ko-Fi Engine
@@ -28,14 +32,18 @@ export default function Engine() {
           Spice Ops. It's development started 3 months earlier and has been
           improving in parallel to the development of the game.
         </p>
-        <Image
+
+        {/* <Image
           src="/contents/images/engine_isometric.png"
           width={700}
           height={546.478}
           quality={100}
-        />
+        /> */}
       </div>
-      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-center md:space-x-28  ">
+      <div className="w-full h-[546.478px]">
+        <Spline scene="https://draft.spline.design/crlIiC8NdiQNvHRK/scene.splinecode" />
+      </div>
+      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between md:my-16">
         <FeatureBox
           width={270}
           height={160}
@@ -65,12 +73,12 @@ export default function Engine() {
           body="You can add a navmesh to create your own AIs."
         />
       </div>
-      <div className="grid grid-cols-2 my-10 mx-20 gap-28">
+      <div className="grid grid-cols-2 my-10  gap-14">
         <ModuleCard
           img="/contents/images/module_animation.png"
           lottieData={moduleAnimationData}
           title="Animation"
-          description="The animation module accepts fbx with animations inside them. 
+          description="The animation module accepts fbx with animations inside them.
           You can create and delete your custom clips to take just a segment of the animation
            and use the clips in the scripting module.
          "
