@@ -19,10 +19,11 @@ import {
 import dynamic from "next/dynamic";
 
 import Spline from "@splinetool/react-spline";
+import PageLayout from "../layouts/page-layout";
 
 export default function Engine() {
   return (
-    <div className="flex flex-col mx-5  md:w-1/2 md:mx-0 items-center">
+    <PageLayout>
       <div className=" flex flex-col items-center justify-center space-y-3">
         <h1 className="text-4xl text-dune-orangespicy font-semibold">
           Ko-Fi Engine
@@ -41,7 +42,7 @@ export default function Engine() {
         /> */}
       </div>
       <div className="w-full h-[546.478px]">
-        <Spline scene="https://draft.spline.design/crlIiC8NdiQNvHRK/scene.splinecode" />
+        <Spline scene="https://draft.spline.design/JfJqmu3CSrBnua1k/scene.splinecode" />
       </div>
       <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between md:my-16">
         <FeatureBox
@@ -129,6 +130,6 @@ export default function Engine() {
           description="Ko-Fi engine supports Lua as its scriping language due to its speed, ease of use and popularity. We also support Javascript with basic functionality. With the scriping module you can access any property of the game objects such as its transform, its components and the component properties. You can access some internal features of the engine such as the time or the settings."
         />
       </div>
-    </div>
+    </PageLayout>
   );
 }

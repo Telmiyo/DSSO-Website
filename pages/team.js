@@ -16,7 +16,7 @@ import {
 export default function Team({ teammembers }) {
   const [activeRol, setActiveRole] = useState("Artist")
   return (
-    <PageLayout>
+    <PageLayout className="items-center">
       <Image
         src="/contents/corporative/ch_banner.png"
         width={350}

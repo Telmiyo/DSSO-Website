@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Production() {
   return (
-    <div className="flex flex-col mx-5 md:w-1/2 md:mx-0">
+    <PageLayout>
       <h1 className="text-4xl tracking-wider text-center ">PRODUCTION</h1>
       <h2 className="text-xl text-dune-orangespicy font-bold text-center">Goal</h2>
       <p className="text-md text-gray-500 text-center my-8">Chamfer Studios is a group of 25 university students that share a common goal of producing their first 3D RTT video game for the subject Project III.</p>
@@ -363,6 +363,6 @@ export default function Production() {
       </div>
 
 
-    </div>
+    </PageLayout>
   )
 }

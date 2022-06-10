@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Youtube from "react-youtube";
+import PageLayout from "../layouts/page-layout";
 
 export default function Game() {
   const youtubeOpts = {
@@ -11,8 +12,8 @@ export default function Game() {
     },
   };
   return (
-    <div className="flex flex-col items-center">
-      <div className=" flex flex-col items-center justify-center space-y-3">
+    <PageLayout className="items-center">
+      <div className="flex flex-col items-center justify-center space-y-3">
         <Image
           src="/contents/corporative/dune_logo.png"
           width={533}
@@ -27,6 +28,6 @@ export default function Game() {
       </div>
 
       <Youtube videoId="vW-PHNZ-Xww" opts={youtubeOpts} className="mt-5" />
-    </div>
+    </PageLayout>
   );
 }
