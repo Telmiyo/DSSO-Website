@@ -2,7 +2,7 @@ import React from 'react'
 import PageLayout from "../layouts/page-layout"
 export default function Postmortem() {
   return (
-    <div className="flex flex-col  w-1/2">
+    <PageLayout>
       {/* Tittle & Description */}
       <h1 className="text-4xl tracking-wider text-center ">POST MORTEM</h1>
       <h2 className="text-xl text-dune-orangespicy font-bold text-center">Lorem Ipsum</h2>
@@ -32,7 +32,7 @@ export default function Postmortem() {
       </p>
 
 
-    </div>
+    </PageLayout>
 
   )
 }

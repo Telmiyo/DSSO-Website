@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import FeatureBox from "../components/feature-box";
 import ModuleCard from "../components/module-card";
@@ -16,9 +16,14 @@ import {
   skyboxData,
   navigateData,
 } from "../components/lottie-references";
+import dynamic from "next/dynamic";
+
+import Spline from "@splinetool/react-spline";
+import PageLayout from "../layouts/page-layout";
+
 export default function Engine() {
   return (
-    <div className="flex flex-col items-center">
+    <PageLayout>
       <div className=" flex flex-col items-center justify-center space-y-3">
         <h1 className="text-4xl text-dune-orangespicy font-semibold">
           Ko-Fi Engine
@@ -28,14 +33,18 @@ export default function Engine() {
           Spice Ops. It's development started 3 months earlier and has been
           improving in parallel to the development of the game.
         </p>
-        <Image
+
+        {/* <Image
           src="/contents/images/engine_isometric.png"
           width={700}
           height={546.478}
           quality={100}
-        />
+        /> */}
       </div>
-      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-center md:space-x-28  ">
+      <div className="w-full h-[546.478px]">
+        <Spline scene="https://draft.spline.design/JfJqmu3CSrBnua1k/scene.splinecode" />
+      </div>
+      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between md:my-16">
         <FeatureBox
           width={270}
           height={160}
@@ -65,12 +74,12 @@ export default function Engine() {
           body="You can add a navmesh to create your own AIs."
         />
       </div>
-      <div className="grid grid-cols-2 my-10 mx-20 gap-28">
+      <div className="grid grid-cols-2 my-10  gap-14">
         <ModuleCard
           img="/contents/images/module_animation.png"
           lottieData={moduleAnimationData}
           title="Animation"
-          description="The animation module accepts fbx with animations inside them. 
+          description="The animation module accepts fbx with animations inside them.
           You can create and delete your custom clips to take just a segment of the animation
            and use the clips in the scripting module.
          "
@@ -121,6 +130,6 @@ export default function Engine() {
           description="Ko-Fi engine supports Lua as its scriping language due to its speed, ease of use and popularity. We also support Javascript with basic functionality. With the scriping module you can access any property of the game objects such as its transform, its components and the component properties. You can access some internal features of the engine such as the time or the settings."
         />
       </div>
-    </div>
+    </PageLayout>
   );
 }

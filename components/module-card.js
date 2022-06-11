@@ -19,7 +19,7 @@ export default function ModuleCard({
   return (
     <div className="flex flex-col items-center justify-center text-center mt-20">
       <div className=" relative">
-        <img class="rounded-3xl" src={img} alt="" />
+        <img className="rounded-3xl" src={img} alt="" />
 
         <div className="flex shadow-lg shadow-dune-lightblue/60 justify-center items-center w-28 h-28 rounded-3xl bg-dune-ultralightblue absolute -bottom-11 left-1/2 -translate-x-1/2">
           <div className={`w-52 ${lottieClassName}`}>

@@ -10,6 +10,8 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@splinetool/react-spline": "^2.2.0",
+    "@splinetool/runtime": "^0.9.67",
     "flowbite": "^1.4.7",
     "flowbite-react": "0.0.25",
     "gray-matter": "^4.0.3",

@@ -18,8 +18,12 @@ export default function Team({ teammembers }) {
 
   const prod = ["Producer", "Lead Programmer"];
   return (
-    <PageLayout>
-      <Image src="/contents/corporative/ch_banner.png" width={350} height={150} />
+    <PageLayout className="items-center">
+      <Image
+        src="/contents/corporative/ch_banner.png"
+        width={350}
+        height={150}
+      />
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it

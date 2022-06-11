@@ -12,6 +12,7 @@ import {
   twitterIconData,
   youtubeIconData,
 } from "../components/lottie-references";
+import PageLayout from "../layouts/page-layout";
 //the source is the actual content of the mdx file and teh frontmatter is the metadata but we inserted also the slug
 export default function TeamMember({
   source,
@@ -26,7 +27,7 @@ export default function TeamMember({
   const existsTwitter = frontmatter.twitter === undefined;
   const existsSpotify = frontmatter.spotify === undefined;
   return (
-    <div className="">
+    <PageLayout className="items-center">
       {/* Profile */}
       <div className="flex flex-col items-center justify-center space-y-5 mt-5">
         <Image
@@ -144,11 +145,11 @@ export default function TeamMember({
 
       {/* Markdown */}
       <div className="flex justify-center items-center mt-5">
-        <div className="prose max-w-lg prose-p:text-justify prose-headings:text-dune-bluefremen">
+        <div className="prose  prose-p:text-justify prose-headings:text-dune-bluefremen">
           {<MDXRemote {...source} components={MDXComponents} lazy />}
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 }
 /**

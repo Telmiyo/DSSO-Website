@@ -1,6 +1,6 @@
-export default function PageLayout({ children }) {
+export default function PageLayout({ children,className }) {
     return (
-        <div className="flex flex-col items-center justify-center space-y-4 w-1/2">
+        <div className={` flex flex-col mx-5 md:container md:mx-0 ${className}`}>
             {children}
 
         </div>
