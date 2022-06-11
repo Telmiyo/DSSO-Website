@@ -5,7 +5,7 @@ export default function JobCard({ link, img, title, subtitle, desc }) {
       <a
         target="_blank"
         href={link}
-        class="no-underline flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-2xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="no-underline flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-2xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
       >
         <div class="flex flex-col justify-between p-4 leading-normal">
           <div className="flex items-center">
