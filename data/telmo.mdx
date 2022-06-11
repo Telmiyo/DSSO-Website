@@ -19,6 +19,11 @@ with them in a way of learning and sharing"
        I'd try to do it, as I did when I was 12 years old and started configuring my first minecraft 
        plugins to be able to make online servers. From there, I became interested in the code and I followed 
        small unity tutorials; it was clear to me that video game programming was what I wanted to study. 
+       In 2018 I entered a course of DigiPen Institute of Technology Europe - Bilbao where I coursed:
+      
+      - Video Game Programming Level 1: 2D
+      - Video Game Programming Level 2: 2D 
+       
        After many years and having begun my studies, I became interested in web development, marketing, 
        and product sales, which led me down another path. Nowadays, I have it clear that I am passionate about 
        video game programming, but I also like to cover more areas and learn from them.
@@ -36,8 +41,7 @@ with them in a way of learning and sharing"
         - JavaScript & React, NextJS
         - Html & Css
         - Dart & Flutter
-      
-      <br/>
+
       ## Experience
 
         Here, you can add your professional experience related to uni, video games, art, design,
@@ -47,7 +51,7 @@ with them in a way of learning and sharing"
         Example template:
         <JobCard link="https://andradebalear.es/" img="/contents/screenshots/telmo_abea.png" title="Web Design" subtitle="ABEA" desc="Worked on Abea's website. Responsible for designing and renewing the website using Wordpress & Elementor."/>
         <JobCard link="https://kekebisuteria.com/" img="/contents/screenshots/telmo_keke.png" title="Web Design & Management" subtitle="KEKE" desc="Started a family Business, an ecommerce about jewelry called KEKE."/>
-  
+
   </Tabs.Item>
   <Tabs.Item title="Contribution">
     # Contribution
@@ -57,52 +61,78 @@ with them in a way of learning and sharing"
          in my field, and seeing the results to which I have contributed has been gratifying.
 
       ## Main Tasks
+       ### <u>Camera Rework</u>
+          The camera is a critical component in a game engine, and the camera code we had in the engine,
+          both the engine camera and the camera component, was causing us a lot of problems. As a result,
+          I took it upon myself to reimplement and improve the entire camera. It was a somewhat complicated
+          process because many sections relied on the old camera's code, which I had to adapt. The result was
+          great, it fixed lot of problems we had on the engine like guizmo bugs, bugs when drawing camera frustum, etc... and we could add new features with [Alejandro Avila's](/alejandro) help like orthographic camera and skybox.
+       ### <u>Skybox</u>
+         In collaboration with [Alejandro Avila's](/alejandro), we created the scene's skybox using [Cubemaps](https://learnopengl.com/Advanced-OpenGL/Cubemaps).
+         We finished it in less time than expected and had a lot of fun doing it.
         ### <u>Guizmo</u>
-          I put the gizmo of the objects on stage into action. It was a quite annoying process because it 
+          I put the gizmo of the objects on stage into action. It was a quite annoying process because it
           had to be tailored to the limitations of the transform component.
         ### <u>Mouse Picking</u>
           I was in charge of implementing mouse picking of objects in the scene to make it easier to interact with them.
-        ### <u>Camera Rework</u>
-          The camera is a critical component in a game engine, and the camera code we had in the engine, 
-          both the engine camera and the camera component, was causing us a lot of problems. As a result, 
-          I took it upon myself to reimplement and improve the entire camera. It was a somewhat complicated 
-          process because many sections relied on the old camera's code, which I had to adapt. The result was
-          great and we could add new features with [Alejandro Avila's](/alejandro) help.
         ### <u>Dialogues</u>
-          Bla Bla Bla. Add as many as you need.
+         I was in charge of developing a dialog system using lua scripting with [David Montufo's](/david) support. It was a time-sensitive task, and completing
+         it on time was challenging. The result was great; the dialouges were loaded from a json file and could be triggered by objects in the scene.
         ### <u>Engine Improvements </u>
-          Bla Bla Bla. Add as many as you need.
+          For a while, [Alejandro Avila](/alejandro), [Andres Sanchez](/andres) and I were in charge of stabilizing and improving the graphics engine. It was a process of fixing bugs and adding new features to improve
+           the user experience when using it, such as organizing objects inside the hierarchy, correcting the hierarchy's selector, adjustments to the inspector...
         ### <u>Web Design & Developement </u>
-          Bla Bla Bla. Add as many as you need.
+          We developed this website with Alex Avila using react, next js, and talwind. The app has been designed using Figma. Overall, however, I was in charge of the Team,
+           Gallery, Production, and Landing pages.
 
       ## Secondary Tasks
+      ### <u>Clean Up Reorganized</u>
+        With [Sergi Colomer's](/sergi) support, we reorganized the entire application's clean-up procedure in terms of memory optimization and reduction.
+        ### <u>Runtine Camera</u>
+        I was in charge of developing the selection of the camera to be displayed at runtime, which allowed the developer to select the main camera in the scene and be able switch between cameras.
         ### <u> Hierarchy Imporvements</u>
-         Alex and I improved the object hierarchy in the scene so that you could reorganize them by dragging them. I also contributed by adding an alert box and implementation to enable / disable an the childrens of an object. 
-        ### <u>Camera Movement</u>
-          These tasks are less important. Remember, after a paragraph put <br/> to make an
-          enter.
+        [Alejandro Avila](/alejandro) and I improved the object hierarchy in the scene so that you could reorganize them by dragging them. I also contributed by adding an alert box and implementation to enable / disable an the childrens of an object.
+        ### <u>Camera Rotation Script</u>
+         I coded the camera rotation script for the game. The script was rewritten again due to design changes later on.
         ### <u>Space Partitioning</u>
-          These tasks are less important. Remember, after a paragraph put <br/> to make an
-          enter.
-        ### <u>Space Partitioning</u>
-          These tasks are less important. Remember, after a paragraph put <br/> to make an
-          enter.
+        I was in charge of implementing the space partitioning of the objects in the scene.
+
   </Tabs.Item>
   <Tabs.Item title="Projects">
      # Projects
         In this section you have the opportunity to showcase some of your projects.
-        You can choose maximum 3. It can be uni related or not. 
+        You can choose maximum 3. It can be uni related or not.
+  ## Citm To The Moon
+       [(Repo)](https://github.com/OCA99/Physics-Apolo) We were asked to develop a space game emulating the Apollo Mision on "Physics II": The objective is to launch a spaceship from earth, 
+        land safely on the moon and return to the earth without any problem. We decided to give it our little touch so we added some extra features!
+        <img src={"/contents/screenshots/telmo_citm_to_the_moon.png"} alt="citm-to-the-moon" />
+        <img src={"/contents/screenshots/telmo_mission_apollo.gif"} alt="mission-apollo-citm" />
+       ## Citm For Speed - No Limits
+       [(Repo)](https://github.com/OCA99/PhysicsII-RaceCar) We were asked to develop a 3D Racing car game using OpenGl, Bullet and SDL Libraries on "Physics II" : The objective is to launch a spaceship from earth, 
+        land safely on the moon and return to the earth without any problem. We decided to give it our little touch so we added some extra features!
+        <img src={"/contents/screenshots/telmo_citm_for_speed.png"} alt="citm-for-speed" />
 
-          ## Title 1
-            Description of what the project is. Im going to put an example below
-            on how to put a youtube link.
+      ## UnderEvil
+       [UnderEvil](https://github.com/AitorAlvarez17/Project2-RPG) is an RPG game created by FM Studios, a group of 7 students for our
+        university subject called Project II (CITM UPC). In this class we had the chance
+        to make our own engine and make a 2D RPG playable game for PC.
+        <Youtube videoId="Jcrc76qN4ps" opts={{height: "390", width: "640"}} className="mt-5" />
+      ## Pengo
+      [Pengo](https://github.com/OCA99/PenguBruh-Pengo) was the process of creating a more accurate replica of the Pengo Arcade Game. is wThork was completed for the university course "Project 1."
+        <Youtube videoId="vDf2kOUu2gk" opts={{height: "390", width: "640"}} className="mt-5" />
+      ## OnlyHeroes
+        <img src={"/contents/screenshots/telmo_oh.png"} alt="only-heroes" width={150} height={150} className="my-8"/>
+        [OnlyHeroes](https://github.com/Telmiyo/OnlyHeroes) is a simple and fun Hunger Games plugin for Minecraft that is almost finished. It is inspired on the big and loved server MCSG which was known by its famous 
+        and competitive Hunger Games stand by the old pvp style. Unfortunatelly, this server closed some years ago. So here OnlyHeroes comes, to let new 
+        servers introduce this plugin and have an oportunity to revive this great community.
 
-            <Youtube videoId="KbKdkGYgEsI" opts={{height: "390", width: "640"}} className="mt-5" />
+      ## Own Website
+       I Developed a [personal website](https://telmoberoiz.xyz/) to practice React, Nextjs & ChakraUI
+        <img src={"/contents/screenshots/telmo_portfolio.png"} alt="telmo-website" />
 
-          ## Title 2
-            Remember, if you need widgets or anything, just ask.
+      ## Sexenni's Website
+      [(Repo)](https://sexenni.lol/) This minimalist website is about the musical band formed by a group young Catalans from Lleida. It is the first iteration of the web. It is still in development and it is for practice.
+        <img src={"/contents/screenshots/telmo_sexenni.png"} alt="sexenni-website" />
 
-          ## Title 3
-            Hello. 
   </Tabs.Item>
 </Tabs.Group>

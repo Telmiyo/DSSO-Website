@@ -14,7 +14,7 @@ import {
 } from "react-icons/io5";
 
 export default function Team({ teammembers }) {
-  const [activeRol, setActiveRol] = useState("Programmer");
+  const [activeRol, setActiveRol] = useState("Producer");
 
   const prod = ["Producer", "Lead Programmer"];
   return (
@@ -99,31 +99,54 @@ export default function Team({ teammembers }) {
         />
       </div>
 
-
       {/* Member Grid */}
       <div className="flex w-full">
-
-        <button onClick={() => setActiveRol("Producer")} className={`w-full flex justify-center ${activeRol === "Producer" ? " border-b-2 border-roles-producer" : "text-gray-500"}`}>
-          <IoPeopleOutline size={30} className="place-self-center"/>
+        <button
+          onClick={() => setActiveRol("Producer")}
+          className={`w-full flex justify-center ${
+            activeRol === "Producer"
+              ? " border-b-2 border-roles-producer"
+              : "text-gray-500"
+          }`}
+        >
+          <IoPeopleOutline size={30} className="place-self-center" />
         </button>
 
-        <button onClick={() => setActiveRol("Programmer")} className={`w-full flex justify-center ${activeRol === "Programmer" ? " border-b-2 border-roles-programmer" : "text-gray-500"}`}>
+        <button
+          onClick={() => setActiveRol("Programmer")}
+          className={`w-full flex justify-center ${
+            activeRol === "Programmer"
+              ? " border-b-2 border-roles-programmer"
+              : "text-gray-500"
+          }`}
+        >
           <IoCode size={30} />
         </button>
-        <button onClick={() => setActiveRol("Designer")} className={`w-full flex justify-center ${activeRol === "Designer" ? " border-b-2 border-roles-designer" : "text-gray-500"}`}>
+        <button
+          onClick={() => setActiveRol("Designer")}
+          className={`w-full flex justify-center ${
+            activeRol === "Designer"
+              ? " border-b-2 border-roles-designer"
+              : "text-gray-500"
+          }`}
+        >
           <IoNewspaperOutline size={30} />
         </button>
-        <button onClick={() => setActiveRol("Artist")} className={`w-full flex justify-center ${activeRol === "Artist" ? " border-b-2 border-roles-artist" : "text-gray-500"}`}>
+        <button
+          onClick={() => setActiveRol("Artist")}
+          className={`w-full flex justify-center ${
+            activeRol === "Artist"
+              ? " border-b-2 border-roles-artist"
+              : "text-gray-500"
+          }`}
+        >
           <IoBrush size={30} />
         </button>
       </div>
 
-
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
         {teammembers
-          .filter((teammember) =>
-            teammember.role.includes(activeRol)
-          )
+          .filter((teammember) => teammember.role.includes(activeRol))
           .map((filteredmember) => (
             <NextLink
               key={filteredmember.slug}
@@ -141,7 +164,6 @@ export default function Team({ teammembers }) {
             </NextLink>
           ))}
       </div>
-
     </PageLayout>
   );
 }
