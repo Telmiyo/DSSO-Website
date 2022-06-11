@@ -101,19 +101,19 @@ export default function Team({ teammembers }) {
 
 
       {/* Member Grid */}
-      <div className="flex flex-row  w-full">
+      <div className="flex w-full">
 
-        <button onClick={() => setActiveRol("Producer")} className={activeRol === prod ? "w-full border-b-2 border-roles-producer" : "w-full"}>
+        <button onClick={() => setActiveRol("Producer")} className={`w-full flex justify-center ${activeRol === "Producer" ? " border-b-2 border-roles-producer" : "text-gray-500"}`}>
           <IoPeopleOutline size={30} className="place-self-center"/>
         </button>
 
-        <button onClick={() => setActiveRol("Programmer")} className={activeRol === "Programmer" ? "w-full border-b-2 border-roles-programmer" : "w-full"}>
+        <button onClick={() => setActiveRol("Programmer")} className={`w-full flex justify-center ${activeRol === "Programmer" ? " border-b-2 border-roles-programmer" : "text-gray-500"}`}>
           <IoCode size={30} />
         </button>
-        <button onClick={() => setActiveRol("Designer")} className={activeRol === "Designer" ? "w-full border-b-2 border-roles-designer" : "w-full"}>
+        <button onClick={() => setActiveRol("Designer")} className={`w-full flex justify-center ${activeRol === "Designer" ? " border-b-2 border-roles-designer" : "text-gray-500"}`}>
           <IoNewspaperOutline size={30} />
         </button>
-        <button onClick={() => setActiveRol("Artist")} className={activeRol === "Artist" ? "w-full border-b-2 border-roles-artist" : "w-full"}>
+        <button onClick={() => setActiveRol("Artist")} className={`w-full flex justify-center ${activeRol === "Artist" ? " border-b-2 border-roles-artist" : "text-gray-500"}`}>
           <IoBrush size={30} />
         </button>
       </div>
