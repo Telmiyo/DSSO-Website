@@ -113,7 +113,7 @@ export default function NewNavbar() {
               <Image
                 layout="intrinsic"
                 src="/contents/corporative/logo_outline.png"
-                width="52.980132450331x"
+                width="52.980132450331px"
                 height="50px"
                 onClick={() => {
                   cycleOpen(false);
