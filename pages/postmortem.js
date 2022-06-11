@@ -79,6 +79,12 @@ export default function Postmortem() {
       so he knew from what base we were starting off and what it meant to make basically a whole engine and a game in four months. He was very understanding 
       and always supported the decisions we were making. We started dividing the team in two sections, one in charge of the motor and the other of the gameplay. We couldn’t let all the gameplay towards the very end or it would be disastrous.
       </p>
+      <p className="text-lg text-gray-500 mt-2">
+      As for design, we started realizing that we did not have a stable engine where we could playtest, so we took the right decision to imitate the game 
+      into Unity. Two designers took the responsibility of programming it, and we got to say that it helped a lot to have this platform where we could start 
+      visualizing what our game looked like. 
+
+      </p>
 
     </PageLayout>
 
