@@ -10,7 +10,7 @@ import {
   IoPeopleOutline,
   IoNewspaperOutline,
   IoCode,
-  IoBrush,
+  IoBrushOutline,
 } from "react-icons/io5";
 
 export default function Team({ teammembers }) {
@@ -38,7 +38,7 @@ export default function Team({ teammembers }) {
       <div className="flex flex-row my-16">
         <div className="flex flex-col justify-center mr-48">
           <p className="text-sm text-dune-orangespicy font-bold">
-           <IoCode size={50} className="size-8"/>
+           <IoCode size={32} className="size-8"/>
           </p>
           <h2 className="text-4xl text-dune-lightblue font-semibold">
             PROGRAMMING TEAM
@@ -65,9 +65,9 @@ export default function Team({ teammembers }) {
           width={2048}
           height={1536}
         />
-        <div className="flex flex-col justify-center mr-48">
-          <p className="text-sm text-right text-dune-orangespicy font-bold">
-            <IoNewspaperOutline size={50} className=""/>
+        <div className="flex flex-col justify-center mr-48 items-end">
+          <p className="text-sm text-right text-dune-orangespicy font-bold ">
+            <IoNewspaperOutline size={32} className=""/>
           </p>
           <h2 className="text-4xl text-right text-dune-lightblue font-semibold">
             Design Team
@@ -82,7 +82,7 @@ export default function Team({ teammembers }) {
       <div className="flex flex-row pr-8">
         <div className="flex flex-col justify-center">
           <p className="text-sm text-dune-orangespicy font-bold">
-           <IoBrush size={50} /> 
+           <IoBrushOutline size={32} /> 
           </p>
           <h2 className="text-4xl text-dune-lightblue font-semibold">
             ART TEAM
@@ -142,7 +142,7 @@ export default function Team({ teammembers }) {
               : "text-gray-500"
           }`}
         >
-          <IoBrush size={30} />
+          <IoBrushOutline size={30} />
         </button>
       </div>
 

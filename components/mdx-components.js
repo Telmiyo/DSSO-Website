@@ -6,6 +6,7 @@ import Lottie from "react-lottie";
 import Image from 'next/image'
 import SoundCloudCard from './soundcloud'
 import SketchfabCard from './sketchfab'
+import GifEmbed from './gif-embed'
 export default {
    Tabs,
    Youtube,
@@ -14,6 +15,7 @@ export default {
    Lottie,
    Image,
    SoundCloudCard,
-   SketchfabCard
+   SketchfabCard,
+   GifEmbed
 
 }

@@ -16,7 +16,7 @@ export default function Navbar(props) {
     },
   };
   return (
-    <nav {...props}>
+    <nav {...props} className="z-30">
       {/* Navbar */}
       <div className="bg-transparent flex w-full justify-between py-2 items-center shadow-md">
         <IoMenuOutline className=" text-white text-2xl invisible ml-2" />
@@ -56,7 +56,7 @@ export default function Navbar(props) {
       <div
         className={`${
           isActive ? "flex" : "hidden"
-        } bg-white text-black fixed right-0 w-1/2 h-screen flex-col justify-center items-center z-10`}
+        } bg-white text-black fixed top-0 right-0 w-1/2 h-screen flex-col justify-center items-center `}
       >
         <div className="mt-8 ">
           <NextLink href="/">

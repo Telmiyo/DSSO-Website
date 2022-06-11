@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { MDXRemote } from "next-mdx-remote";
 import { getFileBySlug, getFiles } from "../utils/mdx";
 import Image from "next/image";
-import { RiSpotifyLine } from "react-icons/ri";
+import { RiSpotifyLine,RiVimeoLine } from "react-icons/ri";
+import { FaArtstation } from "react-icons/fa";
 import Link from "next/link";
 import MDXComponents from "../components/mdx-components";
 import Lottie from "react-lottie";
@@ -26,6 +27,8 @@ export default function TeamMember({
   const existsYoutube = frontmatter.youtube === undefined;
   const existsTwitter = frontmatter.twitter === undefined;
   const existsSpotify = frontmatter.spotify === undefined;
+  const existsArtstation = frontmatter.artstation === undefined;
+  const existsVimeo = frontmatter.vimeo === undefined;
   return (
     <PageLayout className="items-center">
       {/* Profile */}
@@ -47,7 +50,7 @@ export default function TeamMember({
             />
           }
         </div>
-        <div className="flex justify-center space-x-5 items-baseline">
+        <div className="flex justify-center space-x-5 items-center">
           <Link href={`${frontmatter.github}`}>
             <a
               target="_blank"
@@ -138,6 +141,22 @@ export default function TeamMember({
               className={`${existsSpotify ? "hidden" : "flex"}`}
             >
               <RiSpotifyLine size={27} />
+            </a>
+          </Link>
+          <Link href={`${frontmatter.artstation}`} passHref>
+            <a
+              target="_blank"
+              className={`${existsArtstation ? "hidden" : "flex"}`}
+            >
+              <FaArtstation size={25} />
+            </a>
+          </Link>
+          <Link href={`${frontmatter.vimeo}`} passHref>
+            <a
+              target="_blank"
+              className={`${existsVimeo ? "hidden" : "flex"}`}
+            >
+              <RiVimeoLine size={25} />
             </a>
           </Link>
         </div>
