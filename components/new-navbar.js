@@ -3,6 +3,8 @@ import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { IoMenuOutline, IoCloseOutline, IoLogoGithub } from "react-icons/io5";
 import Lottie from "react-lottie";
 import menuIconData from "../public/icons/menu.json";
+import NextLink from "next/link";
+import Image from "next/image";
 
 const links = [
   { name: "Home", to: "/home", id: 1 },
@@ -51,11 +53,11 @@ export default function NewNavbar() {
     open: { opacity: 1 },
   };
   return (
-    <nav className="flex justify-end w-full h-52 bg-red-500">
+    <nav>
       <AnimatePresence>
         {open && (
           <motion.aside
-            className="flex flex-col justify-center w-1/2  h-full bg-dune-orangespicy fixed right-0"
+            className="flex flex-col justify-center w-1/2  h-full bg-dune-orangespicy fixed right-0 z-10"
             initial={{ width: 0 }}
             animate={{ width: 300 }}
             exit={{
@@ -86,9 +88,43 @@ export default function NewNavbar() {
         )}
       </AnimatePresence>
 
-      <div className="fixed">
+      <div className="bg-transparent flex w-full justify-between py-1 items-center shadow-md">
         <button
-          className="pointer m-5 border-none py-2 px-4"
+          className="pointer mx-5 border-none py-2 px-4 invisible"
+          onClick={() => {
+            cycleOpen();
+            setMenuState({ isStopped: false, direction: open ? -1 : 1 });
+          }}
+        >
+          {" "}
+          <Lottie
+            className="block"
+            isStopped={menuState.isStopped}
+            options={defaultOptions}
+            direction={menuState.direction}
+            height={32}
+            width={32}
+            speed={0.6}
+          />
+        </button>
+        <div className="cursor-pointer">
+          <NextLink href="/">
+            <a href="">
+              <Image
+                layout="intrinsic"
+                src="/contents/corporative/logo.png"
+                width="50px"
+                height="50px"
+                onClick={() => {
+                  cycleOpen(false);
+                  setMenuState({ isStopped: false, direction: open ? -1 : 1 });
+                }}
+              ></Image>
+            </a>
+          </NextLink>
+        </div>
+        <button
+          className="pointer mx-5 my-3 border-none py-2 px-4 z-10"
           onClick={() => {
             cycleOpen();
             setMenuState({ isStopped: false, direction: open ? -1 : 1 });
