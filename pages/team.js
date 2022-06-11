@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NextLink from "next/link";
 import Image from "next/image";
 import { getAllFilesMetadata } from "../utils/mdx";
-import { MemberFrame, ToolFrame } from "../components/frames";
+import { ImageFrame, MemberFrame, ToolFrame } from "../components/frames";
 import { Tabs } from "flowbite-react";
 import PageLayout from "../layouts/page-layout";
 
@@ -14,14 +14,12 @@ import {
 } from "react-icons/io5";
 
 export default function Team({ teammembers }) {
-  const [activeRol, setActiveRole] = useState("Artist")
+  const [activeRol, setActiveRol] = useState("Programmer");
+
+  const prod = ["Producer", "Lead Programmer"];
   return (
     <PageLayout>
-      <Image
-        src="/contents/corporative/ch_banner.png"
-        width={350}
-        height={150}
-      />
+      <Image src="/contents/corporative/ch_banner.png" width={350} height={150} />
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it
@@ -47,19 +45,19 @@ export default function Team({ teammembers }) {
             Tristique magna sit amet purus.
           </p>
         </div>
-        <Image
+        <ImageFrame
           className="rounded-2xl"
           src="/contents/images/prog_team.jpeg"
-          width={930}
-          height={725}
+          width={2048}
+          height={1536}
         />
       </div>
       <div className="flex flex-row pr-8">
         <Image
           className="rounded-2xl"
           src="/contents/images/design_team.jpeg"
-          width={930}
-          height={725}
+          width={2048}
+          height={1536}
         />
         <div className="flex flex-col justify-center">
           <p className="text-sm text-right text-dune-orangespicy font-bold">
@@ -92,107 +90,53 @@ export default function Team({ teammembers }) {
         <Image
           className="rounded-2xl"
           src="/contents/images/art_team.jpeg"
-          width={930}
-          height={725}
+          width={2048}
+          height={1536}
         />
       </div>
-      
+
 
       {/* Member Grid */}
-    
-        <Tabs.Group aria-label="Default tabs" style="underline">
-            <Tabs.Item active={true} icon={IoPeopleOutline}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
-                {teammembers
-                  .filter((teammember) =>
-                    teammember.role.includes("Programmer")
-                  )
-                  .map((filteredmember) => (
-                    <NextLink
-                      key={filteredmember.slug}
-                      href={`/${filteredmember.slug}`}
-                      passHref
-                    >
-                      <a>
-                        <MemberFrame
-                          id={"Programmer"}
-                          src={`/team/${filteredmember.slug}.png`}
-                          name={filteredmember.name}
-                          role={filteredmember.role}
-                        />
-                      </a>
-                    </NextLink>
-                  ))}
-              </div>
-            </Tabs.Item>
-            <Tabs.Item icon={IoCode}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
-                {teammembers
-                  .filter((teammember) => teammember.role.includes("Designer"))
-                  .map((filteredmember) => (
-                    <NextLink
-                      key={filteredmember.slug}
-                      href={`/${filteredmember.slug}`}
-                      passHref
-                    >
-                      <a>
-                        <MemberFrame
-                          id={"Designer"}
-                          src={`/team/${filteredmember.slug}.png`}
-                          name={filteredmember.name}
-                          role={filteredmember.role}
-                        />
-                      </a>
-                    </NextLink>
-                  ))}
-              </div>
-            </Tabs.Item>
-            <Tabs.Item icon={IoNewspaperOutline}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
-                {teammembers
-                  .filter((teammember) => teammember.role.includes("Artist"))
-                  .map((filteredmember) => (
-                    <NextLink
-                      key={filteredmember.slug}
-                      href={`/${filteredmember.slug}`}
-                      passHref
-                    >
-                      <a>
-                        <MemberFrame
-                          id={"Artist"}
-                          src={`/team/${filteredmember.slug}.png`}
-                          name={filteredmember.name}
-                          role={filteredmember.role}
-                        />
-                      </a>
-                    </NextLink>
-                  ))}
-              </div>
-            </Tabs.Item>
-            <Tabs.Item icon={IoBrush}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
-                {teammembers
-                  .filter((teammember) => teammember.role.includes("Artist"))
-                  .map((filteredmember) => (
-                    <NextLink
-                      key={filteredmember.slug}
-                      href={`/${filteredmember.slug}`}
-                      passHref
-                    >
-                      <a>
-                        <MemberFrame
-                          id={"Artist"}
-                          src={`/team/${filteredmember.slug}.png`}
-                          name={filteredmember.name}
-                          role={filteredmember.role}
-                        />
-                      </a>
-                    </NextLink>
-                  ))}
-              </div>
-              
-            </Tabs.Item>
-        </Tabs.Group>
+      <div className="flex flex-row  w-full">
+
+        <button onClick={() => setActiveRol("Producer")} className={activeRol === prod ? "w-full border-b-2 border-roles-producer" : "w-full"}>
+          <IoPeopleOutline size={30} className="place-self-center"/>
+        </button>
+
+        <button onClick={() => setActiveRol("Programmer")} className={activeRol === "Programmer" ? "w-full border-b-2 border-roles-programmer" : "w-full"}>
+          <IoCode size={30} />
+        </button>
+        <button onClick={() => setActiveRol("Designer")} className={activeRol === "Designer" ? "w-full border-b-2 border-roles-designer" : "w-full"}>
+          <IoNewspaperOutline size={30} />
+        </button>
+        <button onClick={() => setActiveRol("Artist")} className={activeRol === "Artist" ? "w-full border-b-2 border-roles-artist" : "w-full"}>
+          <IoBrush size={30} />
+        </button>
+      </div>
+
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
+        {teammembers
+          .filter((teammember) =>
+            teammember.role.includes(activeRol)
+          )
+          .map((filteredmember) => (
+            <NextLink
+              key={filteredmember.slug}
+              href={`/${filteredmember.slug}`}
+              passHref
+            >
+              <a>
+                <MemberFrame
+                  id={"Programmer"}
+                  src={`/team/${filteredmember.slug}.png`}
+                  name={filteredmember.name}
+                  role={filteredmember.role}
+                />
+              </a>
+            </NextLink>
+          ))}
+      </div>
 
     </PageLayout>
   );

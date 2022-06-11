@@ -12,6 +12,7 @@ export default function Production() {
 
       {/* Project 3 */}
       <h2 className="text-xl tracking-wider">About Our Team</h2>
+      <ImageFrame src="/contents/images/chamfer_team.jpeg" width="1600px" height="1200px" layout="responsive"/>
       <p className="text-md text-gray-500 mt-2 ">The team consists of one producer, three leads, one for each department, and three departments: ten programmers, seven designers and four artists.</p>
       <p className="text-md text-gray-500 mt-8">Make sure you head over to the Team tab to get to know all of us!</p>
 

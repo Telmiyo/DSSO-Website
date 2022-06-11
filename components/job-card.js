@@ -1,7 +1,7 @@
 import React from "react";
 export default function JobCard({ link, img, title, subtitle, desc }) {
   return (
-    <div>
+    <div className="my-8">
       <a
         target="_blank"
         href={link}

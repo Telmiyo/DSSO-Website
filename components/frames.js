@@ -27,7 +27,7 @@ const SetRoleColor = (_role) => {
 
 export const MemberFrame = ({ src, name, role, github, linkdn }) => {
     return (
-        <div className='rounded-xl shadow-xl w-[216px] min-h-[285px]'>
+        <div className='rounded-xl shadow-xl w-auto h-auto px-8'>
             <div className='flex flex-col justify-around h-100 space-y-4 py-4 items-center'>
 
                 <Image src={src} width={120} height={120} objectFit="cover" className="rounded-full" />
