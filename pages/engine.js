@@ -16,7 +16,6 @@ import {
   skyboxData,
   navigateData,
 } from "../components/lottie-references";
-import dynamic from "next/dynamic";
 
 import Spline from "@splinetool/react-spline";
 import PageLayout from "../layouts/page-layout";

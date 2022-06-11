@@ -112,13 +112,14 @@ export default function NewNavbar() {
             <a href="">
               <Image
                 layout="intrinsic"
-                src="/contents/corporative/logo.png"
-                width="50px"
+                src="/contents/corporative/logo_outline.png"
+                width="52.980132450331x"
                 height="50px"
                 onClick={() => {
                   cycleOpen(false);
                   setMenuState({ isStopped: false, direction: open ? -1 : 1 });
                 }}
+                quality={100}
               ></Image>
             </a>
           </NextLink>
