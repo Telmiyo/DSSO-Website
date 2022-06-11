@@ -21,8 +21,8 @@ export default function Team({ teammembers }) {
     <PageLayout className="items-center">
       <Image
         src="/contents/corporative/ch_banner.png"
-        width={350}
-        height={150}
+        width={11023}
+        height={4267}
       />
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
@@ -35,10 +35,10 @@ export default function Team({ teammembers }) {
       </p>
 
       {/* Team Section */}
-      <div className="flex flex-row pr-8">
-        <div className="flex flex-col justify-center">
+      <div className="flex flex-row my-16">
+        <div className="flex flex-col justify-center mr-48">
           <p className="text-sm text-dune-orangespicy font-bold">
-            There will be an icon here
+           <IoCode size={50} className="size-8"/>
           </p>
           <h2 className="text-4xl text-dune-lightblue font-semibold">
             PROGRAMMING TEAM
@@ -49,23 +49,25 @@ export default function Team({ teammembers }) {
             Tristique magna sit amet purus.
           </p>
         </div>
-        <ImageFrame
-          className="rounded-2xl"
+        
+        <Image
           src="/contents/images/prog_team.jpeg"
           width={2048}
           height={1536}
+          className="rounded-2xl  "
+          
         />
       </div>
-      <div className="flex flex-row pr-8">
+      <div className="flex flex-row my-16">
         <Image
           className="rounded-2xl"
           src="/contents/images/design_team.jpeg"
           width={2048}
           height={1536}
         />
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center mr-48">
           <p className="text-sm text-right text-dune-orangespicy font-bold">
-            There will be an icon here
+            <IoNewspaperOutline size={50} className=""/>
           </p>
           <h2 className="text-4xl text-right text-dune-lightblue font-semibold">
             Design Team
@@ -80,7 +82,7 @@ export default function Team({ teammembers }) {
       <div className="flex flex-row pr-8">
         <div className="flex flex-col justify-center">
           <p className="text-sm text-dune-orangespicy font-bold">
-            There will be an icon here
+           <IoBrush size={50} /> 
           </p>
           <h2 className="text-4xl text-dune-lightblue font-semibold">
             ART TEAM
@@ -100,7 +102,7 @@ export default function Team({ teammembers }) {
       </div>
 
       {/* Member Grid */}
-      <div className="flex w-full">
+      <div className="flex w-full mt-16">
         <button
           onClick={() => setActiveRol("Producer")}
           className={`w-full flex justify-center ${
@@ -144,7 +146,7 @@ export default function Team({ teammembers }) {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center my-16">
         {teammembers
           .filter((teammember) => teammember.role.includes(activeRol))
           .map((filteredmember) => (
