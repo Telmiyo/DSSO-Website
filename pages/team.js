@@ -19,80 +19,92 @@ export default function Team({ teammembers }) {
 
   const prod = ["Producer", "Lead Programmer"];
   return (
-    <PageLayout className="items-center">
-      <Image
-        src="/contents/corporative/ch_banner.png"
-        width={11023 / 20}
-        height={4267 / 20}
-        alt="chamfer studios"
-      />
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through
-        the cites of the word in classical literature, discovered the
-        undoubtable source. Lorem Ipsum comes from sections 1.10
-      </p>
+    <PageLayout className="items-center space-y-20">
+      <div className="flex flex-col items-center space-y-10">
+        <Image
+          src="/contents/corporative/ch_banner.png"
+          width={11023 / 32}
+          height={4267 / 32}
+          alt="chamfer studios"
+        />
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical Latin literature from 45 BC, making
+          it over 2000 years old. Richard McClintock, a Latin professor at
+          Hampden-Sydney College in Virginia, looked up one of the more obscure
+          Latin words, consectetur, from a Lorem Ipsum passage, and going
+          through the cites of the word in classical literature, discovered the
+          undoubtable source. Lorem Ipsum comes from sections 1.10
+        </p>
+      </div>
 
-      <div className="grid grid-cols-3 gap-8 my-8 grayscale" >
-      <Image
-          src="/contents/images/art_team.jpeg"
-          width={2048}
-          height={1536}
-          alt="programming team"
-          className="rounded-2xl "
-          
-        />
-                <Image
-          src="/contents/images/prog_team.jpeg"
-          width={2048}
-          height={1536}
-          alt="programming team"
-          className="rounded-2xl"
-          
-        />
-              <Image
-          className="rounded-2xl"
-          src="/contents/images/design_team.jpeg"
-          width={2048}
-          height={1536}
-          alt="art team"
-        />
+      <div className="grid grid-cols-5">
+        <div className="col-start-1 col-end-3">
+          <Image
+            src="/contents/images/admin_team.jpeg"
+            width={2048}
+            height={1536}
+            alt="Production team"
+            objectFit="cover"
+            className="rounded-2xl "
+          />
+        </div>
+        <div className="col-start-4 col-end-6">
+          <Image
+            src="/contents/images/art_team.jpeg"
+            width={2048}
+            height={1536}
+            alt="programming team"
+            className="rounded-2xl "
+          />
+        </div>
+        <div className="col-start-1 col-end-3">
+          <Image
+            src="/contents/images/prog_team.jpeg"
+            width={2048}
+            height={1536}
+            alt="programming team"
+            className="rounded-2xl"
+          />
+        </div>
+        <div className="col-start-4 col-end-6">
+          <Image
+            className="rounded-2xl"
+            src="/contents/images/design_team.jpeg"
+            width={2048}
+            height={1536}
+            alt="art team"
+          />
+        </div>
       </div>
 
       {/* Team Section */}
-      <div className="flex flex-row w-full my-36 ">
-        <div className="w-1/2 flex flex-col ">
-          <h2 className="text-4xl tracking-wider text-left mb-8 w-1/2 ">
-            PROGRAMMING TEAM
-          </h2>
-          <p className="w-1/2">
+      <div className="flex flex-row w-full">
+        <div className="w-1/2 flex flex-col justify-center">
+          <h2 className="text-4xl mb-4">PROGRAMMING TEAM</h2>
+
+          <p className="">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
             making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10
+            at Hampden-Sydnne of the more obscure Latin words, consectetur, from
+            a Lorem Ipsum passage, and going through the cites of the word in
+            classical literature, discovered the undoubtable source. Lorem Ipsum
+            comes from sections 1.10
           </p>
         </div>
 
-        <div className="w-10/12">
+        <div className="w-1/2">
           <Spline
             scene="https://prod.spline.design/zDflupuR9UBSjJ7v/scene.splinecode"
             className=""
           />
         </div>
       </div>
-      <div className="flex flex-row-reverse  w-full my-36 ">
-        <div className="w-1/2 flex flex-col ">
-          <h2 className="text-4xl tracking-wider text-left mb-8 w-1/2 ">
-            DESIGN TEAM
-          </h2>
-          <p className="w-1/2">
+      <div className="flex flex-row-reverse  w-full">
+        <div className="w-1/2 flex flex-col justify-center text-right items-end ">
+          <h2 className="text-4xl mb-4">DESIGN TEAM</h2>
+          <p className="">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
             making it over 2000 years old. Richard McClintock, a Latin professor
@@ -104,17 +116,15 @@ export default function Team({ teammembers }) {
           </p>
         </div>
 
-        <div className="w-10/12">
-        <Spline scene="https://prod.spline.design/KB65y6t5NMv2Jwju/scene.splinecode" />
+        <div className="w-1/2">
+          <Spline scene="https://prod.spline.design/KB65y6t5NMv2Jwju/scene.splinecode" />
         </div>
       </div>
 
-      <div className="flex flex-row  w-full my-36 ">
-        <div className="w-1/2 flex flex-col ">
-          <h2 className="text-4xl tracking-wider text-left mb-8 w-1/2 ">
-            ART TEAM
-          </h2>
-          <p className="w-1/2">
+      <div className="flex flex-row  w-full ">
+        <div className="w-1/2 flex flex-col justify-center">
+          <h2 className="text-4xl mb-4 ">ART TEAM</h2>
+          <p className="">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
             making it over 2000 years old. Richard McClintock, a Latin professor
@@ -126,8 +136,8 @@ export default function Team({ teammembers }) {
           </p>
         </div>
 
-        <div className="w-10/12">
-        <Spline scene="https://prod.spline.design/Mog8KZJUaTLtZo9y/scene.splinecode" />
+        <div className="w-1/2">
+          <Spline scene="https://prod.spline.design/Mog8KZJUaTLtZo9y/scene.splinecode" />
         </div>
       </div>
       {/* <div className="flex flex-row my-16">
@@ -200,7 +210,7 @@ export default function Team({ teammembers }) {
       </div> */}
 
       {/* Member Grid */}
-      <div className="flex w-full mt-16">
+      <div className="flex w-full">
         <button
           onClick={() => setActiveRol("Producer")}
           className={`w-full flex justify-center ${
