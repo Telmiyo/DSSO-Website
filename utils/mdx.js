@@ -37,7 +37,7 @@ export const getFileBySlug = async (slug) => {
       ],
     },
   });
-  console.log("desc "+data.description)
+  // console.log("desc "+data.description)
   const descriptionMarkdown = await serialize(data.description, {
     mdxOptions: {
       remarkPlugins: [

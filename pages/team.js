@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NextLink from "next/link";
+
 import Image from "next/image";
 import { getAllFilesMetadata } from "../utils/mdx";
 import { ImageFrame, MemberFrame, ToolFrame } from "../components/frames";
@@ -19,13 +19,44 @@ export default function Team({ teammembers }) {
 
   const prod = ["Producer", "Lead Programmer"];
   return (
-    <PageLayout className="items-center space-y-20">
-      <div className="flex flex-col items-center space-y-10">
+    <PageLayout className="items-center">
+      <Image
+        src="/contents/corporative/ch_banner.png"
+        width={11023 / 20}
+        height={4267 / 20}
+        alt="chamfer studios"
+      />
+      <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It
+        has roots in a piece of classical Latin literature from 45 BC, making it
+        over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure
+        Latin words, consectetur, from a Lorem Ipsum passage, and going through
+        the cites of the word in classical literature, discovered the
+        undoubtable source. Lorem Ipsum comes from sections 1.10
+      </p>
+
+      <div className="grid grid-cols-3 gap-8 my-8 grayscale">
         <Image
-          src="/contents/corporative/ch_banner.png"
-          width={11023 / 32}
-          height={4267 / 32}
-          alt="chamfer studios"
+          src="/contents/images/art_team.jpeg"
+          width={2048}
+          height={1536}
+          alt="programming team"
+          className="rounded-2xl "
+        />
+        <Image
+          src="/contents/images/prog_team.jpeg"
+          width={2048}
+          height={1536}
+          alt="programming team"
+          className="rounded-2xl"
+        />
+        <Image
+          className="rounded-2xl"
+          src="/contents/images/design_team.jpeg"
+          width={2048}
+          height={1536}
+          alt="art team"
         />
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
@@ -116,7 +147,7 @@ export default function Team({ teammembers }) {
           </p>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-10/12">
           <Spline scene="https://prod.spline.design/KB65y6t5NMv2Jwju/scene.splinecode" />
         </div>
       </div>
@@ -136,7 +167,7 @@ export default function Team({ teammembers }) {
           </p>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-10/12">
           <Spline scene="https://prod.spline.design/Mog8KZJUaTLtZo9y/scene.splinecode" />
         </div>
       </div>
@@ -258,20 +289,16 @@ export default function Team({ teammembers }) {
         {teammembers
           .filter((teammember) => teammember.role.includes(activeRol))
           .map((filteredmember) => (
-            <NextLink
-              key={filteredmember.slug}
+            <MemberFrame
+              id={"Programmer"}
+              src={`/team/${filteredmember.slug}.png`}
+              name={filteredmember.name}
+              role={filteredmember.role}
+              github={filteredmember.github}
+              linkdn={filteredmember.linkedin}
               href={`/${filteredmember.slug}`}
-              passHref
-            >
-              <a>
-                <MemberFrame
-                  id={"Programmer"}
-                  src={`/team/${filteredmember.slug}.png`}
-                  name={filteredmember.name}
-                  role={filteredmember.role}
-                />
-              </a>
-            </NextLink>
+              
+            />
           ))}
       </div>
     </PageLayout>
