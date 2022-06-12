@@ -28,7 +28,7 @@ export const MemberFrame = ({ src, name, role, github, linkdn, href }) => {
   return (
     <div className="rounded-xl shadow-xl w-auto h-auto px-8">
       <div className="flex flex-col justify-around h-100 space-y-4 py-4 items-center">
-        <NextLink key={href} href={href} passHref >
+        <NextLink key={href} href={href} passHref>
           <a>
             <Image
               src={src}
@@ -93,6 +93,39 @@ export const ImageFrame = ({ src, width, height, layout }) => {
         className="rounded-2xl"
         alt="image"
       />
+    </div>
+  );
+};
+
+export const SectionFrame = ({ src, width, height, layout, title, desc, imageRight }) => {
+  return (
+    <div 
+    className={`flex ${
+        imageRight
+          ? " "
+          : "flex-row-reverse"
+      }`}
+    >
+      <div 
+      className={`w-1/2 flex flex-col justify-center ${
+        imageRight
+          ? " pr-16"
+          : "text-right pl-16"
+      }`}
+      >
+        <h3 className="text-lg text-gray-600 mt-4 tracking-wider font-bold">{title}</h3>
+        <p className="text-md text-gray-500 mt-2 ">{desc}</p>
+      </div>
+      <div className="rounded-2xl shadow-2xl my-8 w-1/2 ">
+        <Image
+          src={src}
+          width={width}
+          height={height}
+          layout={layout}
+          className="rounded-2xl"
+          alt="image"
+        />
+      </div>
     </div>
   );
 };
