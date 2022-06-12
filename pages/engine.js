@@ -73,7 +73,7 @@ export default function Engine() {
           body="You can add a navmesh to create your own AIs."
         />
       </div>
-      <div className="grid grid-cols-2 my-10  gap-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 my-10  gap-14">
         <ModuleCard
           img="/contents/images/module_animation.png"
           lottieData={moduleAnimationData}
