@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import Main from "../layouts/main";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <div>
       <Head>
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="robots" content="index, follow" />
         <meta name="rating" content="safe for kids" />
       </Head>
-      <Main>
+      <Main router={router}>
         <Component {...pageProps} />
       </Main>
     </div>
