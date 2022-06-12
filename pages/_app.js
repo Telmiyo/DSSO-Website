@@ -1,17 +1,28 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Main from '../components/layouts/main'
-import theme from '../lib/theme'
-import { AnimatePresence } from 'framer-motion'
+import "../styles/globals.css";
+import Head from "next/head";
+import Main from "../layouts/main";
 
-const Website = ({ Component, pageProps, router }) => {
-    return (
-        <ChakraProvider theme={theme}>
-            <Main router={router}>
-                <AnimatePresence exitBeforeEnter initial={true}>
-                    <Component {...pageProps} key={router.route} />
-                </AnimatePresence>
-            </Main>
-        </ChakraProvider>
-    )
+function MyApp({ Component, pageProps }) {
+  return (
+    <div>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Dune Special Spice Ops</title>
+        <meta
+          name="description"
+          content="Dune is a videogame developed for Project III subject @ CITM"
+        />
+        <meta name="author" content="Alejandro Ávila & Telmo Beroiz" />
+        <meta name="copyright" content="Alejandro Ávila & Telmo Beroiz" />
+        <meta name="robots" content="index, follow" />
+        <meta name="rating" content="safe for kids" />
+      </Head>
+      <Main>
+        <Component {...pageProps} />
+      </Main>
+    </div>
+  );
 }
-export default Website
+
+export default MyApp;

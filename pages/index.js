@@ -1,20 +1,8 @@
-import {
-Box,
-Container
-} from "@chakra-ui/react"
+import Head from "next/head";
+import Image from "next/image";
+import PageLayout from "../layouts/page-layout";
+import styles from "../styles/Home.module.css";
 
-const Page = () => {
- 
-
-  return (
-    <Container>
-
-      <Box>
-        Hello World!
-      </Box>
-    </Container>
-
-  )
+export default function Home() {
+  return <PageLayout>MainPage</PageLayout>;
 }
-
-export default Page

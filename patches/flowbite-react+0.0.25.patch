@@ -1,0 +1,13 @@
+diff --git a/node_modules/flowbite-react/lib/esm/components/Tab/index.js b/node_modules/flowbite-react/lib/esm/components/Tab/index.js
+index fb9bf4f..ffd46a0 100644
+--- a/node_modules/flowbite-react/lib/esm/components/Tab/index.js
++++ b/node_modules/flowbite-react/lib/esm/components/Tab/index.js
+@@ -52,7 +52,7 @@ export const TabsComponent = ({ children, className, style = 'default', ...rest
+         tabRefs.current[focusedTab]?.focus();
+     }, [focusedTab]);
+     const id = useMemo(() => nanoid.nanoid(), []);
+-    return (_jsxs("div", { className: "flex flex-col gap-2", children: [_jsx("div", { "aria-label": "Tabs", role: "tablist", className: classNames('flex text-center', tabGroupStyleClasses[style], {
++    return (_jsxs("div", { className: "flex flex-col gap-2", children: [_jsx("div", { "aria-label": "Tabs", role: "tablist", className: classNames('flex text-center justify-around', tabGroupStyleClasses[style], {
+                     'border-b border-gray-200 dark:border-gray-700': style === 'underline',
+                 }), ...rest, children: tabs.map((tab, index) => (_jsxs("button", { type: "button", "aria-controls": `${id}-tabpanel-${index}`, "aria-selected": index === activeTab, className: classNames('flex items-center justify-center p-4 text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-gray-500', {
+                         'ml-2 first:ml-0': style !== 'fullWidth',
