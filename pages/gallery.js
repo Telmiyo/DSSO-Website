@@ -4,7 +4,7 @@ import Card from "../components/card";
 import PageLayout from "../layouts/page-layout";
 export default function Gallery() {
   return (
-    <PageLayout>
+    <PageLayout className={"bg-gray-200 blur-10"}>
       <div className=" md:mx-36 md:my-5 grid grid-cols-1 gap-y-6 md:grid-cols-3 md:grid-rows-4 md:gap-6">
         <a
           className="md:row-span-2 md:col-span-1 "
