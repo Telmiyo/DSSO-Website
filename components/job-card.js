@@ -11,7 +11,7 @@ export default function JobCard({ link, img, title, subtitle, desc }) {
       >
         <div className="flex flex-col justify-between p-4 leading-normal">
           <div className="flex items-center">
-            <Image className=" object-contain h-32 w-48 " src={img} alt="job image" />
+            <img className=" object-contain h-32 w-48 " src={img} alt="job image" />
             <div className="flex flex-col ml-5">
               <h5 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {title}
