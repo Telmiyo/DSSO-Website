@@ -168,7 +168,7 @@ export default function Team({ teammembers }) {
         </div>
 
         <div className="w-10/12">
-          <Spline scene="https://prod.spline.design/Mog8KZJUaTLtZo9y/scene.splinecode" />
+          <Spline scene="https://prod.spline.design/Mog8KZJUaTLtZo9y/scene.splinecode"/>
         </div>
       </div>
       {/* <div className="flex flex-row my-16">
@@ -297,7 +297,6 @@ export default function Team({ teammembers }) {
               github={filteredmember.github}
               linkdn={filteredmember.linkedin}
               href={`/${filteredmember.slug}`}
-              
             />
           ))}
       </div>

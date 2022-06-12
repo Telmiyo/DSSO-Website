@@ -59,7 +59,7 @@ export default function NewNavbar({path}) {
       <AnimatePresence>
         {open && (
           <motion.aside
-            className="flex flex-col justify-center w-1/2  h-full bg-dune-orangespicy fixed right-0 z-10"
+            className="flex flex-col justify-center w-1/2  h-full bg-dune-ultralightblue fixed right-0 z-10"
             initial={{ width: 0 }}
             animate={{ width: 300 }}
             exit={{
@@ -77,7 +77,7 @@ export default function NewNavbar({path}) {
               {links.map(({ name, to, id }) => (
                 <motion.a
              
-                  className={` no-underline text-3xl font-semibold block m-5 ${to === path ? " text-dune-bluefremen": "text-white"
+                  className={` no-underline text-3xl font-semibold block m-5 ${to === path ? " text-dune-black": "text-white"
                 }`}
                   key={id}
                   href={to}
@@ -122,7 +122,7 @@ export default function NewNavbar({path}) {
                 height="50px"
                 alt="logo dune"
                 onClick={() => {
-                  cycleOpen(false);
+                  cycleOpen()
                   setMenuState({ isStopped: false, direction: open ? -1 : 1 });
                 }}
                 quality={100}

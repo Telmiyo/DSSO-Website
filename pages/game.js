@@ -29,7 +29,7 @@ export default function Game() {
         </p>
       </div>
      <div className="pb-[56.25%] relative w-[60%]">
-     <YouTubeLite url="vW-PHNZ-Xww" title='Dune SSO Trailer' className="w-full h-full absolute top-0 left-0"/>
+     <YouTubeLite url="xQKdZvK3yuo" title='Dune SSO Trailer' className="w-full h-full absolute top-0 left-0"/>
 
      </div>
       {/* <Youtube videoId="vW-PHNZ-Xww" opts={youtubeOpts} className="mt-5 " /> */}
