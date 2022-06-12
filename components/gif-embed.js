@@ -4,7 +4,7 @@ export default function GifEmbed() {
   return (
     <div>
       <div
-        class="tenor-gif-embed"
+        className="tenor-gif-embed"
         data-postid="16020589"
         data-share-method="host"
         data-aspect-ratio="0.9"

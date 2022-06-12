@@ -115,6 +115,7 @@ export default function NewNavbar() {
                 src="/contents/corporative/logo_outline.png"
                 width="52.980132450331px"
                 height="50px"
+                alt="logo dune"
                 onClick={() => {
                   cycleOpen(false);
                   setMenuState({ isStopped: false, direction: open ? -1 : 1 });

@@ -1,10 +1,10 @@
 export default function SketchfabCard({ sketchfabId, title }) {
   return (
       <iframe
-        frameborder="0"
-        allowfullscreen
-        mozallowfullscreen="true"
-        webkitallowfullscreen="true"
+        frameBorder="0"
+        allowFullScreen
+        mozallowFullscreen="true"
+        webkitallowfullScreen="true"
         allow="autoplay; fullscreen; xr-spatial-tracking"
         xr-spatial-tracking
         execution-while-out-of-viewport

@@ -39,6 +39,7 @@ export default function TeamMember({
           height={125}
           objectFit="cover"
           className="rounded-full"
+          alt="profile image"
         ></Image>
         <h1 className="text-4xl font-semibold">{frontmatter.name}</h1>
         <div className="prose prose-p:text-justify prose-headings:text-dune-bluefremen">

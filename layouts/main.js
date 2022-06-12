@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/navbar";
 import NewNavbar from "../components/new-navbar";
 import Footer from "../components/footer";
 export default function Main({ children }) {
