@@ -1,8 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
 import PageLayout from "../layouts/page-layout";
-import styles from "../styles/Home.module.css";
+import Hero from "../layouts/hero";
 
 export default function Home() {
-  return <PageLayout>MainPage</PageLayout>;
+  return (
+    <div className="container flex flex-col items-center justify-center h-full py-2 ">
+      <div className=" w-full flex flex-grow justify-center items-center">
+        <Hero />
+      </div>
+    </div>
+  );
 }
