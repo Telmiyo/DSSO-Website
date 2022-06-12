@@ -29,7 +29,7 @@ export default function Engine() {
         </h1>
         <p className="w-1/2 text-center">
           Ko-Fi Engine is a videogame engine develop to create Dune Special
-          Spice Ops. It's development started 3 months earlier and has been
+          Spice Ops. It&apos;s development started 3 months earlier and has been
           improving in parallel to the development of the game.
         </p>
 

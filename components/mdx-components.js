@@ -7,7 +7,8 @@ import Image from 'next/image'
 import SoundCloudCard from './soundcloud'
 import SketchfabCard from './sketchfab'
 import GifEmbed from './gif-embed'
-export default {
+
+const mdxComponents = {
    Tabs,
    Youtube,
    Vimeo,
@@ -17,5 +18,5 @@ export default {
    SoundCloudCard,
    SketchfabCard,
    GifEmbed
-
 }
+export default mdxComponents

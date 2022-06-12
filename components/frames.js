@@ -30,7 +30,7 @@ export const MemberFrame = ({ src, name, role, github, linkdn }) => {
         <div className='rounded-xl shadow-xl w-auto h-auto px-8'>
             <div className='flex flex-col justify-around h-100 space-y-4 py-4 items-center'>
 
-                <Image src={src} width={120} height={120} objectFit="cover" className="rounded-full" />
+                <Image src={src} width={120} height={120} objectFit="cover" className="rounded-full" alt="memberImg" />
 
                 <p>{name}</p>
                 <div className={`${SetRoleColor(role)} text-center text-white rounded-xl w-40`}>{role}</div>
@@ -52,7 +52,7 @@ export const ToolFrame = ({ src, role, name, desc }) => {
         <div className='rounded-xl shadow-xl w-auto '>
             <div className='flex flex-row justify-start h-auto space-x-4 p-4 items-center'>
                 <div className={`${SetRoleColor(role)} text-center rounded-xl p-1`}>
-                    <Image src={src} width={50} height={50} objectFit="cover" className="rounded-full" />
+                    <Image src={src} width={50} height={50} objectFit="cover" className="rounded-full" alt="tool image"/>
                 </div>
                 <p>{name}</p>
 
@@ -66,7 +66,7 @@ export const ImageFrame = ({src, width, height, layout}) => {
 
     return(
         <div className='rounded-2xl shadow-2xl my-8 '>
-            <Image src={src} width={width} height={height} layout={layout} className="rounded-2xl " />
+            <Image src={src} width={width} height={height} layout={layout} className="rounded-2xl" alt="image" />
         </div>
     )
 }

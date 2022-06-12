@@ -23,6 +23,7 @@ export default function Team({ teammembers }) {
         src="/contents/corporative/ch_banner.png"
         width={11023}
         height={4267}
+        alt="chamfer studios"
       />
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
@@ -54,7 +55,8 @@ export default function Team({ teammembers }) {
           src="/contents/images/prog_team.jpeg"
           width={2048}
           height={1536}
-          className="rounded-2xl  "
+          alt="programming team"
+          className="rounded-2xl"
           
         />
       </div>
@@ -64,6 +66,7 @@ export default function Team({ teammembers }) {
           src="/contents/images/design_team.jpeg"
           width={2048}
           height={1536}
+          alt="a saber"
         />
         <div className="flex flex-col justify-center mr-48 items-end">
           <p className="text-sm text-right text-dune-orangespicy font-bold ">
@@ -98,6 +101,7 @@ export default function Team({ teammembers }) {
           src="/contents/images/art_team.jpeg"
           width={2048}
           height={1536}
+          alt="art team"
         />
       </div>
 

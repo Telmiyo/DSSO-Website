@@ -1,6 +1,6 @@
 // pages/_document.js
 import { Html, Head, Main, NextScript } from "next/document";
-
+import Script from 'next/script'
 export default function Document() {
   return (
     <Html>
@@ -19,7 +19,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+        <Script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></Script>
       </body>
     </Html>
   );

@@ -115,6 +115,7 @@ export default function NewNavbar() {
                 src="/contents/corporative/logo_outline.png"
                 width="52.980132450331px"
                 height="50px"
+                alt="logo dune"
                 onClick={() => {
                   cycleOpen(false);
                   setMenuState({ isStopped: false, direction: open ? -1 : 1 });
@@ -125,7 +126,7 @@ export default function NewNavbar() {
           </NextLink>
         </div>
         <button
-          className="pointer mx-5 my-3 border-none py-2 px-4 z-10"
+          className={`pointer mx-5 my-3 border-none py-2 px-4 z-10 invert ${open?'invert':'invert-0'}`}
           onClick={() => {
             cycleOpen();
             setMenuState({ isStopped: false, direction: open ? -1 : 1 });
