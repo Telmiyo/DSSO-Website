@@ -1,0 +1,118 @@
+---
+name: "Yeray Tarifa"
+role: "Programmer"
+github: "https://github.com/yeraytm"
+linkedin: "https://www.linkedin.com/in/yeray-tarifa/"
+description: "Hello there. I'm Yeray, I have been a programmer at Chamfer Studios during the development of Dune: Special Spice Ops.
+Throughout the videogames design & development degree at UPC-CITM I have been interested in playing a technical role in projects and to start working in bigger
+teams to acquire valuable experience both in programming & organization skills.
+"
+---
+
+<Tabs.Group aria-label="Default tabs" style="default">
+  <Tabs.Item title="Background">
+    # Background
+      ## About Me
+
+        I have always been a curious person and videogames have been in my life more than I can remember. While growing up I never knew how videogames were done and that left in me many questions. At the time when I had to decide what to do in the future and which path to choose, I started investigating and being interested in games development.
+
+        As I began acquiring knowledge about computers and programming, this whole new world became one of my hobbies besides videogames. Combining these two worlds I found what I wanted to become and went to the university degree about videogame development in Barcelona.
+
+        Not knowing which field about programming I wanted to specialise in, I'm now searching for inspiration and personal projects to prepare my carrer. However, I sometimes struggle in the process and feel frustrated about the many things I still have to learn, but as a Star Wars fan myself I always remember:
+
+      > The greatest teacher failure is.
+      <br/>- Yoda
+      <br/>
+
+      ## Hard Skills
+        - C/C++ Programming
+        - Unity 
+        - Basics of C# & Dart
+        - Google Workspace
+
+      ## Soft Skills
+        - Teamwork & cooperation
+        - Problem-solving
+        - Organization
+        - Empathy
+      
+      <br/>
+      
+  </Tabs.Item>
+  <Tabs.Item title="Contribution">
+    # Contribution
+      ## Project Overview
+        During the development, I had the role of engine programmer for the first two months and gameplay programmer for the rest of it.
+
+      ## Main Tasks
+        ### <u>Importers & Resources</u>
+          Along with [Sergi Colomer](/sergi), we needed to refactor the importing methods as they required a better organization and more features. We went with a Singleton structure for these importers as a convenience. These are:
+            - Scenes
+            - Mesh
+            - Texture
+            - Shader
+
+          Moreover, we started to implement a common resource structure on top of the elements the engine supported.
+
+          <Image src="/contents/screenshots/yeray_refactor.png" width={300} height={168}/>
+
+        ### <u>Audio Module</u>
+          Implementation of an audio module that [Martí Buxeda](/marti) previously programmed in the Game Engines course, adapting it to our engine. It supports the following gameobject components:
+            - Audio Source for single tracks/SFX.
+            - Audio Switch for multiple tracks where we can fade in and out between them.
+            
+          It also features offsets and looping if in the case music tracks have the same bpm and create smooth transitions. The module uses the OpenAL library.
+
+          <Image src="/contents/screenshots/yeray_modaudio.png" width={600} height={324}/>
+
+        ### <u>Resource Manager</u>
+          Together with [Sergi Colomer](/sergi) we programmed the engine module that takes care of the memory management of a series of resources used in the game. The manager is in charge of the resources files reading & updating using a workflow pairing them with their respective .meta file. This was an enormous task that took a lot of time to complete fully.
+
+          Throughout the alpha phase, we prepared the methods to create & manage the assets metadata we needed to keep track of resources even between developers. We programmed the library map pairing with UID for the assets metadata, the resource map pairing with UID for the allocated memory and coded the custom file format and creation of resources for each asset type.
+          As we needed to optimize some loading processes, I implemented the methods to save & load the texture resource in binary.
+          
+          We implemented the process to have the assets directory up to date by importing, updating or deleting at start time and storing the needed resources only once in memory using a map and reference counting. As a result, some improvements thanks to our work were: reduced loading in scenes and drag & drop assets from outside the program.
+          The supported resources are:
+            - Meshes
+            - Textures
+            - Animations
+            - Shaders
+
+          As a debugging tool, we created the resource manager window (showing all resources loaded and some information about them).
+
+          <Image src="/contents/screenshots/sergi_resource_window.png" width={600} height={687}/>
+
+        ### <u>Spice & Game State</u>
+          As a gameplay programmer, I was in charge of the resource of Dune, the spice. My job here was to have sacks around the level that reward the player with a certain quantity of spice. Enemies dropped spice loot as well, but using a random drop rate.
+
+          As the spice was required in other parts of the game, I needed a way to save & load the game progression. So I dedicated some time to be able to preserve the state of the game using a json file from Lua. This gamestate considers defeated enemies, collected spice and characters position.
+
+          <Image src="/contents/screenshots/yeray_spice.png" width={590} height={500}/>
+
+      ## Secondary Tasks
+        ### <u>Serialization Refactor</u>
+          To organize the engine scenes we have been using json files. Serialization takes care on how the gameobjects are saved to these files, so with [Sergi Colomer](/sergi) we refactored the way we were doing that using virtual methods and avoiding trees inside the json by using UIDs for parenting.
+          
+          <Image src="/contents/screenshots/yeray_json.png" width={512} height={512}/>
+
+        ### <u>MD5 Hash</u>
+          In order to not use the modification time from Windows that gave us serious issues with Git, I implemented a hashing method to know if a file has been modified based on the contents of it.
+
+        ### <u>Levelling System</u>
+          Characters presented levels in their abilities so the spice & game state task is also relevant here. This way, I registered the level of each ability that the player upgraded its characters to and considered this into the game as well.
+
+  </Tabs.Item>
+  <Tabs.Item title="Projects">
+     # Projects
+          ## Wasabi Warriors
+            A RPG game in 2D set in a japanese city about a story of power and corruption. It features some areas to explore and a turn-based combat system. Created by a group of 6 students for the Project II course at UPC-CITM, the roles of this project were not fixed but I was mainly in charge of the intial game design and the UX & UI programming.
+
+            <Youtube videoId="7f4P7SI7GmM" opts={{height: "390", width: "640"}} className="mt-5" />
+
+          ## Euterpe
+            Project created with two other colleagues for the Mobile Devices course at UPC-CITM, about a mobile application to enjoy your favourite music from the cloud programmed in Dart using the Flutter framework.
+
+            [Check the Github repository here](https://github.com/yeraytm/Euterpe-FoH)
+
+  </Tabs.Item>
+</Tabs.Group>
