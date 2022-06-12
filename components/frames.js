@@ -13,7 +13,7 @@ const SetRoleColor = (_role) => {
             return "bg-roles-artist"
         case "Lead Programmer":
             return "bg-roles-leadprogrammer"
-        case "Lead Desginer":
+        case "Lead Designer":
             return "bg-roles-leaddesigner"
         case "Lead Artist":
             return "bg-roles-artist"

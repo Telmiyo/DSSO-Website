@@ -5,11 +5,12 @@ import { getAllFilesMetadata } from "../utils/mdx";
 import { ImageFrame, MemberFrame, ToolFrame } from "../components/frames";
 import { Tabs } from "flowbite-react";
 import PageLayout from "../layouts/page-layout";
+import Spline from "@splinetool/react-spline";
 
 import {
   IoPeopleOutline,
-  IoNewspaperOutline,
-  IoCode,
+  IoLaptopOutline,
+  IoCodeOutline,
   IoBrushOutline,
 } from "react-icons/io5";
 
@@ -21,8 +22,8 @@ export default function Team({ teammembers }) {
     <PageLayout className="items-center">
       <Image
         src="/contents/corporative/ch_banner.png"
-        width={11023}
-        height={4267}
+        width={11023 / 20}
+        height={4267 / 20}
         alt="chamfer studios"
       />
       <p>
@@ -35,8 +36,101 @@ export default function Team({ teammembers }) {
         undoubtable source. Lorem Ipsum comes from sections 1.10
       </p>
 
+      <div className="grid grid-cols-3 gap-8 my-8 grayscale" >
+      <Image
+          src="/contents/images/art_team.jpeg"
+          width={2048}
+          height={1536}
+          alt="programming team"
+          className="rounded-2xl "
+          
+        />
+                <Image
+          src="/contents/images/prog_team.jpeg"
+          width={2048}
+          height={1536}
+          alt="programming team"
+          className="rounded-2xl"
+          
+        />
+              <Image
+          className="rounded-2xl"
+          src="/contents/images/design_team.jpeg"
+          width={2048}
+          height={1536}
+          alt="art team"
+        />
+      </div>
+
       {/* Team Section */}
-      <div className="flex flex-row my-16">
+      <div className="flex flex-row w-full my-36 ">
+        <div className="w-1/2 flex flex-col ">
+          <h2 className="text-4xl tracking-wider text-left mb-8 w-1/2 ">
+            PROGRAMMING TEAM
+          </h2>
+          <p className="w-1/2">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+            going through the cites of the word in classical literature,
+            discovered the undoubtable source. Lorem Ipsum comes from sections
+            1.10
+          </p>
+        </div>
+
+        <div className="w-10/12">
+          <Spline
+            scene="https://prod.spline.design/zDflupuR9UBSjJ7v/scene.splinecode"
+            className=""
+          />
+        </div>
+      </div>
+      <div className="flex flex-row-reverse  w-full my-36 ">
+        <div className="w-1/2 flex flex-col ">
+          <h2 className="text-4xl tracking-wider text-left mb-8 w-1/2 ">
+            DESIGN TEAM
+          </h2>
+          <p className="w-1/2">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+            going through the cites of the word in classical literature,
+            discovered the undoubtable source. Lorem Ipsum comes from sections
+            1.10
+          </p>
+        </div>
+
+        <div className="w-10/12">
+        <Spline scene="https://prod.spline.design/KB65y6t5NMv2Jwju/scene.splinecode" />
+        </div>
+      </div>
+
+      <div className="flex flex-row  w-full my-36 ">
+        <div className="w-1/2 flex flex-col ">
+          <h2 className="text-4xl tracking-wider text-left mb-8 w-1/2 ">
+            ART TEAM
+          </h2>
+          <p className="w-1/2">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+            going through the cites of the word in classical literature,
+            discovered the undoubtable source. Lorem Ipsum comes from sections
+            1.10
+          </p>
+        </div>
+
+        <div className="w-10/12">
+        <Spline scene="https://prod.spline.design/Mog8KZJUaTLtZo9y/scene.splinecode" />
+        </div>
+      </div>
+      {/* <div className="flex flex-row my-16">
         <div className="flex flex-col justify-center mr-48">
           <p className="text-sm text-dune-orangespicy font-bold">
            <IoCode size={32} className="size-8"/>
@@ -103,7 +197,7 @@ export default function Team({ teammembers }) {
           height={1536}
           alt="art team"
         />
-      </div>
+      </div> */}
 
       {/* Member Grid */}
       <div className="flex w-full mt-16">
@@ -126,7 +220,7 @@ export default function Team({ teammembers }) {
               : "text-gray-500"
           }`}
         >
-          <IoCode size={30} />
+          <IoCodeOutline size={30} />
         </button>
         <button
           onClick={() => setActiveRol("Designer")}
@@ -136,7 +230,7 @@ export default function Team({ teammembers }) {
               : "text-gray-500"
           }`}
         >
-          <IoNewspaperOutline size={30} />
+          <IoLaptopOutline size={30} />
         </button>
         <button
           onClick={() => setActiveRol("Artist")}
