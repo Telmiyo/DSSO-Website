@@ -7,7 +7,7 @@ import NextLink from "next/link";
 import Image from "next/image";
 
 const links = [
-  { name: "Home", to: "/home", id: 1 },
+  { name: "Home", to: "/", id: 1 },
   { name: "Game", to: "/game", id: 2 },
   { name: "Engine", to: "/engine", id: 3 },
   { name: "Team", to: "/team", id: 4 },
@@ -20,7 +20,9 @@ const links = [
     id: 8,
   },
 ];
-export default function NewNavbar() {
+export default function NewNavbar({path}) {
+
+
   const [menuState, setMenuState] = useState({ isStopped: true, direction: 1 });
 
   const [open, cycleOpen] = useCycle(false, true);
@@ -74,11 +76,14 @@ export default function NewNavbar() {
             >
               {links.map(({ name, to, id }) => (
                 <motion.a
-                  className="text-white no-underline text-3xl font-semibold block m-5"
+             
+                  className={` no-underline text-3xl font-semibold block m-5 ${to === path ? " text-dune-bluefremen": "text-white"
+                }`}
                   key={id}
                   href={to}
                   whileHover={{ scale: 1.1 }}
                   variants={itemVariants}
+                 
                 >
                   {name}
                 </motion.a>
