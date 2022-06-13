@@ -1,6 +1,6 @@
 import { Tabs } from "flowbite-react";
 import Vimeo from "react-vimeo";
-import { YouTube } from "react-youtube";
+import Youtube from "react-youtube";
 
 import JobCard from "./job-card";
 import Lottie from "react-lottie";
@@ -10,7 +10,7 @@ import SketchfabCard from './sketchfab'
 import GifEmbed from './gif-embed'
 const mdxComponents = {
    Tabs,
-   YouTube,
+   Youtube,
    Vimeo,
    JobCard,
    Lottie,
