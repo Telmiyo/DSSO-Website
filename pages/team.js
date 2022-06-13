@@ -121,7 +121,7 @@ export default function Team({ teammembers }) {
           </div>
           <div className="w-full md:w-1/2  p-4">
             <Image
-              src="/contents/images/admin_team.jpeg"
+              src="/contents/images/design_team.jpeg"
               width={2048}
               height={1536}
               alt="chamfer-studios-admin-team"
@@ -152,7 +152,7 @@ export default function Team({ teammembers }) {
           </div>
           <div className="w-full md:w-1/2 p-4">
             <Image
-              src="/contents/images/prog_team.jpeg"
+              src="/contents/images/art_team.jpeg"
               width={2048}
               height={1536}
               alt="chamfer-studios-admin-team"
