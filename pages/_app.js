@@ -2,12 +2,15 @@ import "../styles/globals.css";
 import Head from "next/head";
 import Main from "../layouts/main";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width,height=device-height, initial-scale=1"
+        />
         <title>Dune Special Spice Ops</title>
         <meta
           name="description"
@@ -18,7 +21,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="robots" content="index, follow" />
         <meta name="rating" content="safe for kids" />
       </Head>
-      <Main>
+      <Main router={router}>
         <Component {...pageProps} />
       </Main>
     </div>

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import NextLink from "next/link";
+
 import Image from "next/image";
 import { getAllFilesMetadata } from "../utils/mdx";
-import { ImageFrame, MemberFrame, ToolFrame } from "../components/frames";
-import { Tabs } from "flowbite-react";
+import { MemberFrame} from "../components/frames";
 import PageLayout from "../layouts/page-layout";
 
 import {
   IoPeopleOutline,
-  IoNewspaperOutline,
-  IoCode,
+  IoLaptopOutline,
+  IoCodeOutline,
   IoBrushOutline,
+  IoDesktopOutline,
 } from "react-icons/io5";
 
 export default function Team({ teammembers }) {
@@ -18,95 +18,155 @@ export default function Team({ teammembers }) {
 
   const prod = ["Producer", "Lead Programmer"];
   return (
-    <PageLayout className="items-center">
-      <Image
-        src="/contents/corporative/ch_banner.png"
-        width={11023}
-        height={4267}
-        alt="chamfer studios"
-      />
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through
-        the cites of the word in classical literature, discovered the
-        undoubtable source. Lorem Ipsum comes from sections 1.10
+    <PageLayout className="items-center space-y-8">
+      <div>
+        <Image
+          src="/contents/corporative/ch_banner.png"
+          width={11023 / 20}
+          height={4267 / 20}
+          alt="chamfer studios"
+        />
+      </div>
+      <p className="text-center">
+        Chamfer Studios is a group of 25 hardworking and eager to learn
+        university students, who came together to build our game Dune: Special
+        Spice Ops. Studying in the Polytechnic University of Catalonia (UPC),
+        and currently in our third year of the bachelor’s degree in Video Game
+        Design and Development, we came to a common goal, for the subject
+        Project III, to simulate a small studio and develop with our own engine
+        an RTT video game.
       </p>
 
       {/* Team Section */}
-      <div className="flex flex-row my-16">
-        <div className="flex flex-col justify-center mr-48">
-          <p className="text-sm text-dune-orangespicy font-bold">
-           <IoCode size={32} className="size-8"/>
-          </p>
-          <h2 className="text-4xl text-dune-lightblue font-semibold">
-            PROGRAMMING TEAM
-          </h2>
-          <p className="mr-20">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Tristique magna sit amet purus.
-          </p>
+      <div className="grid grid-cols-1 gap-y-24">
+        <div className="flex flex-col space-y-8 md:flex-row-reverse justify-center items-center text-center md:text-left">
+          <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start">
+            <IoPeopleOutline size={50} className="text-roles-producer " />
+            <h3 className="text-2xl md:text-6xl font-semibold">DIRECTION TEAM</h3>
+            <p className="text-lg">
+              We present you our direction team, led by Paula Hitz as the
+              Producer, and with María Calle as Lead Designer, Álex Ávila as
+              Lead Programmer, and Guillem Álava as Lead Artist.
+            </p>
+
+            <a
+              // href={require("")}
+              className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4  bg-purple-400 hover:bg-purple-200 active:bg-purple-600 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
+              href="#member-grid"
+              onClick={() => setActiveRol("Producer")}
+            >
+              Meet Us
+            </a>
+          </div>
+          <div className="w-full md:w-1/2  p-4">
+            <Image
+              src="/contents/images/admin_team.jpeg"
+              width={2048}
+              height={1536}
+              alt="chamfer-studios-admin-team"
+              className="object-cover rounded-xl "
+            />
+          </div>
         </div>
-        
-        <Image
-          src="/contents/images/prog_team.jpeg"
-          width={2048}
-          height={1536}
-          alt="programming team"
-          className="rounded-2xl"
-          
-        />
-      </div>
-      <div className="flex flex-row my-16">
-        <Image
-          className="rounded-2xl"
-          src="/contents/images/design_team.jpeg"
-          width={2048}
-          height={1536}
-          alt="a saber"
-        />
-        <div className="flex flex-col justify-center mr-48 items-end">
-          <p className="text-sm text-right text-dune-orangespicy font-bold ">
-            <IoNewspaperOutline size={32} className=""/>
-          </p>
-          <h2 className="text-4xl text-right text-dune-lightblue font-semibold">
-            Design Team
-          </h2>
-          <p className="ml-20 text-right">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Tristique magna sit amet purus.
-          </p>
+
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start text-center md:text-left">
+            <IoCodeOutline size={50} className="text-roles-programmer" />
+            <h3 className="text-2xl md:text-6xl font-semibold">PROGRAMMING TEAM</h3>
+            <p className="text-lg pr-8">
+              Introducing our programming team, formed by Irene Hernández, Tomás
+              Carreras, David Montufo, Oscar Cuatrecasas, Yeray Tarifa, Sergi
+              Colomer, Telmo Beroiz, Albert Espinosa, Bosco Barber, Andrés
+              Sánchez, and Álex Ávila, as their lead.
+            </p>
+
+            <a
+              // href={require("")}
+              className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4 bg-roles-programmer hover:bg-red-200 active:bg-red-500 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
+              href="#member-grid"
+              onClick={() => setActiveRol("Programmer")}
+            >
+              Meet Us
+            </a>
+          </div>
+          <div className="w-full md:w-1/2 p-4">
+            <Image
+              src="/contents/images/prog_team.jpeg"
+              width={2048}
+              height={1536}
+              alt="chamfer-studios-admin-team"
+              className="object-cover  rounded-xl"
+            />
+          </div>
         </div>
-      </div>
-      <div className="flex flex-row pr-8">
-        <div className="flex flex-col justify-center">
-          <p className="text-sm text-dune-orangespicy font-bold">
-           <IoBrushOutline size={32} /> 
-          </p>
-          <h2 className="text-4xl text-dune-lightblue font-semibold">
-            ART TEAM
-          </h2>
-          <p className="mr-20">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Tristique magna sit amet purus.
-          </p>
+
+        <div className="flex flex-col space-y-8 md:flex-row-reverse justify-center items-center text-center md:text-left">
+          <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start">
+            <IoDesktopOutline size={50} className="text-roles-designer " />
+            <h3 className="text-2xl md:text-6xl font-semibold">DESIGN TEAM</h3>
+            <p className="text-lg">
+            Introducing the design team, we have Aram Galarza, Aitor Álvarez,
+              Eduard Minguell, Núria Lamonja, Abraham Díaz, Arnau Lucena, Marc
+              Gallardo, and María Calle, as their lead.
+            </p>
+
+            <a
+              // href={require("")}
+              className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4  bg-blue-400 hover:bg-blue-200 active:bg-roles-leaddesigner text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
+              href="#member-grid"
+              onClick={() => setActiveRol("Designer")}
+            >
+              Meet Us
+            </a>
+          </div>
+          <div className="w-full md:w-1/2  p-4">
+            <Image
+              src="/contents/images/design_team.jpeg"
+              width={2048}
+              height={1536}
+              alt="chamfer-studios-admin-team"
+              className="object-cover rounded-xl "
+            />
+          </div>
         </div>
-        <Image
-          className="rounded-2xl"
-          src="/contents/images/art_team.jpeg"
-          width={2048}
-          height={1536}
-          alt="art team"
-        />
+
+
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start text-center md:text-left">
+            <IoBrushOutline size={50} className="text-roles-artist" />
+            <h3 className="text-2xl md:text-6xl font-semibold">ART TEAM</h3>
+            <p className="text-lg pr-8">
+            And last but not least, we have our art team, Martí Davicino,
+              Víctor Jara, Carles López, Martí Buxeda, and Guillem Álava as
+              their lead.
+            </p>
+
+            <a
+              // href={require("")}
+              className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4 bg-roles-artist hover:bg-green-200 active:bg-roles-leadartist text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
+              href="#member-grid"
+              onClick={() => setActiveRol("Artist")}
+            >
+              Meet Us
+            </a>
+          </div>
+          <div className="w-full md:w-1/2 p-4">
+            <Image
+              src="/contents/images/art_team.jpeg"
+              width={2048}
+              height={1536}
+              alt="chamfer-studios-admin-team"
+              className="object-cover  rounded-xl"
+            />
+          </div>
+        </div>
+
+
+
       </div>
 
       {/* Member Grid */}
-      <div className="flex w-full mt-16">
+      <div className="flex w-full pt-8">
         <button
           onClick={() => setActiveRol("Producer")}
           className={`w-full flex justify-center ${
@@ -126,7 +186,7 @@ export default function Team({ teammembers }) {
               : "text-gray-500"
           }`}
         >
-          <IoCode size={30} />
+          <IoCodeOutline size={30} />
         </button>
         <button
           onClick={() => setActiveRol("Designer")}
@@ -136,7 +196,7 @@ export default function Team({ teammembers }) {
               : "text-gray-500"
           }`}
         >
-          <IoNewspaperOutline size={30} />
+          <IoLaptopOutline size={30} />
         </button>
         <button
           onClick={() => setActiveRol("Artist")}
@@ -150,24 +210,22 @@ export default function Team({ teammembers }) {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center my-16">
+      <div
+        className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center my-16"
+        id="member-grid"
+      >
         {teammembers
           .filter((teammember) => teammember.role.includes(activeRol))
           .map((filteredmember) => (
-            <NextLink
-              key={filteredmember.slug}
+            <MemberFrame
+              id={"Programmer"}
+              src={`/team/${filteredmember.slug}.png`}
+              name={filteredmember.name}
+              role={filteredmember.role}
+              github={filteredmember.github}
+              linkdn={filteredmember.linkedin}
               href={`/${filteredmember.slug}`}
-              passHref
-            >
-              <a>
-                <MemberFrame
-                  id={"Programmer"}
-                  src={`/team/${filteredmember.slug}.png`}
-                  name={filteredmember.name}
-                  role={filteredmember.role}
-                />
-              </a>
-            </NextLink>
+            />
           ))}
       </div>
     </PageLayout>

@@ -10,56 +10,55 @@ export default function Gallery() {
           <Card
             title="Influence"
             subtitle="Design and Development"
-            path="/contents/images/module_animation.png"
+            path="/contents/gallery/1.png"
             width="300"
             height="600"
           />
         </div>
-        <div className="bg-gray-500 md:row-span-1 md:col-span-2">
-          <Link href="/project">
-            <a>
-              <Card
-                title="Insomnia"
-                subtitle="Design and Development"
-                path="/contents/images/module_animation.png"
-                width="600"
-                height="300"
-              />
-            </a>
-          </Link>
+
+        <div className=" md:row-span-1 md:col-span-2">
+          <div>
+            <Card
+              title="Insomnia"
+              subtitle="Design and Development"
+              path="/contents/gallery/2.png"
+              width="600"
+              height="300"
+            />
+          </div>
         </div>
-        <div className=" bg-gray-500 md:row-span-1 md:col-span-1">
+        <div className="md:row-span-1 md:col-span-1">
           <Card
             title="Influence"
             subtitle="Design and Development"
-            path="/contents/images/module_animation.png"
+            path="/contents/gallery/3.png"
             width="300"
             height="300"
           />
         </div>
-        <div className="bg-gray-500 md:row-span-2 md:col-span-1">
+        <div className="md:row-span-2 md:col-span-1">
           <Card
             title="Influence"
             subtitle="Design and Development"
-            path="/contents/images/module_animation.png"
+            path="/contents/gallery/4.png"
             width="300"
             height="600"
           />
         </div>
-        <div className="bg-gray-500 md:row-span-2 md:col-span-2">
+        <div className="md:row-span-2 md:col-span-2">
           <Card
             title="Influence"
             subtitle="Design and Development"
-            path="/contents/images/module_animation.png"
+            path="/contents/gallery/5.png"
             width="600"
             height="600"
           />
         </div>
-        <div className=" bg-gray-500 md:row-span-1 md:col-span-1">
+        <div className="md:row-span-1 md:col-span-1">
           <Card
             title="Influence"
             subtitle="Design and Development"
-            path="/contents/images/module_animation.png"
+            path="/contents/gallery/6.png"
             width="300"
             height="300"
           />
