@@ -114,7 +114,7 @@ export const ImageFrame = ({ src, width, height, layout }) => {
   );
 };
 
-export const SectionFrame = ({ src, layout, title, desc, imageRight }) => {
+export const SectionFrame = ({ src, layout, title, desc, imageRight,subtitle }) => {
   return (
     <div 
     className={`flex flex-col items-center md:flex-row bg-gray-100 rounded-xl md:p-16 md:my-8 ${
@@ -130,6 +130,7 @@ export const SectionFrame = ({ src, layout, title, desc, imageRight }) => {
           : " md:ml-8 md:pr-8"
       }`}
       >
+        <h3 className="text-2xl mb-2 md:text-4xl font-semibold md:mt-4">{subtitle}</h3>
         <h3 className="text-2xl mb-2 md:text-6xl font-semibold md:mt-4">{title}</h3>
         <p className="text-md text-gray-500 md:mt-2 ">{desc}</p>
       </div>
