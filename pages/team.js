@@ -27,13 +27,11 @@ export default function Team({ teammembers }) {
         alt="chamfer studios"
       />
       <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making it
-        over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through
-        the cites of the word in classical literature, discovered the
-        undoubtable source. Lorem Ipsum comes from sections 1.10
+      Chamfer Studios is a group of 25 hardworking and eager to learn university students, who 
+      came together to build our game Dune: Special Spice Ops. Studying in the Polytechnic University 
+      of Catalonia (UPC), and currently in our third year of the bachelor’s degree in Video Game 
+      Design and Development, we came to a common goal, for the subject Project III, to simulate 
+      a small studio and develop with our own engine an RTT video game.
       </p>
 
       <div className="grid grid-cols-3 gap-8 my-8 grayscale">
@@ -110,18 +108,22 @@ export default function Team({ teammembers }) {
       </div>
 
       {/* Team Section */}
-      <div className="flex flex-row w-full">
+      <div className="flex flex-row-reverse  w-full">
+        <div className="w-1/2 flex flex-col justify-center text-right items-end ">
+          <h2 className="text-4xl mb-4">DIRECTION TEAM</h2>
+
+          <p className="">
+          We present you our direction team, led by Paula Hitz as the Producer, and 
+          with María Calle as Lead Designer, Álex Ávila as Lead Programmer, and Guillem Álava as Lead Artist.
+          </p>
+        </div>
         <div className="w-1/2 flex flex-col justify-center">
           <h2 className="text-4xl mb-4">PROGRAMMING TEAM</h2>
 
           <p className="">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydnne of the more obscure Latin words, consectetur, from
-            a Lorem Ipsum passage, and going through the cites of the word in
-            classical literature, discovered the undoubtable source. Lorem Ipsum
-            comes from sections 1.10
+          Introducing our programming team, formed by Irene Hernández, Tomás Carreras, David Montufo, 
+          Oscar Cuatrecasas, Yeray Tarifa, Sergi Colomer, Telmo Beroiz, Albert Espinosa, Bosco Barber, 
+          Andrés Sánchez, and Álex Ávila, as their lead.
           </p>
         </div>
 
@@ -136,14 +138,8 @@ export default function Team({ teammembers }) {
         <div className="w-1/2 flex flex-col justify-center text-right items-end ">
           <h2 className="text-4xl mb-4">DESIGN TEAM</h2>
           <p className="">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10
+          Introducing the design team, we have Aram Galarza, Aitor Álvarez, Eduard Minguell, Núria Lamonja, 
+          Abraham Díaz, Arnau Lucena, Marc Gallardo, and María Calle, as their lead.
           </p>
         </div>
 
@@ -156,14 +152,8 @@ export default function Team({ teammembers }) {
         <div className="w-1/2 flex flex-col justify-center">
           <h2 className="text-4xl mb-4 ">ART TEAM</h2>
           <p className="">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10
+            And last but not least, we have our art team, Martí Davicino, 
+            Víctor Jara, Carles López, Martí Buxeda, and Guillem Álava as their lead.
           </p>
         </div>
 
