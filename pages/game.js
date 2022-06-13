@@ -23,9 +23,13 @@ export default function Game() {
         />
 
         <p className="w-[60%] text-center mb-10">
-          Lorem Ipsum has been the industry&apos;s standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book.
+        Dune: Special Spice Ops is a real time tactics game focused on stealth, discovery and exploration, 
+        developed by Chamfer Studios. It is based on the classic game Commandos, developed by Pyro Studios, 
+        a stealth-oriented real-time tactics video game from 1998, and with Dune theme, one of the world’s 
+        best-selling science fiction novels, by Frank Herbert, set in a distant future feudal interstellar society.<br/><br/>
+
+        Follow the story of our protagonist, Zhib, and his companions, Nerala and Omozra, to discover the threats 
+        that live among the people of Arrakis. They are ready to fight against all odds, will you be able to overcome the challenge?
         </p>
       </div>
      <div className="pb-[56.25%] relative w-[60%]">
