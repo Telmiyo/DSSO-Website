@@ -6,11 +6,8 @@ import Image from "next/image"
 
 export default function Production() {
   return (
-    <PageLayout className="p-4 lg:p-0 space-y-4">
-      <h1 className="text-4xl tracking-wider text-center ">PRODUCTION</h1>
-      <h2 className="text-xl text-dune-orangespicy font-bold text-center">
-        Goal
-      </h2>
+    <PageLayout className="p-4 lg:p-0">
+      <h1 className="text-4xl tracking-wider text-center font-fonseca mb-4">PRODUCTION</h1>
       <p className="text-md text-gray-500 text-center">
         Chamfer Studios is a group of 25 university students that share a common
         goal of producing their first 3D RTT video game for the subject Project
@@ -313,6 +310,7 @@ export default function Production() {
         width="1877px"
         height="961px"
         layout="responsive"
+        subtitle="Tools"
         title="HacknPlan"
         desc=" The team used HacknPlan to manage the scrum framework, using the
         different sprint boards organized by milestones. This allowed the team to organize the tasks not only by sprints and
@@ -321,25 +319,24 @@ export default function Production() {
         imageRight={true}
       />
 
-      <h3 className="text-lg text-gray-600 mt-8 tracking-wider">
-        Google Drive
-      </h3>
-      <p className="text-md text-gray-500 mt-2">
-        In Google Drive, the team was able to keep track of all the different
+      <SectionFrame
+        src="/contents/images/gdrive.png"
+        width="953px"
+        height="658px"
+        layout="responsive"
+        title="Google Drive"
+        desc=" Where the team was able to keep track of all the different
         documents, such as reports and documentation, as well as assets,
-        calendar, and other useful elements.
-      </p>
-      <p className="text-md text-gray-500 mt-2">
-        In our Drive, the producer provided a series of templates that ensured
-        organization and clarification. It included:
-      </p>
-
+        calendar, and other useful elements. In our Drive, the producer provided a series of templates that ensured
+        organization and clarification."
+        imageRight={false}
+      />
       <SectionFrame
         src="/contents/images/calendar.png"
         width="953px"
         height="658px"
         layout="responsive"
-        title="1. Google Calendar"
+        title="Calendar"
         desc="  Where all the important timestamps were displayed, such as the sprint
         week, the milestone deliveries, as well as out of the ordinary meetings
         that we organized."
@@ -350,7 +347,7 @@ export default function Production() {
         width="901px"
         height="712px"
         layout="responsive"
-        title="2. Hour Log"
+        title="Hour Log"
         desc="Where every team member, daily, noted down how many hours they spent
         working in order to keep track of the time invested as well as the
         longevity of a task."
@@ -362,7 +359,7 @@ export default function Production() {
         width="1159px"
         height="583px"
         layout="responsive"
-        title="3.1 Scrum Teams"
+        title="Scrum Teams"
         desc="Scrum teams were made, and there was a template that represented each scrum team, as well as the taskts needed to be done by everyone for the sprint."
         imageRight={true}
       />
@@ -371,7 +368,7 @@ export default function Production() {
         width="864px"
         height="873px"
         layout="responsive"
-        title="3.2 Scrum Masters"
+        title="Scrum Masters"
         desc="There was as well a table that represented who were the scrum masters for the sprint."
         imageRight={true}
       />
@@ -381,7 +378,7 @@ export default function Production() {
         width="1697px"
         height="713px"
         layout="responsive"
-        title="4. Attendance"
+        title="Attendance"
         desc="The producer noted down who came to class every day in order to keep
         track of the implication each member has to the project, as well as
         their schedule."
@@ -393,7 +390,7 @@ export default function Production() {
         width="1360px"
         height="807px"
         layout="responsive"
-        title="5. Evaluation"
+        title="Evaluation"
         desc={ `In every delivery, the producer had to send an evaluation to the
         teachers with an analysis on the progress and impact every member of the
         team was doing. This included their attendance to class, to our
@@ -441,7 +438,7 @@ export default function Production() {
       </div>
 
       {/* Programming */}
-      <h3 className="text-lg mt-16 mb-8 tracking-wider">Programming Tools</h3>
+      <h3 className="text-lg mt-32 mb-8 tracking-wider">Programming Tools</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
         <ToolFrame
           src="/contents/tools/visual-studio.png"
@@ -470,7 +467,7 @@ export default function Production() {
       </div>
 
       {/* Design */}
-      <h3 className="text-lg mt-16 mb-8 tracking-wider">Design Tools</h3>
+      <h3 className="text-lg mt-32 mb-8 tracking-wider">Design Tools</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
         <ToolFrame
           src="/contents/tools/inskcape.png"
@@ -517,7 +514,7 @@ export default function Production() {
       </div>
 
       {/* Artist */}
-      <h3 className="text-lg mt-16 mb-8 tracking-wider">Artist Tools</h3>
+      <h3 className="text-lg mt-32 md-8 tracking-wider">Artist Tools</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
         <ToolFrame
           src="/contents/tools/audacity.png"

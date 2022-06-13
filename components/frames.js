@@ -130,7 +130,7 @@ export const SectionFrame = ({ src, layout, title, desc, imageRight }) => {
           : " md:ml-8 md:pr-8"
       }`}
       >
-        <h3 className="text-lg text-gray-600 md:mt-4 tracking-wider font-bold">{title}</h3>
+        <h3 className="text-2xl mb-2 md:text-6xl font-semibold md:mt-4">{title}</h3>
         <p className="text-md text-gray-500 md:mt-2 ">{desc}</p>
       </div>
       <div className="rounded-2xl shadow-xl w-full md:w-1/2  ">
