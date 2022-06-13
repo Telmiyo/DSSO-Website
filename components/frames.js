@@ -130,8 +130,8 @@ export const SectionFrame = ({ src, layout, title, desc, imageRight,subtitle }) 
           : " md:ml-8 md:pr-8"
       }`}
       >
-        <h3 className="text-2xl mb-2 md:text-4xl font-semibold md:mt-4">{subtitle}</h3>
-        <h3 className="text-2xl mb-2 md:text-6xl font-semibold md:mt-4">{title}</h3>
+        <h3 className="text-2xl md:text-2xl font-semibold md:mt-4 text-gray-400">{subtitle}</h3>
+        <h3 className="text-2xl mb-4 md:text-6xl font-semibold md:mt-4 text-dune-darkorange">{title}</h3>
         <p className="text-md text-gray-500 md:mt-2 ">{desc}</p>
       </div>
       <div className="rounded-2xl shadow-xl w-full md:w-1/2  ">

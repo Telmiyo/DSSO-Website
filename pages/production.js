@@ -7,7 +7,7 @@ import Image from "next/image"
 export default function Production() {
   return (
     <PageLayout className="p-4 lg:p-0">
-      <h1 className="text-4xl tracking-wider text-center font-fonseca mb-4">PRODUCTION</h1>
+      <h1 className="text-4xl text-center font-fonseca mb-4">PRODUCTION</h1>
       <p className="text-md text-gray-500 text-center">
         Chamfer Studios is a group of 25 university students that share a common
         goal of producing their first 3D RTT video game for the subject Project
@@ -29,7 +29,7 @@ export default function Production() {
       />
       
 
-      <h3 className="text-lg text-gray-600 tracking-wider">Producer</h3>
+      <h3 className="text-3xl text-gray-600 tracking-wider mt-4">Producer</h3>
       <p className="text-md text-gray-500 ">
         The role of the producer is to make sure the process and progress of the
         game’s design, development and release happen. They are in charge of the
@@ -38,15 +38,15 @@ export default function Production() {
         vision during its progress.
       </p>
 
-      <h3 className="text-lg tracking-wider text-gray-600 ">Leads</h3>
+      <h3 className="text-3xl tracking-wider text-gray-600 mt-16 ">Leads</h3>
       <p className="text-md text-gray-500 ">
         The leads’ role is to direct, guide, and organize their department in
         the different stages of development. They are also in charge of
         communicating their progress, decisions and opinions to the producer.
       </p>
 
-      <h3 className="text-lg tracking-wider text-gray-700 ">Departments</h3>
-      <p className="text-md text-gray-500 ">
+      <h3 className="text-3xl tracking-wider text-gray-700 mt-16">Departments</h3>
+      <p className="text-md text-gray-500 mb-16">
         Each department is in charge of a specific area on building the video
         game. The three are important and necessary to reach our end goal.
       </p>
@@ -65,7 +65,7 @@ export default function Production() {
         imageRight={true}
       />
 
-      <h2 className="text-xl tracking-wider mt-4">Sprints</h2>
+      <h2 className="text-3xl tracking-wider mt-4">Sprints</h2>
       <p className="text-md text-gray-500 mt-2">
         There were a total of 16 sprints during the whole development of the
         game. Sprints started every Tuesday and ended Monday night, therefore
@@ -88,7 +88,7 @@ export default function Production() {
       <div className="flex flex-col md:flex-row jus md:mt-16">
         {/* Left Column */}
         <div className="md:w-1/2">
-          <h3 className="text-xl tracking-wider ">Roadmap</h3>
+          <h3 className="text-3xl tracking-wider ">Roadmap</h3>
           <p className="text-md md:pr-32 mt-2">
             Milestones are a group of deadlines set at the beginning of the
             production in order to give the team a clear goal with a date. In
@@ -106,7 +106,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl  text-dune-lightblue font-bold ">
+                <h4 className="text-4xl  text-dune-ultradeepblue font-bold ">
                   Concept Discovery
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -127,7 +127,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl  text-dune-lightblue font-bold ">
+                <h4 className="text-4xl  text-dune-ultradeepblue font-bold ">
                   Vertical Slice
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -147,7 +147,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl   text-dune-lightblue font-bold ">
+                <h4 className="text-4xl   text-dune-ultradeepblue font-bold ">
                   Vertical Slice 2
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -172,7 +172,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-ultradeepblue font-bold ">
                   Alpha 1
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -195,7 +195,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-ultradeepblue font-bold ">
                   Alpha 2
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -220,7 +220,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-ultradeepblue font-bold ">
                   Alpha 3
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -245,7 +245,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-ultradeepblue font-bold ">
                   Beta
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -267,7 +267,7 @@ export default function Production() {
             </h4>
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-ultradeepblue font-bold ">
                   Gold
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -281,7 +281,7 @@ export default function Production() {
         </div>
       </div>
 
-      <h2 className="text-xl mt-8 tracking-wider">Scrum Teams</h2>
+      <h2 className="text-3xl mt-8 tracking-wider">Scrum Teams</h2>
       <p className="text-md text-gray-500 mt-2">
         A scrum team is a group that was in charge of a specific design element,
         like the UI or a level. The idea is that, since one element may have
@@ -297,14 +297,14 @@ export default function Production() {
         masters were volunteers.
       </p>
 
-      <p className="text-md text-gray-500 mt-2">
+      <p className="text-md text-gray-500 mt-2 mb-16">
         The reason why we worked with this method was because it facilitates
         communication, organization, motivation, and encourages working with
         other people.
       </p>
 
       {/* Tools Grid */}
-      <h2 className="text-xl tracking-wider mt-8">Tools</h2>
+      
       <SectionFrame
         src="/contents/images/hacknplan.png"
         width="1877px"
@@ -324,6 +324,7 @@ export default function Production() {
         width="953px"
         height="658px"
         layout="responsive"
+        subtitle="Tools"
         title="Google Drive"
         desc=" Where the team was able to keep track of all the different
         documents, such as reports and documentation, as well as assets,
@@ -336,6 +337,7 @@ export default function Production() {
         width="953px"
         height="658px"
         layout="responsive"
+        subtitle="Tools"
         title="Calendar"
         desc="  Where all the important timestamps were displayed, such as the sprint
         week, the milestone deliveries, as well as out of the ordinary meetings
@@ -347,6 +349,7 @@ export default function Production() {
         width="901px"
         height="712px"
         layout="responsive"
+        subtitle="Tools"
         title="Hour Log"
         desc="Where every team member, daily, noted down how many hours they spent
         working in order to keep track of the time invested as well as the
@@ -359,6 +362,7 @@ export default function Production() {
         width="1159px"
         height="583px"
         layout="responsive"
+        subtitle="Tools"
         title="Scrum Teams"
         desc="Scrum teams were made, and there was a template that represented each scrum team, as well as the taskts needed to be done by everyone for the sprint."
         imageRight={true}
@@ -368,9 +372,10 @@ export default function Production() {
         width="864px"
         height="873px"
         layout="responsive"
+        subtitle="Tools"
         title="Scrum Masters"
         desc="There was as well a table that represented who were the scrum masters for the sprint."
-        imageRight={true}
+        imageRight={false}
       />
 
       <SectionFrame
@@ -378,11 +383,12 @@ export default function Production() {
         width="1697px"
         height="713px"
         layout="responsive"
+        subtitle="Tools"
         title="Attendance"
         desc="The producer noted down who came to class every day in order to keep
         track of the implication each member has to the project, as well as
         their schedule."
-        imageRight={false}
+        imageRight={true}
       />
 
       <SectionFrame
@@ -390,6 +396,7 @@ export default function Production() {
         width="1360px"
         height="807px"
         layout="responsive"
+        subtitle="Tools"
         title="Evaluation"
         desc={ `In every delivery, the producer had to send an evaluation to the
         teachers with an analysis on the progress and impact every member of the
@@ -403,13 +410,13 @@ export default function Production() {
         how hard each member was working, and their level of motivation for the
         project. Using these reports, the teachers could have an understanding on how
         everyone was performing, which greatly influenced their grades.`}
-        imageRight={true}
+        imageRight={false}
       />
 
      
 
       {/* Production */}
-      <h3 className="text-lg mt-16 mb-8 tracking-wider ">Production Tools</h3>
+      <h3 className="text-3xl mt-16 mb-8 tracking-wider ">Production Tools</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
         <ToolFrame
           src="/contents/tools/drive.png"
@@ -438,7 +445,7 @@ export default function Production() {
       </div>
 
       {/* Programming */}
-      <h3 className="text-lg mt-32 mb-8 tracking-wider">Programming Tools</h3>
+      <h3 className="text-3xl mt-32 mb-8 tracking-wider">Programming Tools</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
         <ToolFrame
           src="/contents/tools/visual-studio.png"
@@ -467,7 +474,7 @@ export default function Production() {
       </div>
 
       {/* Design */}
-      <h3 className="text-lg mt-32 mb-8 tracking-wider">Design Tools</h3>
+      <h3 className="text-3xl mt-32 mb-8 tracking-wider">Design Tools</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
         <ToolFrame
           src="/contents/tools/inskcape.png"
@@ -514,7 +521,7 @@ export default function Production() {
       </div>
 
       {/* Artist */}
-      <h3 className="text-lg mt-32 md-8 tracking-wider">Artist Tools</h3>
+      <h3 className="text-3xl mt-32 md-8 tracking-wider">Artist Tools</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
         <ToolFrame
           src="/contents/tools/audacity.png"
