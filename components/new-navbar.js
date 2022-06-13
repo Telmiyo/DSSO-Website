@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { IoMenuOutline, IoCloseOutline, IoLogoGithub } from "react-icons/io5";
 import Lottie from "react-lottie";
 import menuIconData from "../public/icons/menu.json";
 import NextLink from "next/link";
@@ -58,7 +57,7 @@ export default function NewNavbar({ path }) {
           <motion.aside
             className={`flex flex-col justify-center w-1/2 h-full fixed right-0  ${
               path == "/"
-                ? "bg-white/30 backdrop-blur-md  z-30"
+                ? "bg-white/30 "
                 : "bg-dune-black z-10"
             }`}
             onClick={console.log(path)}
