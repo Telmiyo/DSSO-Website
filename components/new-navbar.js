@@ -59,7 +59,7 @@ export default function NewNavbar({ path }) {
           <motion.aside
             className={`flex flex-col justify-center w-1/2 h-full fixed right-0  ${
               path == "/"
-                ? "bg-white/30 backdrop-blur-md  z-10"
+                ? "bg-white/30 backdrop-blur-md  z-30"
                 : "bg-dune-ultralightblue z-10"
             }`}
             onClick={console.log(path)}
@@ -97,7 +97,7 @@ export default function NewNavbar({ path }) {
 
       <div
         className={`flex w-full justify-between py-1 items-center shadow-md ${
-          path == "/" ? "bg-white/30 backdrop-blur-md   z-10" : "bg-white"
+          path == "/" ? "bg-white/30 backdrop-blur-md z-30" : "bg-white"
         }`}
       >
         <button

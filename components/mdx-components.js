@@ -10,7 +10,7 @@ import SketchfabCard from './sketchfab'
 import GifEmbed from './gif-embed'
 const mdxComponents = {
    Tabs,
-   Youtube,
+   YouTube,
    Vimeo,
    JobCard,
    Lottie,

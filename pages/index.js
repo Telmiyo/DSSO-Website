@@ -10,7 +10,7 @@ export default function Home() {
         {/* <Hero /> */}
         <MinimalisticHero />
       </div>
-      <div className="fixed top-0 left-0 h-full w-full -z-50">
+      <div className="fixed top-0 left-0 h-full w-full -z-10">
         <video
           loop
           autoPlay
@@ -33,21 +33,22 @@ export default function Home() {
       </div>
       <GameCharacter
         title="Zhib"
-        description="the Naib of the sietch, a fearless fighter who erned the respect of his people from a very young age.
-With his impeccable knife aim he can kill a man from far away, but he is even more dangerous up close, since he can slash through multiple enemies, ending their lives at once."
-        bgcolor={"bg-dune-bluefremen"}
+        description="The Naib of the sietch, a fearless fighter who erned the respect of his people from a very young age.
+        With his impeccable knife aim he can kill a man from far away, but he is even more dangerous up close, since he can slash through multiple enemies, ending their lives at once."
+        bgcolor={"bg-dune-black"}
       />
       <GameCharacter
         title="Nerala"
-        description=" a trained Bene Gesserit that rejected their order and got punished for it, losing her vocal cords in the process.
-She is a ferocious hunter who can blind and deafen a man with her poisons, and kill from very far away with her precious gadgets."
-        bgcolor={"bg-dune-orangespicy"}
+        description="A trained Bene Gesserit that rejected their order and got punished for it, losing her vocal cords in the process.
+        She is a ferocious hunter who can blind and deafen a man with her poisons, and kill from very far away with her precious gadgets."
+        bgcolor={"bg-dune-white"}
+        inverted={true}
       />
       <GameCharacter
         title="Omozra"
-        description="outcasted since he was a kid and adopted and experimented with by a worm trainer, he outlived his master and became, himself, the greatest worm trainer of all.
-Sadiq, his best trained worm, follows him everywhere, emerging from the sand to execute whoever Omozra orders and transporting and healing his allies."
-        bgcolor={"bg-dune-bluefremen"}
+        description="Outcasted since he was a kid and adopted and experimented with by a worm trainer, he outlived his master and became, himself, the greatest worm trainer of all.
+        Sadiq, his best trained worm, follows him everywhere, emerging from the sand to execute whoever Omozra orders and transporting and healing his allies."
+        bgcolor={"bg-dune-black"}
       />
     </div>
   );
