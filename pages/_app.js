@@ -20,6 +20,8 @@ function MyApp({ Component, pageProps, router }) {
         <meta name="copyright" content="Alejandro Ávila & Telmo Beroiz" />
         <meta name="robots" content="index, follow" />
         <meta name="rating" content="safe for kids" />
+        <link rel="icon" type="image/x-icon" href="/contents/corporative/logo.ico"/>
+
       </Head>
       <Main router={router}>
         <Component {...pageProps} />
