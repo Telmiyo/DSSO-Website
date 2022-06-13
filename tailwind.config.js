@@ -45,6 +45,8 @@ module.exports = {
           lightblue: "#A0D1D7",
           black: "#464855",
           orangespicy: "#E4865B",
+          lightorange:"#E99E7C",
+          darkorange:"#B66B49",
           bluefremen: "#12868D",
           ultralightblue: "#D1EEEF",
           ultradeepblue: "#0E656A",

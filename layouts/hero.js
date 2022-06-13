@@ -1,7 +1,19 @@
 import Spline from "@splinetool/react-spline";
 
-import React from "react";
+import React,{useRef} from "react";
 const Hero = () => {
+  const objectToAnimate = useRef();
+  function onLoad(spline){
+    console.log("hfjsfhklsf")
+
+    const obj = spline.findObjectByName('Camera');
+    objectToAnimate.current = obj;
+  }
+  function onMouseDown(e) {
+    if (e.target.name === 'Cube') {
+      console.log('I have been clicked!');
+    }
+  }
   return (
     <div className="w-full relative">
       <div
@@ -16,7 +28,7 @@ const Hero = () => {
         <a
           download="file"
           // href={require("")}
-          className="border-none outline-none inline-block py-[10px] px-[25px] bg-dune-orangespicy text-center cursor-pointer no-underline rounded-md text-dune-white font-bold text-lg"
+          className="border-none outline-none inline-block py-[10px] px-[25px] bg-dune-orangespicy hover:bg-dune-lightorange active:bg-dune-darkorange text-center cursor-pointer no-underline rounded-md text-dune-white font-bold text-lg"
         >
           Download Now
         </a>
@@ -25,7 +37,9 @@ const Hero = () => {
         <Spline
           scene="https://prod.spline.design/BaYZhcMXvOtKxU8q/scene.splinecode"
           className="spline"
-        />
+          onLoad={onLoad}
+          onScroll={onMouseDown}
+          />
       </div>
     </div>
   );
