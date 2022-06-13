@@ -1,40 +1,39 @@
 import React from "react";
-import { ImageFrame, SectionFrame, ToolFrame } from "../components/frames";
+import {  SectionFrame, ToolFrame } from "../components/frames";
 import PageLayout from "../layouts/page-layout";
-import Image from "next/image";
+import Spline from "@splinetool/react-spline";
+import Image from "next/image"
 
 export default function Production() {
   return (
-    <PageLayout>
+    <PageLayout className="p-4 lg:p-0 space-y-4">
       <h1 className="text-4xl tracking-wider text-center ">PRODUCTION</h1>
       <h2 className="text-xl text-dune-orangespicy font-bold text-center">
         Goal
       </h2>
-      <p className="text-md text-gray-500 text-center my-8">
+      <p className="text-md text-gray-500 text-center">
         Chamfer Studios is a group of 25 university students that share a common
         goal of producing their first 3D RTT video game for the subject Project
         III.
       </p>
 
       {/* Project 3 */}
-      <h2 className="text-xl tracking-wider">About Our Team</h2>
-      <ImageFrame
+
+      <SectionFrame
         src="/contents/images/chamfer_team.jpeg"
         width="1600px"
         height="1200px"
         layout="responsive"
-      />
-      <p className="text-md text-gray-500 mt-2 ">
-        The team consists of one producer, three leads, one for each department,
+        title="About Our Team"
+        desc=" The team consists of one producer, three leads, one for each department,
         and three departments: ten programmers, seven designers and four
-        artists.
-      </p>
-      <p className="text-md text-gray-500 mt-8">
-        Make sure you head over to the Team tab to get to know all of us!
-      </p>
+        artists. Make sure you head over to the Team tab to get to know all of us!"
 
-      <h3 className="text-lg text-gray-600 mt-8 tracking-wider">Producer</h3>
-      <p className="text-md text-gray-500 mt-2">
+      />
+      
+
+      <h3 className="text-lg text-gray-600 tracking-wider">Producer</h3>
+      <p className="text-md text-gray-500 ">
         The role of the producer is to make sure the process and progress of the
         game’s design, development and release happen. They are in charge of the
         management of the project by keeping the team moving towards deadlines,
@@ -42,35 +41,34 @@ export default function Production() {
         vision during its progress.
       </p>
 
-      <h3 className="text-lg tracking-wider text-gray-600 mt-8">Leads</h3>
-      <p className="text-md text-gray-500 mt-2">
+      <h3 className="text-lg tracking-wider text-gray-600 ">Leads</h3>
+      <p className="text-md text-gray-500 ">
         The leads’ role is to direct, guide, and organize their department in
         the different stages of development. They are also in charge of
         communicating their progress, decisions and opinions to the producer.
       </p>
 
-      <h3 className="text-lg tracking-wider text-gray-700 mt-8">Departments</h3>
-      <p className="text-md text-gray-500 mt-2">
+      <h3 className="text-lg tracking-wider text-gray-700 ">Departments</h3>
+      <p className="text-md text-gray-500 ">
         Each department is in charge of a specific area on building the video
         game. The three are important and necessary to reach our end goal.
       </p>
 
-      <h2 className="text-xl mt-8 tracking-wider">Methodology</h2>
-      <p className="text-md text-gray-500 mt-2">
-        The methodology Chamfer Studios followed through the design and
-        development of the game is the scrum framework, consisting of short
-        sprints inside several milestones. At first, the team worked
-        specifically by departments, but as the product evolved, they started
-        working in different scrum teams.
-      </p>
-      <ImageFrame
+      <SectionFrame
         src="/contents/images/scrum.png"
         width="1075px"
         height="438px"
         layout="responsive"
+        title="Methodology"
+        desc="The methodology Chamfer Studios followed through the design and
+        development of the game is the scrum framework, consisting of short
+        sprints inside several milestones. At first, the team worked
+        specifically by departments, but as the product evolved, they started
+        working in different scrum teams."
+        imageRight={true}
       />
 
-      <h2 className="text-xl mt-8 tracking-wider">Sprints</h2>
+      <h2 className="text-xl tracking-wider mt-4">Sprints</h2>
       <p className="text-md text-gray-500 mt-2">
         There were a total of 16 sprints during the whole development of the
         game. Sprints started every Tuesday and ended Monday night, therefore
@@ -90,11 +88,11 @@ export default function Production() {
       </p>
 
       {/* Roadmap */}
-      <div className="flex flex-row mt-16">
+      <div className="flex flex-col md:flex-row jus md:mt-16">
         {/* Left Column */}
-        <div className="w-1/2">
-          <h3 className="text-xl mt-8 tracking-wider">Roadmap</h3>
-          <p className="text-md pr-32">
+        <div className="md:w-1/2">
+          <h3 className="text-xl tracking-wider ">Roadmap</h3>
+          <p className="text-md md:pr-32 mt-2">
             Milestones are a group of deadlines set at the beginning of the
             production in order to give the team a clear goal with a date. In
             the case of Chamfer Studios, each milestone represented a delivery
@@ -102,7 +100,7 @@ export default function Production() {
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-col w-1/2">
+        <div className="flex flex-col md:w-1/2">
           <hr className=""></hr>
           <div className="flex flex-row flex-start ">
             <h4 className="text-xl mt-8 pr-16 flex-grow-2 rounded-xl font-fonseca text-gray-400">
@@ -111,7 +109,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl tracking-wider text-dune-lightblue font-bold ">
+                <h4 className="text-4xl  text-dune-lightblue font-bold ">
                   Concept Discovery
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -132,7 +130,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl tracking-wider text-dune-lightblue font-bold ">
+                <h4 className="text-4xl  text-dune-lightblue font-bold ">
                   Vertical Slice
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -152,7 +150,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl  tracking-wider text-dune-lightblue font-bold ">
+                <h4 className="text-4xl   text-dune-lightblue font-bold ">
                   Vertical Slice 2
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -177,7 +175,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl  tracking-wider text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-lightblue font-bold ">
                   Alpha 1
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -200,7 +198,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl  tracking-wider text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-lightblue font-bold ">
                   Alpha 2
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -225,7 +223,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl  tracking-wider text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-lightblue font-bold ">
                   Alpha 3
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -250,7 +248,7 @@ export default function Production() {
 
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl  tracking-wider text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-lightblue font-bold ">
                   Beta
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -272,7 +270,7 @@ export default function Production() {
             </h4>
             <div className="flex-grow-1 mt-4">
               <div className="flex flex-col">
-                <h4 className="text-4xl  tracking-wider text-dune-lightblue font-bold ">
+                <h4 className="text-4xl text-dune-lightblue font-bold ">
                   Gold
                 </h4>
                 <ul className="list-disc ml-4 text-md  text-gray-500 text-left my-4">
@@ -360,27 +358,21 @@ export default function Production() {
       />
 
       <SectionFrame
-        src="/contents/images/scrummaster.png"
+        src="/contents/images/scrumteams.png"
         width="1159px"
         height="583px"
         layout="responsive"
-        title="3. Scrum Team"
-        desc="The information of the scrum teams for that milestone. There were two
-        graphs, one that showed who the scrum master was for the week, and
-        another one with the different members in each scrum team as well as the
-        tasks we wanted to complete for that week."
+        title="3.1 Scrum Teams"
+        desc="Scrum teams were made, and there was a template that represented each scrum team, as well as the taskts needed to be done by everyone for the sprint."
         imageRight={true}
       />
       <SectionFrame
-        src="/contents/images/scrumteams.png"
+        src="/contents/images/scrummaster.png"
         width="864px"
         height="873px"
         layout="responsive"
-        title="3. Scrum Team"
-        desc="The information of the scrum teams for that milestone. There were two
-        graphs, one that showed who the scrum master was for the week, and
-        another one with the different members in each scrum team as well as the
-        tasks we wanted to complete for that week."
+        title="3.2 Scrum Masters"
+        desc="There was as well a table that represented who were the scrum masters for the sprint."
         imageRight={true}
       />
 
@@ -418,34 +410,6 @@ export default function Production() {
       />
 
      
-      {/* General */}
-      <h3 className="text-lg mt-8 mb-8 tracking-wider">General Tools</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
-        <ToolFrame
-          src="/contents/tools/drive.png"
-          role="Producer"
-          name="Google Drive"
-          desc="Google Drive is a file storage and synchronization service developed by Google."
-        />
-        <ToolFrame
-          src="/contents/tools/docs.png"
-          role="Producer"
-          name="Google Docs"
-          desc="Google Docs is an online word processor included as part of the free, web-based Google Docs Editors suite offered by Google."
-        />
-        <ToolFrame
-          src="/contents/tools/slides.jfif"
-          role="Producer"
-          name="Google Slides "
-          desc="Google Slides is a presentation program included as part of the free, web-based Google Docs Editors suite offered by Google."
-        />
-        <ToolFrame
-          src="/contents/tools/sheets.png"
-          role="Producer"
-          name="Google Sheets"
-          desc="Google Sheets is a spreadsheet program included as part of the free, web-based Google Docs Editors suite offered by Google."
-        />
-      </div>
 
       {/* Production */}
       <h3 className="text-lg mt-16 mb-8 tracking-wider ">Production Tools</h3>
@@ -480,28 +444,28 @@ export default function Production() {
       <h3 className="text-lg mt-16 mb-8 tracking-wider">Programming Tools</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
         <ToolFrame
-          src="/contents/tools/drive.png"
-          role="Lead Programmer"
-          name="Google Drive"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo. consectetur adipiscing elit."
+          src="/contents/tools/visual-studio.png"
+          role="Programmer"
+          name="Visual Studio 2019"
+          desc="Microsoft Visual Studio is an integrated development environment from Microsoft. It is used to develop computer programs, as well as websites, web apps, web services and mobile apps."
         />
         <ToolFrame
-          src="/contents/tools/docs.png"
-          role="Lead Programmer"
-          name="Google Docs"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo. consectetur adipiscing elit."
+          src="/contents/tools/vscode.png"
+          role="Programmer"
+          name="VS Code"
+          desc="Visual Studio Code, also commonly referred to as VS Code, is a source-code editor made by Microsoft for Windows, Linux and macOS."
         />
         <ToolFrame
-          src="/contents/tools/slides.jfif"
-          role="Lead Programmer"
-          name="Google Slides "
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo. consectetur adipiscing elit."
+          src="/contents/tools/github.png"
+          role="Programmer"
+          name="Github"
+          desc="GitHub, Inc. is a provider of Internet hosting for software development and version control using Git."
         />
         <ToolFrame
-          src="/contents/tools/sheets.png"
-          role="Lead Programmer"
-          name="Google Sheets"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo. consectetur adipiscing elit."
+          src="/contents/tools/git.png"
+          role="Programmer"
+          name="Git"
+          desc="Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development."
         />
       </div>
 
@@ -512,7 +476,7 @@ export default function Production() {
           src="/contents/tools/inskcape.png"
           role="Designer"
           name="Inskcape"
-          desc="nkscape is a free and open-source vector graphics editor used to create vector images."
+          desc="Inkscape is a free and open-source vector graphics editor used to create vector images."
         />
         <ToolFrame
           src="/contents/tools/unity.png"
@@ -589,7 +553,7 @@ export default function Production() {
           src="/contents/tools/premiere.png"
           role="Artist"
           name="Adobe Premiere"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo. consectetur adipiscing elit."
+          desc="Adobe Premiere Pro is a timeline-based video editing software application developed by Adobe Inc"
         />
         <ToolFrame
           src="/contents/tools/photoshop.png"
