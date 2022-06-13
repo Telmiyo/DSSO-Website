@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 import { getAllFilesMetadata } from "../utils/mdx";
-import { MemberFrame} from "../components/frames";
+import { MemberFrame } from "../components/frames";
 import PageLayout from "../layouts/page-layout";
 
 import {
@@ -42,7 +42,9 @@ export default function Team({ teammembers }) {
         <div className="flex flex-col space-y-8 md:flex-row-reverse justify-center items-center text-center md:text-left">
           <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start">
             <IoPeopleOutline size={50} className="text-roles-producer " />
-            <h3 className="text-2xl md:text-6xl font-semibold">DIRECTION TEAM</h3>
+            <h3 className="text-2xl md:text-6xl font-semibold">
+              DIRECTION TEAM
+            </h3>
             <p className="text-lg">
               We present you our direction team, led by Paula Hitz as the
               Producer, and with María Calle as Lead Designer, Álex Ávila as
@@ -50,7 +52,6 @@ export default function Team({ teammembers }) {
             </p>
 
             <a
-              // href={require("")}
               className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4  bg-purple-400 hover:bg-purple-200 active:bg-purple-600 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
               onClick={() => setActiveRol("Producer")}
@@ -72,7 +73,9 @@ export default function Team({ teammembers }) {
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start text-center md:text-left">
             <IoCodeOutline size={50} className="text-roles-programmer" />
-            <h3 className="text-2xl md:text-6xl font-semibold">PROGRAMMING TEAM</h3>
+            <h3 className="text-2xl md:text-6xl font-semibold">
+              PROGRAMMING TEAM
+            </h3>
             <p className="text-lg pr-8">
               Introducing our programming team, formed by Irene Hernández, Tomás
               Carreras, David Montufo, Oscar Cuatrecasas, Yeray Tarifa, Sergi
@@ -105,7 +108,7 @@ export default function Team({ teammembers }) {
             <IoDesktopOutline size={50} className="text-roles-designer " />
             <h3 className="text-2xl md:text-6xl font-semibold">DESIGN TEAM</h3>
             <p className="text-lg">
-            Introducing the design team, we have Aram Galarza, Aitor Álvarez,
+              Introducing the design team, we have Aram Galarza, Aitor Álvarez,
               Eduard Minguell, Núria Lamonja, Abraham Díaz, Arnau Lucena, Marc
               Gallardo, and María Calle, as their lead.
             </p>
@@ -130,13 +133,12 @@ export default function Team({ teammembers }) {
           </div>
         </div>
 
-
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start text-center md:text-left">
             <IoBrushOutline size={50} className="text-roles-artist" />
             <h3 className="text-2xl md:text-6xl font-semibold">ART TEAM</h3>
             <p className="text-lg pr-8">
-            And last but not least, we have our art team, Martí Davicino,
+              And last but not least, we have our art team, Martí Davicino,
               Víctor Jara, Carles López, Martí Buxeda, and Guillem Álava as
               their lead.
             </p>
@@ -160,9 +162,6 @@ export default function Team({ teammembers }) {
             />
           </div>
         </div>
-
-
-
       </div>
 
       {/* Member Grid */}
@@ -218,6 +217,7 @@ export default function Team({ teammembers }) {
           .filter((teammember) => teammember.role.includes(activeRol))
           .map((filteredmember) => (
             <MemberFrame
+              key={filter.slug}
               id={"Programmer"}
               src={`/team/${filteredmember.slug}.png`}
               name={filteredmember.name}

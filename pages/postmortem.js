@@ -190,7 +190,7 @@ export default function Postmortem() {
       For some team members, the importance of these tools to ensure a good workflow wasn’t clear, even if the leads and producer insisted daily that 
       they needed to be used. Many people forgot to update their tasks or log their hours. In addition, we worked most sprints in scrum teams. Generally, 
       scrum masters should have put more implication in their role to ensure good communication in their scrum team. The direction team could have put 
-      more emphasis on working as scrum teams, be more insistent with their responsibilities. Every week we did scrum team's retrospective, and it mostly 
+      more emphasis on working as scrum teams, be more insistent with their responsibilities. Every week we did scrum team&apos;s retrospective, and it mostly 
       seemed like a waste of time, because they were not really taken seriously.
       </p>
 

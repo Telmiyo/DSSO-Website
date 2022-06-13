@@ -64,10 +64,10 @@ export const MemberFrame = ({ src, name, role, github, linkdn, href }) => {
           {role}
         </div>
         <div className="flex flex-row space-x-4">
-          <a href={github} target="_blank">
+          <a href={github} target="_blank" rel="noreferrer noopener">
             <IoLogoGithub size={35} />
           </a>
-          <a href={linkdn} target="_blank">
+          <a href={linkdn} target="_blank" rel="noreferrer noopener">
             <IoLogoLinkedin size={35} className="text-blue-500 " />
           </a>
         </div>
