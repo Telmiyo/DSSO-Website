@@ -3,11 +3,11 @@ import React from "react";
 export default function MinimalisticHero() {
   return (
     <div className="flex flex-col justify-center items-center h-screen w-full ">
-      <div className="p-5 backdrop-blur-md mt-12 bg-dune-bluefremen/80 w-fit rounded-xl text-center">
-        <h1 className="font-fonseca text-6xl   text-center text-white">
+      <div className="p-5 backdrop-blur-md mt-12 bg-white/30 w-fit rounded-xl text-center">
+        <h1 className="font-fonseca text-6xl text-center text-white">
           DUNE:
         </h1>
-        <h2 className="font-fonseca text-6xl   text-center text-white">
+        <h2 className="font-fonseca text-6xl text-center text-white">
           SPECIAL SPICE OPS
         </h2>
         <a
