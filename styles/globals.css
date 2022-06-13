@@ -31,6 +31,10 @@ a {
     100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-canvas {
+.spline {
 height:100vh !important
+}
+
+.engineSpline {
+height:59vh !important
 }

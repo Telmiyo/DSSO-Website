@@ -57,8 +57,10 @@ export default function NewNavbar({ path }) {
       <AnimatePresence>
         {open && (
           <motion.aside
-            className={`flex flex-col justify-center w-1/2 h-full fixed right-0 z-30 ${
-              path == "/" ? "bg-white/30 backdrop-blur-md " : "bg-dune-ultralightblue"
+            className={`flex flex-col justify-center w-1/2 h-full fixed right-0  ${
+              path == "/"
+                ? "bg-white/30 backdrop-blur-md  z-30"
+                : "bg-dune-ultralightblue z-10"
             }`}
             onClick={console.log(path)}
             initial={{ width: 0 }}
@@ -94,8 +96,8 @@ export default function NewNavbar({ path }) {
       </AnimatePresence>
 
       <div
-        className={`flex w-full justify-between py-1 items-center shadow-md fixed z-30 ${
-          path == "/" ? "bg-white/30 backdrop-blur-md " : "bg-white"
+        className={`flex w-full justify-between py-1 items-center shadow-md ${
+          path == "/" ? "bg-white/30 backdrop-blur-md  fixed z-30" : "bg-white"
         }`}
       >
         <button

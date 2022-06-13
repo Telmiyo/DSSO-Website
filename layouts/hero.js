@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <div className="w-full relative">
       <div
-        className="text-white text-center absolute top-1/2 left-1/2 
-        transform -translate-x-1/2 -translate-y-1/2 z-10 bg-gray-400 bg-opacity-40"
+        className="text-dune-black text-center absolute top-1/2 left-1/2 
+        transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white/30 backdrop-blur-md p-8 space-y-4"
       >
         <h1 className="text-6xl font-semibold ">Dune: Special Spice Ops</h1>
         <p className="pt-1 text-xl">
@@ -24,6 +24,7 @@ const Hero = () => {
       <div className="h-full z-0">
         <Spline
           scene="https://prod.spline.design/BaYZhcMXvOtKxU8q/scene.splinecode"
+          className="spline"
         />
       </div>
     </div>

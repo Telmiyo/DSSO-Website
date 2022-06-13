@@ -41,7 +41,10 @@ export default function Engine() {
         /> */}
       </div>
       <div className="w-full h-[546.478px]">
-        <Spline scene="https://draft.spline.design/JfJqmu3CSrBnua1k/scene.splinecode" />
+        <Spline
+          scene="https://draft.spline.design/JfJqmu3CSrBnua1k/scene.splinecode"
+          className="engineSpline"
+        />
       </div>
       <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between md:my-16">
         <FeatureBox
