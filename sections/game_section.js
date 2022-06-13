@@ -5,8 +5,8 @@ import { YouTubeLite } from "react-youtube-lite";
 export default function GameSection() {
   return (
     <div className="flex flex-col h-full items-center justify-start space-y-10 bg-gray-200 pb-10 pt-10">
-      <div className="flex flex-col items-center space-y-10">
-        <h3 className="text-4xl font-semibold font-fonseca">The Game</h3>
+      <div className="container flex flex-col items-center space-y-10">
+        <h3 className="text-4xl font-semibold font-fonseca mb-5">The Game</h3>
         <p className="w-[60%] mb-10">
           Dune: Special Spice Ops is a real time tactics game focused on
           stealth, discovery and strategy, developed by Chamfer Studios. It is
@@ -22,14 +22,12 @@ export default function GameSection() {
           overcome the challenge?
         </p>
       </div>
-      <div className="w-[60%] h-full">
-        <YouTubeLite
-          url="https://www.youtube.com/embed/xQKdZvK3yuo?autoplay=1"
-          title="Dune SSO Trailer"
-          playerParameters={{ autoplay: 1 }}
-          className="w-[60%] h-96 absolute top-0 left-0"
-        />
-      </div>
+      <YouTubeLite
+        url="https://www.youtube.com/embed/xQKdZvK3yuo?autoplay=1"
+        title="Dune SSO Trailer"
+        playerParameters={{ autoplay: 1 }}
+        className="container"
+      />
     </div>
   );
 }
