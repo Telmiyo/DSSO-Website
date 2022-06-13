@@ -2,18 +2,16 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 import { getAllFilesMetadata } from "../utils/mdx";
-import { ImageFrame, MemberFrame, ToolFrame } from "../components/frames";
-import { Tabs } from "flowbite-react";
+import { MemberFrame} from "../components/frames";
 import PageLayout from "../layouts/page-layout";
-import Spline from "@splinetool/react-spline";
 
 import {
   IoPeopleOutline,
   IoLaptopOutline,
   IoCodeOutline,
   IoBrushOutline,
+  IoDesktopOutline,
 } from "react-icons/io5";
-import { TeamSection } from "../components/sections";
 
 export default function Team({ teammembers }) {
   const [activeRol, setActiveRol] = useState("Producer");
@@ -41,10 +39,10 @@ export default function Team({ teammembers }) {
 
       {/* Team Section */}
       <div className="grid grid-cols-1 gap-y-24">
-        <div className="flex flex-row-reverse ">
-          <div className="flex flex-col w-1/2 space-y-4 pl-16 pt-16">
-            <IoPeopleOutline size={50} className="text-roles-producer" />
-            <h3 className="text-6xl font-semibold">DIRECTION TEAM</h3>
+        <div className="flex flex-col space-y-8 md:flex-row-reverse justify-center items-center text-center md:text-left">
+          <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start">
+            <IoPeopleOutline size={50} className="text-roles-producer " />
+            <h3 className="text-2xl md:text-6xl font-semibold">DIRECTION TEAM</h3>
             <p className="text-lg">
               We present you our direction team, led by Paula Hitz as the
               Producer, and with María Calle as Lead Designer, Álex Ávila as
@@ -53,14 +51,14 @@ export default function Team({ teammembers }) {
 
             <a
               // href={require("")}
-              className=" center border-none outline-none inline-block py-2 px-3 w-1/4 bg-purple-400 hover:bg-purple-200 active:bg-purple-600 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
+              className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4  bg-purple-400 hover:bg-purple-200 active:bg-purple-600 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
               onClick={() => setActiveRol("Producer")}
             >
               Meet Us
             </a>
           </div>
-          <div className="w-1/2 ">
+          <div className="w-full md:w-1/2  p-4">
             <Image
               src="/contents/images/admin_team.jpeg"
               width={2048}
@@ -71,10 +69,10 @@ export default function Team({ teammembers }) {
           </div>
         </div>
 
-        <div className="flex ">
-          <div className="flex flex-col w-1/2 space-y-4 pl-16 pt-16">
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start text-center md:text-left">
             <IoCodeOutline size={50} className="text-roles-programmer" />
-            <h3 className="text-6xl font-semibold">PROGRAMMING TEAM</h3>
+            <h3 className="text-2xl md:text-6xl font-semibold">PROGRAMMING TEAM</h3>
             <p className="text-lg pr-8">
               Introducing our programming team, formed by Irene Hernández, Tomás
               Carreras, David Montufo, Oscar Cuatrecasas, Yeray Tarifa, Sergi
@@ -84,14 +82,14 @@ export default function Team({ teammembers }) {
 
             <a
               // href={require("")}
-              className=" center border-none outline-none inline-block py-2 px-3 w-1/4 bg-roles-programmer hover:bg-red-200 active:bg-red-500 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
+              className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4 bg-roles-programmer hover:bg-red-200 active:bg-red-500 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
               onClick={() => setActiveRol("Programmer")}
             >
               Meet Us
             </a>
           </div>
-          <div className="w-1/2 ">
+          <div className="w-full md:w-1/2 p-4">
             <Image
               src="/contents/images/prog_team.jpeg"
               width={2048}
@@ -102,65 +100,69 @@ export default function Team({ teammembers }) {
           </div>
         </div>
 
-        <div className="flex flex-row-reverse ">
-          <div className="flex flex-col w-1/2 space-y-4 pl-16 pt-16">
-            <IoLaptopOutline size={50} className="text-roles-designer" />
-            <h3 className="text-6xl font-semibold">DESIGN TEAM</h3>
+        <div className="flex flex-col space-y-8 md:flex-row-reverse justify-center items-center text-center md:text-left">
+          <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start">
+            <IoDesktopOutline size={50} className="text-roles-designer " />
+            <h3 className="text-2xl md:text-6xl font-semibold">DESIGN TEAM</h3>
             <p className="text-lg">
-              Introducing the design team, we have Aram Galarza, Aitor Álvarez,
+            Introducing the design team, we have Aram Galarza, Aitor Álvarez,
               Eduard Minguell, Núria Lamonja, Abraham Díaz, Arnau Lucena, Marc
               Gallardo, and María Calle, as their lead.
             </p>
 
             <a
               // href={require("")}
-              className=" center border-none outline-none inline-block py-2 px-3 w-1/4 bg-roles-designer hover:bg-blue-200 active:bg-roles-leaddesigner text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
+              className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4  bg-blue-400 hover:bg-blue-200 active:bg-roles-leaddesigner text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
               onClick={() => setActiveRol("Designer")}
             >
               Meet Us
             </a>
           </div>
-          <div className="w-1/2 ">
+          <div className="w-full md:w-1/2  p-4">
             <Image
               src="/contents/images/admin_team.jpeg"
               width={2048}
               height={1536}
               alt="chamfer-studios-admin-team"
-              className="object-cover rounded-xl"
+              className="object-cover rounded-xl "
             />
           </div>
         </div>
 
-        <div className="flex ">
-          <div className="flex flex-col w-1/2 space-y-4 pl-16 pt-16">
+
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="flex flex-col md:w-1/2 space-y-4 md:pl-16 md:pt-16 items-center md:items-start text-center md:text-left">
             <IoBrushOutline size={50} className="text-roles-artist" />
-            <h3 className="text-6xl font-semibold">ART TEAM</h3>
+            <h3 className="text-2xl md:text-6xl font-semibold">ART TEAM</h3>
             <p className="text-lg pr-8">
-              And last but not least, we have our art team, Martí Davicino,
+            And last but not least, we have our art team, Martí Davicino,
               Víctor Jara, Carles López, Martí Buxeda, and Guillem Álava as
               their lead.
             </p>
 
             <a
               // href={require("")}
-              className=" center border-none outline-none inline-block py-2 px-3 w-1/4 bg-roles-artist hover:bg-green-200 active:bg-roles-leadartist text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
+              className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4 bg-roles-artist hover:bg-green-200 active:bg-roles-leadartist text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
               onClick={() => setActiveRol("Artist")}
             >
               Meet Us
             </a>
           </div>
-          <div className="w-1/2 ">
+          <div className="w-full md:w-1/2 p-4">
             <Image
               src="/contents/images/prog_team.jpeg"
               width={2048}
               height={1536}
               alt="chamfer-studios-admin-team"
-              className="object-cover rounded-xl"
+              className="object-cover  rounded-xl"
             />
           </div>
         </div>
+
+
+
       </div>
 
       {/* Member Grid */}

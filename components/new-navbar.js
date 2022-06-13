@@ -59,7 +59,7 @@ export default function NewNavbar({ path }) {
             className={`flex flex-col justify-center w-1/2 h-full fixed right-0  ${
               path == "/"
                 ? "bg-white/30 backdrop-blur-md  z-30"
-                : "bg-dune-ultralightblue z-10"
+                : "bg-dune-black z-10"
             }`}
             onClick={console.log(path)}
             initial={{ width: 0 }}

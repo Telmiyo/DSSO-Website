@@ -97,6 +97,8 @@ export const ToolFrame = ({ src, role, name, desc }) => {
   );
 };
 
+
+
 export const ImageFrame = ({ src, width, height, layout }) => {
   return (
     <div className="rounded-2xl shadow-2xl ">

@@ -24,7 +24,7 @@ export default function Engine() {
   return (
     <PageLayout>
       <div className=" flex flex-col items-center justify-center space-y-3">
-        <h1 className="text-4xl text-dune-orangespicy font-semibold">
+        <h1 className="text-4xl text-dune-orangespicy font-semibold font-fonseca">
           Ko-Fi Engine
         </h1>
         <p className="w-1/2 text-center">
@@ -110,7 +110,7 @@ export default function Engine() {
           img="/contents/images/module_animation.png"
           title="Particles"
           lottieData={moduleParticlesData}
-          description=""
+          description="With our particle system you will be able to create your own custom particles by using alphas and lots of the properties that this module brings to the users."
         />
         <ModuleCard
           img="/contents/images/module_animation.png"
@@ -131,6 +131,10 @@ export default function Engine() {
           title="Scripting"
           description="Ko-Fi engine supports Lua as its scriping language due to its speed, ease of use and popularity. We also support Javascript with basic functionality. With the scriping module you can access any property of the game objects such as its transform, its components and the component properties. You can access some internal features of the engine such as the time or the settings."
         />
+      </div>
+      <div className="mb-5">
+        <h1 className="text-3xl font-semibold">Libraries</h1>
+        
       </div>
     </PageLayout>
   );

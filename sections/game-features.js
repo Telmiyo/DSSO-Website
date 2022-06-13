@@ -17,7 +17,7 @@ export default function GameFeatures() {
     },
   ];
   return (
-    <div className=" flex justify-around bg-dune-orangespicy py-12 px-12 text-center">
+    <div className=" flex justify-around bg-dune-orangespicy py-12  text-center">
       {features.map(({ title, description }) => (
         <div className="items-center flex flex-col text-white" key={title}>
           <h3 className="text-3xl font-semibold mb-2">{title}</h3>

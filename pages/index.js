@@ -36,7 +36,7 @@ export default function Home() {
         <GameSection />
       </div>
       <div className="bg-dune-black py-10">
-        <h3 className="text-4xl font-semibold text-center text-white">Meet your characters</h3>
+        <h3 className="text-4xl font-semibold text-center text-white font-fonseca">Meet Your Characters</h3>
         <GameCharacter
           title="Zhib"
           description="The Naib of the sietch, a fearless fighter who erned the respect of his people from a very young age.

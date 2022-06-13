@@ -6,7 +6,7 @@ export default function GameSection() {
   return (
     <div className="flex flex-col items-center justify-start space-y-10 bg-gray-200 pb-10 pt-10">
       <div className="flex flex-col items-center space-y-10">
-        <h3 className="text-4xl font-semibold">The Game</h3>
+        <h3 className="text-4xl font-semibold font-fonseca">The Game</h3>
         <p className="w-[60%] mb-10">
           Dune: Special Spice Ops is a real time tactics game focused on
           stealth, discovery and strategy, developed by Chamfer Studios. It is
