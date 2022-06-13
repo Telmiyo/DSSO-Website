@@ -12,11 +12,11 @@ export default function GameCharacter({
         inverted ? "flex-row-reverse text-dune-black" : "text-white "
       }  items-center justify-around `}
     >
-      <div className="w-1/2 px-20 bg-red-500">
+      <div className="w-1/2  ">
         <h3 className="text-4xl">{title}</h3>
         <p>{description}</p>
       </div>
-      <div className="w-1/2 h-96 bg-red-700">
+      <div className="w-1/3 h-96">
         <Spline scene="https://prod.spline.design/7JBlxcEnQSnlSOSY/scene.splinecode" />
       </div>
     </div>
