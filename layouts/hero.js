@@ -5,24 +5,11 @@ import Spline from "@splinetool/react-spline";
 import React from "react";
 const Hero = () => {
   return (
-    <div className="w-full items-center justify-center grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0">
-      <motion.div
-        className=" text-center lg:text-left space-y-4"
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {
-            scale: 0.8,
-            opacity: 0,
-          },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              delay: 0.5,
-            },
-          },
-        }}
+    <div className="w-full relative">
+      <div
+        className="text-white text-center absolute top-1/2 left-1/2 
+        transform -translate-x-1/2 -translate-y-1/2 z-10 bg-gray-400 bg-opacity-40"
+        
       >
         <h1 className="text-6xl font-semibold ">Dune: Special Spice Ops</h1>
         <p className="pt-1 text-xl">
@@ -36,14 +23,14 @@ const Hero = () => {
         >
           Download Now
         </a>
-      </motion.div>
-      <motion.div
-        className="h-full"
+      </div>
+      <div
+        className="h-full z-0"
         initial="hidden"
         animate="visible"
         variants={{
           hidden: {
-            scale: 0.8,
+            scale: 1,
             opacity: 0,
           },
           visible: {
@@ -55,8 +42,12 @@ const Hero = () => {
           },
         }}
       >
-        <Spline scene="https://prod.spline.design/BaYZhcMXvOtKxU8q/scene.splinecode" className="h-[60vh]"/>
-      </motion.div>
+        <Spline
+          scene="https://prod.spline.design/Mog8KZJUaTLtZo9y/scene.splinecode"
+          height={"100vh"}
+          
+        />
+      </div>
     </div>
   );
 };
