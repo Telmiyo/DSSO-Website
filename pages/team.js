@@ -217,7 +217,7 @@ export default function Team({ teammembers }) {
           .filter((teammember) => teammember.role.includes(activeRol))
           .map((filteredmember) => (
             <MemberFrame
-              key={filter.slug}
+              key={filteredmember.slug}
               id={"Programmer"}
               src={`/team/${filteredmember.slug}.png`}
               name={filteredmember.name}
