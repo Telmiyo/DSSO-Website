@@ -14,9 +14,12 @@ import {
 } from "react-icons/io5";
 
 export default function Team({ teammembers }) {
-  const [activeRol, setActiveRol] = useState("Producer");
+  const prod = ["Producer", "Lead Programmer", "Lead Designer", "Lead Artist"];
+  const prog = ["Lead Programmer", "Programmer"];
+  const des = ["Lead Designer", "Designer"];
+  const art = ["Lead Artist", "Artist"];
+  const [activeRol, setActiveRol] = useState(prod);
 
-  const prod = ["Producer", "Lead Programmer"];
   return (
     <PageLayout className="items-center space-y-8">
       <div>
@@ -54,7 +57,7 @@ export default function Team({ teammembers }) {
             <a
               className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4  bg-purple-400 hover:bg-purple-200 active:bg-purple-600 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
-              onClick={() => setActiveRol("Producer")}
+              onClick={() => setActiveRol(prod)}
             >
               Meet Us
             </a>
@@ -87,7 +90,7 @@ export default function Team({ teammembers }) {
               // href={require("")}
               className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4 bg-roles-programmer hover:bg-red-200 active:bg-red-500 text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
-              onClick={() => setActiveRol("Programmer")}
+              onClick={() => setActiveRol(prog)}
             >
               Meet Us
             </a>
@@ -117,7 +120,7 @@ export default function Team({ teammembers }) {
               // href={require("")}
               className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4  bg-blue-400 hover:bg-blue-200 active:bg-roles-leaddesigner text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
-              onClick={() => setActiveRol("Designer")}
+              onClick={() => setActiveRol(des)}
             >
               Meet Us
             </a>
@@ -147,7 +150,7 @@ export default function Team({ teammembers }) {
               // href={require("")}
               className=" border-none outline-none inline-block py-2 w-1/2 md:w-1/4 bg-roles-artist hover:bg-green-200 active:bg-roles-leadartist text-center cursor-pointer no-underline rounded-md text-black font-semibold text-lg"
               href="#member-grid"
-              onClick={() => setActiveRol("Artist")}
+              onClick={() => setActiveRol(art)}
             >
               Meet Us
             </a>
@@ -167,7 +170,7 @@ export default function Team({ teammembers }) {
       {/* Member Grid */}
       <div className="flex w-full pt-8">
         <button
-          onClick={() => setActiveRol("Producer")}
+          onClick={() => setActiveRol(prod)}
           className={`w-full flex justify-center ${
             activeRol === "Producer"
               ? " border-b-2 border-roles-producer"
@@ -178,7 +181,7 @@ export default function Team({ teammembers }) {
         </button>
 
         <button
-          onClick={() => setActiveRol("Programmer")}
+          onClick={() => setActiveRol(prog)}
           className={`w-full flex justify-center ${
             activeRol === "Programmer"
               ? " border-b-2 border-roles-programmer"
@@ -188,7 +191,7 @@ export default function Team({ teammembers }) {
           <IoCodeOutline size={30} />
         </button>
         <button
-          onClick={() => setActiveRol("Designer")}
+          onClick={() => setActiveRol(des)}
           className={`w-full flex justify-center ${
             activeRol === "Designer"
               ? " border-b-2 border-roles-designer"
@@ -198,7 +201,7 @@ export default function Team({ teammembers }) {
           <IoLaptopOutline size={30} />
         </button>
         <button
-          onClick={() => setActiveRol("Artist")}
+          onClick={() => setActiveRol(art)}
           className={`w-full flex justify-center ${
             activeRol === "Artist"
               ? " border-b-2 border-roles-artist"
@@ -214,7 +217,7 @@ export default function Team({ teammembers }) {
         id="member-grid"
       >
         {teammembers
-          .filter((teammember) => teammember.role.includes(activeRol))
+          .filter((teammember) => activeRol.includes(teammember.role))
           .map((filteredmember) => (
             <MemberFrame
               key={filteredmember.slug}
