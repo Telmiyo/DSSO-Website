@@ -19,6 +19,7 @@ import {
 
 import Spline from "@splinetool/react-spline";
 import PageLayout from "../layouts/page-layout";
+import { LibraryFrame } from "../components/frames";
 
 export default function Engine() {
   return (
@@ -132,10 +133,27 @@ export default function Engine() {
           description="Ko-Fi engine supports Lua as its scriping language due to its speed, ease of use and popularity. We also support Javascript with basic functionality. With the scriping module you can access any property of the game objects such as its transform, its components and the component properties. You can access some internal features of the engine such as the time or the settings."
         />
       </div>
-      <div className="mb-5">
-        <h1 className="text-3xl font-semibold">Libraries</h1>
-        
+
+      <h1 className="text-3xl font-semibold mb-8">Libraries</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center ">
+        <LibraryFrame name="Assimp" desc="A library to import and export various 3d-model-formats including scene-post-processing to generate missing render data." />
+        <LibraryFrame name="Brofiler" desc="Brofiler is an external profiling tool developed by Vadim Slyusarev. The Author describes the tool as a Super Lightweight C++ Profiler for Games." />
+        <LibraryFrame name="Recast and Detour" desc="Detours is a software package for monitoring and instrumenting API calls on Windows. Recast is state of the art navigation mesh construction toolset for games." />
+        <LibraryFrame name="DrWav" desc="dr_wav is an open source library for decoding WAV files" />
+        <LibraryFrame name="DrWav" desc="dr_wav is an open source library for decoding WAV files" />
+        <LibraryFrame name="Glew" desc="The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library." />
+        <LibraryFrame name="ImGui" desc="Dear ImGui is a bloat-free graphical user interface library for C++." />
+        <LibraryFrame name="ImGuizmo" desc="ImGizmo is a small (.h and .cpp) library built ontop of Dear ImGui that allow you to manipulate(Rotate & translate at the moment) 4x4 float matrices." />
+        <LibraryFrame name="JsonParser" desc="An Open Source Json parser for modern c++" />
+        <LibraryFrame name="Sol" desc="A fast, simple C++ and Lua Binding" />
+        <LibraryFrame name="MathGeolib" desc="A C++ library for linear algebra and geometry manipulation for computer graphics." />
+        <LibraryFrame name="OpenAL" desc="OpenAL is a cross-platform 3D audio API appropriate for use with gaming applications and many other types of audio applications." />
+        <LibraryFrame name="Optik" desc="Optick is a super-lightweight C++ profiler for Games." />
+        <LibraryFrame name="ReactPhysics3D" desc="ReactPhysics3D is a C++ physics engine library that can be used in 3D simulations and games." />
+        <LibraryFrame name="SDL" desc="Simple DirectMedia Layer is a cross-platform software development library designed to provide a hardware abstraction layer for computer multimedia hardware components." />
+        <LibraryFrame name="STBImage" desc="single-file public domain (or MIT licensed) libraries for C/C++." />
       </div>
+
     </PageLayout>
   );
 }
