@@ -97,6 +97,8 @@ export const ToolFrame = ({ src, role, name, desc }) => {
   );
 };
 
+
+
 export const ImageFrame = ({ src, width, height, layout }) => {
   return (
     <div className="rounded-2xl shadow-2xl ">
@@ -114,21 +116,19 @@ export const ImageFrame = ({ src, width, height, layout }) => {
 
 export const SectionFrame = ({ src, layout, title, desc, imageRight }) => {
   return (
-    <div 
-    className={`flex flex-col items-center md:flex-row bg-gray-100 rounded-xl md:p-16 md:my-8 ${
-        imageRight
-          ? " "
-          : "md:flex-row-reverse"
+    <div
+      className={`flex flex-col items-center md:flex-row bg-gray-100 rounded-xl md:p-16 md:my-8 ${
+        imageRight ? " " : "md:flex-row-reverse"
       }`}
     >
-      <div 
-      className={`md:w-1/2 flex flex-col justify-center ${
-        imageRight
-          ? "md:pr-16  "
-          : " md:ml-8 md:pr-8"
-      }`}
+      <div
+        className={`md:w-1/2 flex flex-col justify-center ${
+          imageRight ? "md:pr-16  " : " md:ml-8 md:pr-8"
+        }`}
       >
-        <h3 className="text-lg text-gray-600 md:mt-4 tracking-wider font-bold">{title}</h3>
+        <h3 className="text-lg text-gray-600 md:mt-4 tracking-wider font-bold">
+          {title}
+        </h3>
         <p className="text-md text-gray-500 md:mt-2 ">{desc}</p>
       </div>
       <div className="rounded-2xl shadow-xl w-full md:w-1/2  ">
