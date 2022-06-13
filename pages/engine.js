@@ -24,7 +24,7 @@ export default function Engine() {
   return (
     <PageLayout>
       <div className=" flex flex-col items-center justify-center space-y-3">
-        <h1 className="text-4xl text-dune-orangespicy font-semibold">
+        <h1 className="text-4xl text-dune-orangespicy font-semibold font-fonseca">
           Ko-Fi Engine
         </h1>
         <p className="w-1/2 text-center">
@@ -110,7 +110,7 @@ export default function Engine() {
           img="/contents/images/module_animation.png"
           title="Particles"
           lottieData={moduleParticlesData}
-          description=""
+          description="With our particle system you"
         />
         <ModuleCard
           img="/contents/images/module_animation.png"
