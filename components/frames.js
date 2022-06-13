@@ -97,7 +97,16 @@ export const ToolFrame = ({ src, role, name, desc }) => {
   );
 };
 
-
+export const LibraryFrame = ({ name, desc }) => {
+  return (
+    <div className="rounded-xl shadow-xl w-auto bg-gray-200">
+      <div className="flex flex-col justify-start h-auto space-x-4 p-4 items-center">
+        <h3 className="text-3xl mb-4">{name}</h3>
+        <p className="px-4 pb-4 text-center">{desc}</p>
+      </div>
+    </div>
+  );
+};
 
 export const ImageFrame = ({ src, width, height, layout }) => {
   return (
@@ -114,24 +123,31 @@ export const ImageFrame = ({ src, width, height, layout }) => {
   );
 };
 
-export const SectionFrame = ({ src, layout, title, desc, imageRight,subtitle }) => {
+export const SectionFrame = ({
+  src,
+  layout,
+  title,
+  desc,
+  imageRight,
+  subtitle,
+}) => {
   return (
-    <div 
-    className={`flex flex-col items-center md:flex-row bg-gray-100 rounded-xl md:p-16 md:my-8 ${
-        imageRight
-          ? " "
-          : "md:flex-row-reverse"
+    <div
+      className={`flex flex-col items-center md:flex-row bg-gray-100 rounded-xl md:p-16 md:my-8 ${
+        imageRight ? " " : "md:flex-row-reverse"
       }`}
     >
-      <div 
-      className={`md:w-1/2 flex flex-col justify-center ${
-        imageRight
-          ? "md:pr-16  "
-          : " md:ml-8 md:pr-8"
-      }`}
+      <div
+        className={`md:w-1/2 flex flex-col justify-center ${
+          imageRight ? "md:pr-16  " : " md:ml-8 md:pr-8"
+        }`}
       >
-        <h3 className="text-2xl md:text-2xl font-semibold md:mt-4 text-gray-400">{subtitle}</h3>
-        <h3 className="text-2xl mb-4 md:text-6xl font-semibold md:mt-4 text-dune-darkorange">{title}</h3>
+        <h3 className="text-2xl md:text-2xl font-semibold md:mt-4 text-gray-400">
+          {subtitle}
+        </h3>
+        <h3 className="text-2xl mb-4 md:text-6xl font-semibold md:mt-4 text-dune-darkorange">
+          {title}
+        </h3>
         <p className="text-md text-gray-500 md:mt-2 ">{desc}</p>
       </div>
       <div className="rounded-2xl shadow-xl w-full md:w-1/2  ">
