@@ -78,7 +78,7 @@ export default function Engine() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 my-10  gap-14">
         <ModuleCard
-          img="/contents/images/module_animation.png"
+          img="/contents/images/engine_animation.gif"
           lottieData={moduleAnimationData}
           title="Animation"
           description="The animation module accepts fbx with animations inside them.
@@ -87,45 +87,45 @@ export default function Engine() {
          "
         />
         <ModuleCard
-          img="/contents/images/module_animation.png"
+          img="/contents/images/engine_physics.gif"
           lottieData={modulePhysicsData}
           title="Physics"
           description="The physics module includes components such as rigidbody, sphere, box and capsule colliders and features like raycasting, collision and triggering detection. It is implemented using React Physics 3D, a lightweight library that has everything needed and can be implemented in a really easy way."
         />
         <ModuleCard
-          img="/contents/images/module_animation.png"
+          img="/contents/images/engine_shaders.gif"
           lottieData={moduleShaderData}
           title="Shaders"
           description="All the engine is rendered using shaders. There is also a component where you can add your own shaders, customize it with the in-engine text editor and apply the changes at realtime compilation. We accept only glsl shaders along with our custom syntax."
         />
 
         <ModuleCard
-          img="/contents/images/module_animation.png"
+          img="/contents/images/engine_ui.gif"
           title="User Interface"
           lottieClassName="-translate-x-2 translate-y-1.5"
           lottieData={moduleUIData}
           description="The UI module allows the user to add 2D graphic elements to the game. The module features a canvas which performs as a coordinate system for the rest of the objects to be placed. At the moment we support buttons, images and text, but you can create your own custom items such as sliders or checkboxes using the scripting module."
         />
         <ModuleCard
-          img="/contents/images/module_animation.png"
+          img="/contents/images/engine_particles.gif"
           title="Particles"
           lottieData={moduleParticlesData}
           description="With our particle system you will be able to create your own custom particles by using alphas and lots of the properties that this module brings to the users."
         />
         <ModuleCard
-          img="/contents/images/module_animation.png"
+          img="/contents/images/engine_sound.gif"
           lottieData={moduleAudioData}
           title="Audio"
           description="The engine has an audio module.It has been developed using OpenAl and supports varius of the most used audio extensions (mp3,wav,ogg,etc). You can use the audio source component and the audio switch component"
         />
         <ModuleCard
-          img="/contents/images/module_animation.png"
+          img="/contents/images/engine_camera.gif"
           lottieData={moduleCameraData}
           title="Camera"
           description="The engine camera has been optimized a lot to be able to run the engine and any game as smooth as posible. We use the frustum to perform 3 types of culling that can be used individually or together. These are: A sphere culling, a frustum culling and an occlusion culling which is done on the renderer. Every culling filters the objects processed by the next culling on the pipeline to ensure a low processing power usage."
         />
         <ModuleCard
-          img="/contents/images/module_animation.png"
+          img="/contents/images/engine_scripting.gif"
           lottieData={moduleScriptingData}
           lottieClassName="w-36"
           title="Scripting"

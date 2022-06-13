@@ -4,7 +4,7 @@ import { YouTubeLite } from "react-youtube-lite";
 
 export default function GameSection() {
   return (
-    <div className="flex flex-col items-center justify-start space-y-10 bg-gray-200 pb-10 pt-10">
+    <div className="flex flex-col h-full items-center justify-start space-y-10 bg-gray-200 pb-10 pt-10">
       <div className="flex flex-col items-center space-y-10">
         <h3 className="text-4xl font-semibold font-fonseca">The Game</h3>
         <p className="w-[60%] mb-10">
@@ -22,7 +22,7 @@ export default function GameSection() {
           overcome the challenge?
         </p>
       </div>
-      <div className="w-[60%]">
+      <div className="w-[60%] ">
         <YouTubeLite
           url="https://www.youtube.com/embed/xQKdZvK3yuo?autoplay=1"
           title="Dune SSO Trailer"
