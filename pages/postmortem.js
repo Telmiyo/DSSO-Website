@@ -2,11 +2,11 @@ import React from 'react'
 import PageLayout from "../layouts/page-layout"
 export default function Postmortem() {
   return (
-    <PageLayout className="space-y-4">
+    <PageLayout>
       {/* Tittle & Description */}
-      <h1 className="text-4xl tracking-wider text-center">POST MORTEM</h1>
-      <h2 className="text-2xl tracking-wider">Project Expectations</h2>
-      <p className="text-lg text-gray-500 ">
+      <h1 className="text-4xl text-center font-fonseca">POST MORTEM</h1>
+      <h2 className="text-4xl font-bold text-dune-darkorange mb-6 mt-8">Project Expectations</h2>
+      <p className="text-lg text-gray-500 mb-6">
       We remember finishing last semester eager to know what Project III was all about. We were told it was the most important subject of the degree, that 
       it would be our star project to show in our curriculums once we enter the industry to look for a job. We were constantly asking our teachers for 
       hints on what the theme would be this year, or who were going to be the leads selected, basically, asking for anything they could tell us in advance 
@@ -14,7 +14,7 @@ export default function Postmortem() {
       and get started with it.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       Overall and without a doubt, we are a class that is very hardworking and we are lucky to get along with each other very well. We started with the right 
       foot, everyone was extremely motivated and excited to make the project a game that we would be proud of calling our own. 
       </p>
@@ -27,14 +27,14 @@ export default function Postmortem() {
       one, but either way, we were ready to start making our staple in CITM, because we wanted to make one of the best games produced in the university.
       </p>
 
-      <h2 className="text-2xl tracking-wider ">Progression</h2>
-      <h3 className="text-xl tracking-wider text-gray-600 ">Beginning</h3>
-      <p className="text-lg text-gray-500 ">
+      <h2 className="mt-16 text-4xl font-bold text-dune-darkorange mb-6">Progression</h2>
+      <h3 className="text-2xl tracking-wider text-gray-600  mb-2 font-bold">Beginning</h3>
+      <p className="text-lg text-gray-500  mb-6">
       We started off strong, as motivated as we could ever be, everyone in the team was ready to sacrifice all their free-time to put those hours into 
       the project. We aimed high while still being ready to cut off if it was necessary, which, at the end, it was.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       From the department of programming we had some difficulties since the outcome of last semester’s class, Game Engines, was disastrous. The idea of 
       this subject is to make our own game with the engine we built last semester in Game Engines, but we had very bad results in that class, which 
       directly affected Project III. We had to redo many modules within the engine, which took a very long time to do, as well as effort. The department 
@@ -42,7 +42,7 @@ export default function Postmortem() {
       of the game, delaying and slowing the production.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       From the department of design, they aimed as high as they could, exploring all the different alternatives and elements that could be implemented, 
       from mechanics to the storyline of the game. Luckily, we had a chat with the leads from the project last year, and they told us that most of the 
       design decisions, due to lack of time, would probably not make it into the game. With this information in mind, we planned out different packs. 
@@ -51,7 +51,7 @@ export default function Postmortem() {
       us for what the project was going to bring us.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       As for art, their mission was to explore and discover which artistic path they would take in order to give life to the game. The idea of having one 
       lead and four artists was a little scary at first. It was such a small team that would have to cover all the visuals for the game, including the models, 
       the animations, the texturing, the UI, the sounds and music, etc. It was for sure a challenge to produce all of this with such a small team, but with a 
@@ -60,7 +60,7 @@ export default function Postmortem() {
       months, and which they had to stick to in order to produce cohesive, and stunning, visuals and audio.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-12">
       Finally, for the production team, it was a bit of a confusing start. We didn’t have the experience of leading a team, and the role of the producer sounded 
       a bit abstract at first since we never learned anything about it. It was a challenging start where we would have to figure out what kind of planification 
       worked out the best for us, but once we understood it, the producer was able to plan out the methodology that we would follow in the upcoming months in 
@@ -69,8 +69,8 @@ export default function Postmortem() {
       project’s progression.
       </p>
 
-      <h3 className="text-xl tracking-wider text-gray-600 ">Middle</h3>
-      <p className="text-lg text-gray-500 ">
+      <h3 className="text-2xl tracking-wider text-gray-600  mb-2 font-bold">Middle</h3>
+      <p className="text-lg text-gray-500  mb-6">
       Weeks went by and it looked from the outside that we were making little to no progress since we had very little to show of the game. Due to the initial 
       state of the engine, we put most of our resources into that. It was necessary to finish the engine. Luckily enough, our programming teacher Toni, knew 
       and understood our situation. At the end of the day, he was our teacher last semester for Game Engines, so he knew from what base we were starting off 
@@ -79,26 +79,26 @@ export default function Postmortem() {
       the very end or it would be disastrous. 
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       As for design, we started realizing that we did not have a stable engine where we could playtest, so we took the right decision to imitate the game into 
       Unity. Two designers took the responsibility of programming it, and we have to say that it helped a lot to have this platform where we could start 
       visualizing what our game would look like. 
 
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6 ">
       From the art department, it was constant work from all the sub-departments in the team (characters, enemies, environment, UI and sound). We had some issues 
       trying to figure out how to export specific models or animations to our engine, but after a lot of trial and error, we got it.  
       </p>
 
-      <p className="text-lg text-gray-500">
+      <p className="text-lg text-gray-500 mb-12">
       For design and art it was easier to track the progress of the development of the project, since design had its GDD and art had their assets pack. 
       We had something to show our art and design teachers, but they were right in insisting that it was time to see the progress in our game. We tried 
       very hard but we had the bottleneck of the engine. 
       </p>
 
-      <h3 className="text-xl tracking-wider text-gray-600">End</h3>
-      <p className="text-lg text-gray-500">
+      <h3 className="text-2xl tracking-wider text-gray-600 mb-2 font-bold">End</h3>
+      <p className="text-lg text-gray-500 mb-6">
       Around the beginning of May, one month before the delivery of  the project, we were finally freed from the bottleneck of the engine. It took a lot 
       of effort and time to make this happen, but it did thanks to our programming team. Once this happened, everything started running more smoothly. 
       They had the chance to focus on gameplay and include the part of design and art into the game. We could start to see that what we were putting so 
@@ -106,7 +106,7 @@ export default function Postmortem() {
       could have done to change the state of the engine. 
       </p>
 
-      <p className="text-lg text-gray-500">
+      <p className="text-lg text-gray-500 mb-6">
       The project was reaching the end, and everyone was putting so much hard work into it. The amount of hours spent on it was crazy, but the progress 
       is there. We were congratulated by our teachers once we got freed from the engine problem, which helped us a lot by boosting our motivation a bit more. 
       </p>
@@ -117,28 +117,28 @@ export default function Postmortem() {
       forward to finishing the game as best as we could.
       </p>
 
-      <h2 className="text-2xl tracking-wider">Project Expectations</h2>
-      <h3 className="text-xl tracking-wider text-gray-600">The Team</h3>
-      <p className="text-lg text-gray-500">
+      <h2 className="mt-16 text-4xl font-bold text-dune-darkorange mb-6">What Went Well</h2>
+      <h3 className="text-2xl tracking-wider text-gray-600 mb-2 font-bold">The Team</h3>
+      <p className="text-lg text-gray-500 mb-12">
       When we think about what went well in the project, the first thing that comes to mind is the team. Not only the bond we created as a class but as well 
       as the implication everyone had to the project. We learned how to work together, listen to each other, and most importantly, understand and help each 
       other. Yes, there were a couple of times when there was some tension, but we managed to solve it and learn from it. The bond we built not only helped 
       for better communication, but also to improve and lift the motivation of the team. We shared a common goal and we worked together to reach it.
       </p>
 
-      <h3 className="text-xl tracking-wider text-gray-600">The Implication</h3>
-      <p className="text-lg text-gray-500">
+      <h3 className="text-2xl tracking-wider text-gray-600 mb-2 font-bold">The Implication</h3>
+      <p className="text-lg text-gray-500 mb-6">
       Project III is a very demanding subject, which requires many hours and therefore implication from everybody. Everyone found time to put into this project, 
       even when it seemed impossible. We all had exams and projects coming from other subjects, and some even had work outside university, nevertheless, that did not stop us.
       </p>
 
-      <p className="text-lg text-gray-500">
+      <p className="text-lg text-gray-500 mb-12">
       We have to give a big shoutout to the programming team, which did the impossible. All the departments managed to deliver their part and unify them into what 
       is Dune Special Spice Ops.
       </p>
 
-      <h3 className="text-xl tracking-wider text-gray-600 ">The Management</h3>
-      <p className="text-lg text-gray-500">
+      <h3 className="text-2xl tracking-wider text-gray-600  mb-2 font-bold">The Management</h3>
+      <p className="text-lg text-gray-500 mb-6">
       Even with no experience of managing a team, overall, we are very proud of ourselves for being able to bring the team together and plan out the project. 
       From organizing the tasks everyone had to do weekly, to general milestone objectives, our work as leads and producer helped give our game a sense 
       of direction and progression.
@@ -149,84 +149,84 @@ export default function Postmortem() {
       implication in order to make the right decisions for the best result. 
       </p>
 
-      <h2 className="text-2xl tracking-wider ">What Can Be Improved</h2>
-      <h3 className="text-xl tracking-wider text-gray-600">The Knowledge</h3>
-      <p className="text-lg text-gray-500 ">
+      <h2 className="mt-16 text-4xl font-bold text-dune-darkorange mb-6">What Can Be Improved</h2>
+      <h3 className="text-2xl tracking-wider text-gray-600 mb-2 font-bold">The Knowledge</h3>
+      <p className="text-lg text-gray-500  mb-6">
       Overall, we can say from the different departments that we lacked experience and knowledge of how to make an AAA game in four months. The 
       programmers feel like they didn’t have the base on C++ that they needed, as well as knowledge on engine OpenGL, and in-depth understanding 
       on the different modules and how to unify them into an engine. 
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       For designers, they had little to no knowledge on how to design an RTT game, so they had to do a lot of research on it and look for a lot of references to base our project on. 
 
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       For artists, we learned in uni how to model, animate and texturize, but we never learned how to export everything for our engine. That was one of the challenges we had to face and overcome. 
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       For the direction team, we never had the experience of managing so many people and the emotional implication it has, since we had to take so many important decisions all along the project. 
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       Finally, for the producer, we have never learned anything about the role, how important it is to have a project manager and a figure of leadership.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-12">
       We expected, logically, that we had to learn a lot about how to make this project, but some extra help, indications and preparation would have helped us be more prepared for the responsibilities each and every one of us had to take.
       </p>
 
-      <h3 className="text-xl tracking-wider text-gray-600">The Engine</h3>
-      <p className="text-lg text-gray-500">
+      <h3 className="text-2xl tracking-wider text-gray-600 mb-2 font-bold">The Engine</h3>
+      <p className="text-lg text-gray-500 mb-12">
       As mentioned before, we had a very bad start due to the base we had from Game Engines. We did not have a good start off point to make the engine, 
       so our programming team had to put a lot of resources into fixing and redoing most of the modules that make up Ko-Fi engine today.
       </p>
 
-      <h3 className="text-xl tracking-wider text-gray-600 ">The Team’s Effort Into Production</h3>
+      <h3 className="text-2xl tracking-wider text-gray-600  mb-2 font-bold">The Team’s Effort Into Production</h3>
       <p className="text-lg text-gray-500 ">
       Different tools were given to the team in order to track their progression on the tasks, like HacknPlan, the hour log, the scrum teams, etc. 
       For some team members, the importance of these tools to ensure a good workflow wasn’t clear, even if the leads and producer insisted daily that 
       they needed to be used. Many people forgot to update their tasks or log their hours. In addition, we worked most sprints in scrum teams. Generally, 
       scrum masters should have put more implication in their role to ensure good communication in their scrum team. The direction team could have put 
-      more emphasis on working as scrum teams, be more insistent with their responsibilities. Every week we did scrum team's retrospective, and it mostly 
+      more emphasis on working as scrum teams, be more insistent with their responsibilities. Every week we did scrum team&apos;s retrospective, and it mostly 
       seemed like a waste of time, because they were not really taken seriously.
       </p>
 
-      <h2 className="text-2xl tracking-wider">Conclusions</h2>
-      <h3 className="text-xl tracking-wider text-gray-600">The Subject</h3>
-      <p className="text-lg text-gray-500">
+      <h2 className="mt-16 text-4xl font-bold text-dune-darkorange mb-6">Conclusions</h2>
+      <h3 className="text-2xl tracking-wider text-gray-600 mb-2 font-bold">The Subject</h3>
+      <p className="text-lg text-gray-500 mb-6">
       In general, we believe the structure of our university with this subject and this semester is not very well designed for students. The amount of time 
       that has to be put into this project in order to make the result possible is insane, and it seems that they do not take into account that we have other 
       four subjects as well as a personal life besides university.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-12">
       No matter how hard we tried, or how much work and hours we put into the project, we constantly felt like the requirements for the subject were 
       unrealistic. Building a whole engine and game in four months is very demanding, and pretty unrealistic, and sometimes we felt like we didn’t 
       have enough support from the university, in terms of feedback and overall implication.
       </p>
 
-      <h3 className="text-xl tracking-wider text-gray-600">The Result</h3>
-      <p className="text-lg text-gray-500 ">
+      <h3 className="text-2xl tracking-wider text-gray-600 mb-2 font-bold">The Result</h3>
+      <p className="text-lg text-gray-500  mb-6">
       After months of hard work we can finally say that we are done! It has been a rollercoaster of emotions at some points.
        We were overall motivated, but it got to a point of overwhelming stress and pressure to deliver the product. 
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       After talking to the rest of the team and gathering some feedback, we all agree that there are specific things we 
       could have done better, and not only what was mentioned before, such as making priority lists since the beginning 
       (we only started doing it after the Alpha 2), or better limiting what was design and what was art when making characters.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500 mb-6 ">
       Now, seeing it from an outside perspective, we can say that we are very proud of the work we have done, and we did a very 
       good job in overcoming all the challenges and obstacles that crossed our path. Yes, there are things that we could have 
       done better, but it is part of the learning process to make mistakes as long as we take them into account in future projects.
       </p>
 
-      <p className="text-lg text-gray-500 ">
+      <p className="text-lg text-gray-500  mb-6">
       The game ended up not reaching our expectations design-wise. We would have hoped for a bit more time or a stronger base to 
       start off the project from. Sometimes we dream about how well the game would have turned out if we didn’t have the bottleneck 
       of the engine, or if we had done it in Unity, for example. But at the same time, doing it all by ourselves gives it more value 
