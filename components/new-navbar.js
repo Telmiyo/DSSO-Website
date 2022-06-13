@@ -35,13 +35,13 @@ export default function NewNavbar({ path }) {
   const sideVariants = {
     closed: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
         staggerDirection: -1,
       },
     },
     open: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
         staggerDirection: 1,
       },
     },
@@ -59,7 +59,7 @@ export default function NewNavbar({ path }) {
           <motion.aside
             className={`flex flex-col justify-center w-1/2 h-full fixed right-0  ${
               path == "/"
-                ? "bg-white/30 backdrop-blur-md  z-30"
+                ? "bg-white/30 backdrop-blur-md  z-10"
                 : "bg-dune-ultralightblue z-10"
             }`}
             onClick={console.log(path)}
@@ -67,7 +67,7 @@ export default function NewNavbar({ path }) {
             animate={{ width: 300 }}
             exit={{
               width: 0,
-              transition: { delay: 1.6, duration: 0.3 },
+              transition: { delay: 0.8, duration: 0.3 },
             }}
           >
             <motion.div
@@ -80,7 +80,7 @@ export default function NewNavbar({ path }) {
               {links.map(({ name, to, id }) => (
                 <motion.a
                   className={` no-underline text-3xl font-semibold block m-5 ${
-                    to === path ? " text-dune-black" : "text-white"
+                    to === path ? " text-dune-orangespicy" : "text-white"
                   }`}
                   key={id}
                   href={to}
@@ -97,7 +97,7 @@ export default function NewNavbar({ path }) {
 
       <div
         className={`flex w-full justify-between py-1 items-center shadow-md ${
-          path == "/" ? "bg-white/30 backdrop-blur-md  fixed z-30" : "bg-white"
+          path == "/" ? "bg-white/30 backdrop-blur-md   z-10" : "bg-white"
         }`}
       >
         <button
