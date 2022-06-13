@@ -22,12 +22,12 @@ export default function GameSection() {
           overcome the challenge?
         </p>
       </div>
-      <div className="w-[60%] ">
+      <div className="w-[60%] h-full">
         <YouTubeLite
           url="https://www.youtube.com/embed/xQKdZvK3yuo?autoplay=1"
           title="Dune SSO Trailer"
           playerParameters={{ autoplay: 1 }}
-          className="w-full h-full absolute top-0 left-0"
+          className="w-[60%] h-96 absolute top-0 left-0"
         />
       </div>
     </div>
