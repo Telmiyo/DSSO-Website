@@ -20,9 +20,7 @@ const links = [
     id: 8,
   },
 ];
-export default function NewNavbar({path}) {
-
-
+export default function NewNavbar({ path }) {
   const [menuState, setMenuState] = useState({ isStopped: true, direction: 1 });
 
   const [open, cycleOpen] = useCycle(false, true);
@@ -59,7 +57,10 @@ export default function NewNavbar({path}) {
       <AnimatePresence>
         {open && (
           <motion.aside
-            className="flex flex-col justify-center w-1/2  h-full bg-white/30 backdrop-blur-md fixed right-0 z-30"
+            className={`flex flex-col justify-center w-1/2 h-full fixed right-0 z-30 ${
+              path == "/" ? "bg-white/30 backdrop-blur-md " : "bg-dune-ultralightblue"
+            }`}
+            onClick={console.log(path)}
             initial={{ width: 0 }}
             animate={{ width: 300 }}
             exit={{
@@ -76,14 +77,13 @@ export default function NewNavbar({path}) {
             >
               {links.map(({ name, to, id }) => (
                 <motion.a
-             
-                  className={` no-underline text-3xl font-semibold block m-5 ${to === path ? " text-dune-black": "text-white"
-                }`}
+                  className={` no-underline text-3xl font-semibold block m-5 ${
+                    to === path ? " text-dune-black" : "text-white"
+                  }`}
                   key={id}
                   href={to}
                   whileHover={{ scale: 1.1 }}
                   variants={itemVariants}
-                 
                 >
                   {name}
                 </motion.a>
@@ -93,7 +93,11 @@ export default function NewNavbar({path}) {
         )}
       </AnimatePresence>
 
-      <div className="bg-white/30  backdrop-blur-md flex w-full justify-between py-1 items-center shadow-md fixed z-30">
+      <div
+        className={`flex w-full justify-between py-1 items-center shadow-md fixed z-30 ${
+          path == "/" ? "bg-white/30 backdrop-blur-md " : "bg-white"
+        }`}
+      >
         <button
           className="pointer mx-5 border-none py-2 px-4 invisible"
           onClick={() => {
@@ -122,7 +126,7 @@ export default function NewNavbar({path}) {
                 height="50px"
                 alt="logo dune"
                 onClick={() => {
-                  cycleOpen()
+                  cycleOpen();
                   setMenuState({ isStopped: false, direction: open ? -1 : 1 });
                 }}
                 quality={100}
@@ -131,7 +135,9 @@ export default function NewNavbar({path}) {
           </NextLink>
         </div>
         <button
-          className={`pointer mx-5 my-3 border-none py-2 px-4 z-10 invert ${open?'invert':'invert-0'}`}
+          className={`pointer mx-5 my-3 border-none py-2 px-4 z-10 invert ${
+            open ? "invert" : "invert-0"
+          }`}
           onClick={() => {
             cycleOpen();
             setMenuState({ isStopped: false, direction: open ? -1 : 1 });

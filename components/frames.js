@@ -100,7 +100,7 @@ export const ImageFrame = ({ src, width, height, layout }) => {
 export const SectionFrame = ({ src, width, height, layout, title, desc, imageRight }) => {
   return (
     <div 
-    className={`flex ${
+    className={`flex bg-gray-200 rounded-tl-full ${
         imageRight
           ? " "
           : "flex-row-reverse"
@@ -109,20 +109,20 @@ export const SectionFrame = ({ src, width, height, layout, title, desc, imageRig
       <div 
       className={`w-1/2 flex flex-col justify-center ${
         imageRight
-          ? " pr-16"
-          : "text-right pl-16"
+          ? " pr-16 "
+          : "text-right ml-8"
       }`}
       >
         <h3 className="text-lg text-gray-600 mt-4 tracking-wider font-bold">{title}</h3>
         <p className="text-md text-gray-500 mt-2 ">{desc}</p>
       </div>
-      <div className="rounded-2xl shadow-2xl my-8 w-1/2 ">
+      <div className="rounded-2xl my-8 w-1/2 ">
         <Image
           src={src}
           width={width}
           height={height}
           layout={layout}
-          className="rounded-2xl"
+          className="rounded-2xl  mr-8"
           alt="image"
         />
       </div>
