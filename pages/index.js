@@ -42,6 +42,7 @@ export default function Home() {
           description="The Naib of the sietch, a fearless fighter who erned the respect of his people from a very young age.
         With his impeccable knife aim he can kill a man from far away, but he is even more dangerous up close, since he can slash through multiple enemies, ending their lives at once."
           bgcolor={"bg-dune-black"}
+          scene="https://prod.spline.design/ugle5zu9157kuMbE/scene.splinecode"
         />
         <GameCharacter
           title="Nerala"
@@ -49,12 +50,14 @@ export default function Home() {
         She is a ferocious hunter who can blind and deafen a man with her poisons, and kill from very far away with her precious gadgets."
           bgcolor={"bg-dune-white"}
           inverted={true}
+          scene="https://prod.spline.design/EPd23ofU93NfWQlC/scene.splinecode"
         />
         <GameCharacter
           title="Omozra"
           description="Outcasted since he was a kid and adopted and experimented with by a worm trainer, he outlived his master and became, himself, the greatest worm trainer of all.
         Sadiq, his best trained worm, follows him everywhere, emerging from the sand to execute whoever Omozra orders and transporting and healing his allies."
           bgcolor={"bg-dune-black"}
+          scene="https://prod.spline.design/JFBNrKkrn5Fz6bkH/scene.splinecode"
         />
       </div>
     </div>

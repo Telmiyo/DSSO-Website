@@ -5,6 +5,7 @@ export default function GameCharacter({
   description,
   bgcolor,
   inverted,
+  scene
 }) {
   return (
     <div
@@ -17,7 +18,7 @@ export default function GameCharacter({
         <p>{description}</p>
       </div>
       <div className="w-1/3 h-96">
-        <Spline scene="https://prod.spline.design/7JBlxcEnQSnlSOSY/scene.splinecode" />
+      <Spline scene={scene} />
       </div>
     </div>
   );
