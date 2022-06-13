@@ -3,32 +3,25 @@ import React from "react";
 export default function GameFeatures() {
   const features = [
     {
-      title: "INFINITE",
-      description: "Entire galaxies lie waiting to be discovered.",
+      title: "STRATEGY",
+      description: "Challenge your mind to command your troops and win.",
     },
     {
       title: "STORY",
       description:
-        "Experience infinite freedom, or uncover the secrets of the universe with more than 30 hours of story.",
+        "Submerge inside the famous DUNE franchise to enjoy an alternative story about the fremen",
     },
     {
-      title: "MULTIPLAYER",
-      description:
-        "Dogfight, race exocraft, build colonies, explore, trade, fight and survive together.",
+      title: "DISCOVERY",
+      description: "Explore and discover two maps in order to win.",
     },
-    {
-      title: "VR",
-      description:
-        "The entire game playable in virtual reality for a more immersive experience.",
-    },
- 
   ];
   return (
-    <div className=" flex justify-around bg-dune-orangespicy w-full h-full py-12 px-12 text-center space-x-4">
+    <div className=" flex justify-around bg-dune-orangespicy py-12 px-12 text-center">
       {features.map(({ title, description }) => (
-        <div>
-          <h3 className="text-3xl">{title}</h3>
-          <p className="">{description}</p>
+        <div className="items-center flex flex-col text-white" key={title}>
+          <h3 className="text-3xl font-semibold mb-2">{title}</h3>
+          <p className="w-1/2">{description}</p>
         </div>
       ))}
     </div>
