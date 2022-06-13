@@ -17,7 +17,7 @@ export default function Game() {
 
         <p className="w-[60%] text-center mb-10">
           Dune: Special Spice Ops is a real time tactics game focused on
-          stealth, discovery and exploration, developed by Chamfer Studios. It
+          stealth, discovery and strategy, developed by Chamfer Studios. It
           is based on the classic game Commandos, developed by Pyro Studios, a
           stealth-oriented real-time tactics video game from 1998, and with Dune
           theme, one of the world’s best-selling science fiction novels, by
