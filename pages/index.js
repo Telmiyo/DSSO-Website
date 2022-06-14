@@ -39,7 +39,7 @@ export default function Home() {
         <h3 className="text-4xl font-semibold text-center text-white font-fonseca">Meet Your Characters</h3>
         <GameCharacter
           title="Zhib"
-          description="The Naib of the sietch, a fearless fighter who erned the respect of his people from a very young age.
+          description="The Naib of the sietch, a fearless fighter who earned the respect of his people from a very young age.
         With his impeccable knife aim he can kill a man from far away, but he is even more dangerous up close, since he can slash through multiple enemies, ending their lives at once."
           bgcolor={"bg-dune-black"}
           scene="https://prod.spline.design/ugle5zu9157kuMbE/scene.splinecode"
