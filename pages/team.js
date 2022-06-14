@@ -217,7 +217,9 @@ export default function Team({ teammembers }) {
         id="member-grid"
       >
         {teammembers
-          .filter((teammember) => activeRol.includes(teammember.role))
+          .filter((teammember) => activeRol.includes(teammember.role)).sort((a,b)=>
+            a.role.includes("Lead")==false
+          )
           .map((filteredmember) => (
             <MemberFrame
               key={filteredmember.slug}
